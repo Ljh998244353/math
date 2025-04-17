@@ -1,0 +1,1708 @@
+\documentclass[12pt, a4paper, oneside]{ctexbook}
+\usepackage{amsmath, amsthm, amssymb, bm, graphicx, hyperref, mathrsfs}
+
+
+
+\setlength{\parindent}{0pt}  
+\title{{\Huge{\textbf{XCPC 数学基础}}}}
+\author{ljh}
+\date{\today}
+\linespread{1.5}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{corollary}[theorem]{推论}
+\newtheorem{example}[theorem]{例}
+\newtheorem{proposition}[theorem]{结论}
+\newcommand{\newp}[1]{\vspace{#1\baselineskip}\noindent}  
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\chapter{组合数学}
+
+\section{基本排列组合公式}
+1. 线性排列:n个数的r排列 $P(n,r)=\frac{n!}{(n-r)!}$\\
+2. 圆排列:n个数的r排列 $\frac{P(n,r)}{r}$\\
+3. 项链数:$n$ 个不同的珠子串成一串项链,则得到不同的项链数为
+$$
+p=\begin{cases}
+  1,& \left( n<=2\right) \\
+  \frac{(n-1)!}{2},& \left( otherwise\right)
+  \end{cases}
+$$
+4. 多重集合的排列: 有$k$ 种元素,每种$n_1,n_2,\dots n_k$个,的排列公式为
+$$
+\frac{n!}{\prod_{i=1}^{k}\left(n_i!\right)} 
+$$
+或记为
+$$
+\binom{n}{n1,n2,\cdots,n_k} 
+$$
+5. 组合: 
+$$
+\binom{n}{r}=\frac{P(n,r)}{r!} 
+$$
+
+6. 多重集的组合
+设$S$是有$k$ 种元素的集合,每种元素无限个$(\geq r)$,则其$r$ 组合的个数为:
+$$
+\binom{r+k-1}{r} 
+$$
+或者说有
+\begin{proposition}
+$x_1+x_2+\dots+x_k=r(x_i\geq 0)$的整数解有
+$$
+\binom{r+k-1}{r} 
+$$
+种.
+\end{proposition}
+
+\newp{3}
+
+\section{重要组合恒等式}
+1. Pascal公式
+$$
+\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1} 
+$$
+
+2.
+$$
+\sum_{i=0}^{n} \binom{n}{i}=2^n 
+$$
+
+3. 
+$$
+ m\cdot \binom{n}{m}=n\cdot \binom{n-1}{m-1}
+$$
+
+4.
+$$ 
+\sum_{k=1}^{n} k\cdot\binom{n}{k}=n\cdot \sum_{k=1}^{n}\binom{n-1}{k-1}=n\cdot2^{n-1} 
+$$
+
+5. 朱世杰恒等式
+$$
+\binom{m+n+1}{n+1}=\sum_{i=0}^{m} \binom{n+i}{n}
+$$
+
+6.范德蒙德恒等式
+$$
+\binom{a+b}{n}=\sum_{i=0}^{k}\binom{a}{i}\binom{b}{n-i}
+$$
+
+特别地:
+$$
+\binom{2n}{n}=\sum_{i=0}^{n}\binom{n}{i}\binom{n}{n-i}
+$$
+
+\begin{proposition}
+$m$ 个$a$,和最多$n$ 个b的排列数等于
+$$
+\binom{m+n+1}{m+1} 
+$$
+\end{proposition}
+
+\begin{proposition}
+  最多 $m$ 个$a$,和最多$n$ 个b的排列数等于
+  $$
+  \binom{n+m+2}{m+1}-1
+  $$
+\end{proposition}
+
+7.
+$$
+\sum_{1\le k \le n} k\binom{n}{k} =n2^{n-1} \qquad (n\ge 1)
+$$
+8.
+利用导数可以得到
+$$
+\sum_{1\le k \le n} k^2 \binom{n}{k} =n(n+1)2^{n-2}  \qquad (n\ge 1)
+$$
+
+\newp{3}
+
+\section{二项式系数}
+
+\begin{proposition}
+在杨辉三角中规定只能向下或者右下移动,从(0,0)到(n,k)的路径数为$\binom{n}{k}$
+\end{proposition}
+
+\begin{theorem}
+二项式定理
+$$
+(x+y)^n=\sum_{k=0}^{n}\binom{n}{k} x^{n-k}y^k
+$$
+\end{theorem}
+
+\begin{theorem}
+Sperner定理:\\
+设$S$是$n$ 元素集合.那么$S$上的一个反链至多包含$\binom{n}{\lfloor \frac{n}{2} \rfloor} $个集合.\\
+其中,这里的反链指的是以集合包含为偏序关系的反链,即$S$ 的一个子集的集合,任何两个集合没有关系.
+\end{theorem}
+
+\begin{proposition}
+多项式系数的帕斯卡公式
+$$
+\binom{n}{n_1,n_2,\cdots,n_t}=\binom{n-1}{n_1-1,n_2,\cdots,n_t}+\binom{n-1}{n_1,n_2-1,\cdots,n_t}+\cdots+\binom{n-1}{n_1,n_2,\cdots,n_t-1}
+$$
+\end{proposition}
+
+\begin{theorem}
+多项式定理
+$$
+(x_1+s_2+\cdots+x_t)^n=\sum \binom{n}{n_1,n_2,\cdots,n_t}x_1^{n_1}x_x^{n_2}\cdots x_t^{n_t}
+$$
+\end{theorem}
+
+\begin{theorem}
+牛顿多项式定理
+  $$
+  (1+z)^a=\sum_{k=0}^{\infty} \binom{a}{n} z^k \qquad  (a\in R,|z|<1)
+  $$
+\end{theorem}
+
+\begin{theorem}
+Dilworth定理\\
+设$(X,\leq)$是有限偏序集合,而$m$是反链的最大大小,则$X$可以被划分为$m$个链,但不能被划分成小于$m$个链.\\
+设$(X,\leq)$是有限偏序集合,而$r$是链的最大大小,则$X$可以被划分为$r$个反链,但不能被划分成小于$r$个反链.
+\end{theorem}
+\newp{3}
+\section{抽屉原理}
+简单形式
+\begin{proposition}
+如果要把$n+1$个物体放进$n$个盒子,那么至少有一个盒子有至少$2$个物体
+\end{proposition}
+加强形式
+
+\begin{proposition}
+设$q_1,q_2,\dots q_n$ 是正整数.如果将$q_1+q_2+\dots +q_n-n+1$个物体放进$n$ 个盒子.那么要么要么第一个盒子含有$q_1$个物体,$\dots$ ,要么第$n$ 个物体含有$q_n$个物体.
+\end{proposition}
+
+\begin{theorem}
+Ramsey定理\\
+在$6$个人(或者更多),要么有$3$个人互相认识,要么有$3$个人互相都不认识.\\
+或者说\\
+对于$K_n(n \geq 6)$我们给他的所有边染红色或蓝色,总存在一个红$K_3$ 或蓝$K_3$,记为$K_6\rightarrow K_3,K_3$
+\end{theorem}
+
+推广 
+\begin{theorem}
+若$m,n \geq2 $,存在正整数$p$,使得$K_p\rightarrow K_m,K_n $
+事实上,注意到若$p$成立,则对于$q\geq p$都成立,取一个子图即可.
+我们记Ramsey数$r(m,n)$为使之成立的最小的数.Ramsey定理保证这样的数一定存在.
+注意到$$r(m,n)=r(n,m)$$
+以及$$r(2,m)=m $$ 当$m\geq2$时,$r(2,m)$称为平凡的Ramsey数(交换同理).
+\end{theorem}
+
+性质\\
+1. $$r(m,n)\leq r(m-1,n)+r(m,n-1)(m,n \geq 3) $$
+2. $$r(m,n)\leq \binom{m+n-2}{n-1} $$(数学归纳法证明)
+\newp{3}
+
+\section{容斥原理}
+\subsection{容斥原理}
+\begin{theorem}
+容斥原理
+$$
+|\overline{A_1}\cap \overline{A_2} \cap \cdots \cap \overline{A_n}|=|S|-\sum|A_i|+\sum|A_i\cap A_j|+\cdots+(-1)^n|A_1\cap A_2\cap \cdots \cap A_n|
+$$
+\end{theorem}
+可根据贡献法证明.\\
+应用:不定方程整数解个数问题
+\begin{example}
+  求下列方程整数解个数
+  $$
+  x_1+x_2+x_3+x_4=18
+  $$
+  满足
+  $$
+  1\leq x_1 \leq 5 ,\quad -2\leq x_2\leq4,\quad0\leq x_3\leq 5,\quad 3\leq x_4\leq 9
+  $$
+  解:\\
+  等价于
+  $$
+  a_1+a_2+a_3+a_4=16
+  $$
+  满足
+  $$
+  0\leq a_1 \leq 4 ,\quad 0\leq a_2\leq6,\quad0\leq a_3\leq 5,\quad 0\leq a_4\leq 6
+  $$
+  不加范围的解的个数为
+  $$
+  |S|=\binom{16+4-1}{16}=969
+  $$
+  其中设$A_1$为$a_1$大于$4$的解的集合$A_2$为$a_2$大于6的解的集合$\cdots$
+  $$
+  \begin{aligned}
+  |A_1|=&\binom{11+4-1}{11}=364\\
+  |A_2|=&\binom{9+4-1}{9}=220\\
+  |A_3|=&\binom{13}{10}=286\\
+  |A_4|=&\binom{12}{9}=220\\
+  \end{aligned}
+  $$
+  同理算交集.然后根据容斥原理可得出答案为$55$
+\end{example}
+
+\begin{proposition}
+  错位排列
+  $$
+  D_n=n!\left(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\cdots+(-1)^n\frac{1}{n!}\right)
+  $$
+\end{proposition}
+有性质\\
+1.$$\frac{D_n}{n!}\approx e^{-1}$$
+2.
+$D_1=0,D_2=1$
+$$
+D_n=(n-1)(D_{n-1}+D_{n-2})
+$$
+3.
+$$
+\begin{aligned}
+&D_n=(n-1)(D_{n-1}+D_{n-2})\\
+\iff&D_n-nD_{n-1}=-(D_{n-1}-(n-1)D_{n-2})\\
+\iff&D_n=nD_{n-1}+(-1)^n
+\end{aligned}
+$$
+
+\begin{proposition}
+$$ 
+ Q_n=n!-\binom{n-1}{1}(n-1)!+\binom{n-1}{2}(n-2)!-\binom{n-1}{3}(n-3)!+\cdots+(-1)^{n-1}\binom{n-1}{n-1}1!
+$$
+\end{proposition}
+为不出现$i(i+1)$的排列数
+并且有
+$$
+Q_n=D_n+D_{n-1}
+$$
+\subsection{莫比乌斯反演}
+容斥原理是莫比乌斯反演在有限偏序集上的一个实例.\\
+偏序集形式的容斥原理\\
+对于一个偏序集$ (\mathcal{P}(X_n),\subseteq) $, ($X_n$为$n$元集) ,若
+$$
+F,G:\mathcal{P}(X_n)\rightarrow R
+$$
+且
+$$
+G(K)=\sum_{L\subseteq K} F(L)\qquad (K\subseteq X_n)
+$$
+考虑反解,有:
+$$
+F(K)=\sum_{L\subseteq K} (-1)^{|K|-|L|}G(L)
+$$
+\begin{proof}
+$$
+\begin{aligned}
+\sum_{L\subseteq K} (-1)^{|K|-|L|} G(L)&= \sum_{L\subseteq K} (-1)^{|K|-|L|} \sum_{T\subseteq L} F(T)\\
+&= \sum_{T\subseteq K} F(T) \sum_{T\subseteq L\subseteq K} (-1)^{|K|-|L|}\\
+&=F(K)
+\end{aligned}
+$$
+\end{proof}
+这就是莫比乌斯反演.\\
+因此我们可以对$F,G$下定义,令$A_1,A_2,\cdots,A_n$是有限集$S$的子集,且$K\subseteq X_n$,$F(K)$为恰好属于所有$A_i$ that $i\notin K$的元素
+个数,即
+$$
+F(K)=\left| \bigcap_{i\notin K} A_i -\bigcup_{i \in K} A_i \right|
+$$
+显然有
+$$
+F(X_n)=n-\left| \bigcup_{i \in X_n} A_i  \right|
+$$
+然后令
+$$
+G(K) =\sum_{L\subseteq K} F(L)=\left| \bigcap_{i \notin K} A_i \right|
+$$
+由莫比乌斯反演有
+$$
+F(K)=\sum_{L\subseteq K} (-1)^{|K|-|L|}G(L)
+$$
+有
+$$
+|\overline{A_1}\cap \overline{A_2} \cap \cdots \cap \overline{A_n}|=\sum_{J\subseteq K} (-1)^{|J|} \left|\bigcap_{i\in J}A_i \right|
+$$
+等价于上面的容斥原理.
+
+\subsubsection{偏序集里的莫比乌斯反演}
+建议先看看代数系统.
+%%%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+下面将莫比乌斯反演推广到偏序集$(X,\le)$ 里.以下介绍的函数满足
+$$
+f:X \times X \rightarrow \mathcal{R}
+$$
+且$f(x,y)=0$ if $x\nleq y$.
+下面考察代数系统$<\mathcal{F},*>$,设其为A
+\begin{definition}
+令$h=f*g$为$f$和$g$的卷积,如果满足:
+$$
+h(x,y)=\begin{cases} \sum_{z:x\leq z\leq y} f(x,z)g(z,y) \qquad&,x\leq y\\ 0\qquad &,other\end{cases}
+$$
+\end{definition}
+显然卷积运算在该偏序集上是封闭的,故这是一个广群.
+并且显然其是满足 \textbf{结合律} ,故其是一个半群.
+\begin{definition}
+科罗内尔delta函数:
+$$
+\delta(x,y)=\begin{cases}1\qquad ,x=y\\ 0\qquad,other\end{cases}
+$$
+\end{definition}
+显然有$f*\delta=\delta*f=f$,显然其为\textbf{卷积运算的幺元}.
+故这个一个独异点.
+
+\begin{definition}
+$\zeta$函数:
+$$
+\zeta(x,y)=\begin{cases}1\qquad,x\leq y\\ 0\qquad,other\end{cases}
+$$
+\end{definition}
+
+
+\begin{definition}
+逆函数:\\
+对于$X$中所有的$y$满足$f(y,y)\neq 0$,有其逆元.
+$$
+g(x,y)=\begin{cases}
+  \frac{1}{f(y,y)} ,& x=y\\
+  -\frac{1}{f(y,y)}\sum_{x\le z < y} g(x,z)f(z,y),&x< y\\
+  0,&other
+\end{cases}
+$$
+\end{definition}
+
+
+\begin{proof}
+  若$x\neq y$
+  $$
+  \begin{aligned}
+  (g*f)(x,y)&=g(x,y)f(y,y)+\sum_{x \le z <y} g(x,z)f(z,y)\\
+  &=-\sum_{x \le z <y} g(x,z)f(z,y)+\sum_{x \le z <y} g(x,z)f(z,y)\\
+  &=0
+  \end{aligned}
+  $$
+  故g是其左逆元,类似地可以证明其是右逆元.故其是f的逆元.
+\end{proof}
+
+
+\begin{definition}
+  莫比乌斯函数:\\
+  莫比乌斯函数为 $\zeta$函数的逆函数.\\
+  具体地:
+  $$
+  \mu(x,y)=\begin{cases}
+    1&,x=y\\
+    -\sum_{x\leq z<y} \mu(x,z)& ,x<y
+    \end{cases}
+  $$
+\end{definition}
+
+\newp{3}
+
+下面给出一些常见偏序集的莫比乌斯函数: 
+
+1.$(\mathcal{P}(X_n),\subseteq)$ \\
+\[
+\mu(A,B)=(-1)^{|B|-||A}
+\]
+
+2.$(X_n,\le)$ 即正整数集合上的全序关系\\
+\[
+\mu(k,l)=\begin{cases}
+  1&\qquad,l=k\\
+  -1&\qquad,l=k+1\\
+  0&\qquad,other
+  \end{cases}
+\]
+3.$(X_n,|)$,即正整数集合上的整除关系\\
+有$\mu(a,b)=\mu\left(1,\frac{b}{a}\right)$
+\[
+  \mu(1,n)=\begin{cases}
+    1&\qquad,n=1\\
+    (-1)^k&\qquad,\text{n是互不相同的素数乘积}\\
+    0,&\qquad,other
+    \end{cases}
+\]
+
+4.直积的莫比乌斯函数\\
+线性有限偏序集$(X,\le_1)$,$(Y,\le_2)$,且$\mu_1$,$\mu_2$分别为其莫比乌斯函数,定义其笛卡尔积的偏序为
+$$
+(x,y)\le (x',y') \iff x\le x' \text{and} y \le y'
+$$
+那么新偏序集$(X\times Y ,\le_3 )$的莫比乌斯函数为
+$$
+\mu((x,y),(x',y'))=\mu_1(x,x')\mu_2(y,y')
+$$
+
+
+\begin{theorem}
+  莫比乌斯反演:\\
+设$(X,\le)$是一个具有最小元的线性偏序集.令$\mu$ 是其莫比乌斯函数,定义在$X$上的实值函数$F,G:X\rightarrow \mathcal{R}$满足
+$$
+G(x)=\sum_{z\le x} F(z),\qquad (x\in X)
+$$
+那么有
+$$
+F(x)=\sum_{y\le x} \mu(y,x) G(y),\qquad (x\in X)
+$$
+\end{theorem}
+
+\begin{proof}
+  $$
+  \begin{aligned}
+  \sum_{y \le x} \mu(y,x) G(y) &=\sum_{y \le x} \mu(y,x) \sum_{z\le y} F(z)\\
+  &=\sum_{z \le x}F(z) \sum_{ z\le y \le x} \zeta(z,y)\mu(y,x)\\
+  &=\sum_{z\le x} F(z) \delta(z,x)\\
+  &=F(x)
+  \end{aligned}
+  $$
+\end{proof}
+这里最小元保证了和式有限,因此不用判断敛散性.(这里对和式的一些变换在无穷和式有的有时不成立)\\ 
+事实上,莫比乌斯反演是卷积结合律的一个推论.\\
+\begin{proof}
+  不妨设最小元为0,定义$f,g\in \mathcal{F}(X)$
+  $$
+  f(x,y)=\begin{cases}
+  F(y)&, x=0\\
+  0&,other
+  \end{cases}
+  $$
+
+  $$
+  g(x,y)=\begin{cases}
+  G(y)&, x=0\\
+  0&,other
+  \end{cases}
+  $$
+  从而有$g=f*\zeta$,从而有$g*\mu=f$,
+
+\end{proof}
+%但若是满足$\forall x \in X ,\sum_{z\le x} F(z) ,\sum_{z \le x} G(z)$绝对收敛,就不再需要最小元这一条件.\\
+
+
+\newp{3}
+\section{递推关系和生成函数}
+一些斐波拉契数列的性质:\\
+1.
+$$
+\begin{pmatrix}
+  F_n &F_{n+1}
+\end{pmatrix}=
+\begin{pmatrix}
+  F_0 &F_1
+\end{pmatrix}
+\begin{pmatrix}
+  0 &1\\1&1
+\end{pmatrix}^n
+$$
+2.
+$F_{2k}=F_k(2F_{k+1}-F_k)$; 
+$F_{2k+1}=F_{k+1}^2+F_{k}^2$
+
+3.
+$$
+\sum_{i=0}^{n} f_i=f_{n+2}-1
+$$
+
+4.
+$$
+2|f_n\iff3|n
+$$
+
+\subsection{生成函数}
+这里只做简单介绍\\
+牛顿二项式定理
+\begin{theorem}
+  设$\alpha$ 是一个实数.对于任意$x,y$ with $0\le |x| <|y|$,有性质
+  $$
+  (x+y)^{\alpha} =\sum_{k=0}^{\infty} \binom{\alpha}{k} x^{k} y^{\alpha-k}
+  $$
+  where
+  $$
+  \binom{\alpha} {k}=\frac{\alpha (\alpha-1) \cdots (\alpha -k+1)}{k!}
+  $$
+\end{theorem}
+设$|z|<1$,特别地有
+$$
+(1+z)^{\alpha} =\sum_{k=0}^{\infty} \binom{\alpha}{k} z^k
+$$
+
+\begin{proposition}
+  若$\alpha$是一个负整数,且$\alpha = -n$then
+  $$
+  \begin{aligned}
+    \binom{\alpha}{k}&=\binom{-n}{k}\\
+    &=\frac{-n (-n-1)\cdots (-n-k+1)}{k!}\\
+    &=(-1)^k\binom{n+k-1}{k}
+  \end{aligned}
+  $$
+\end{proposition}
+thus: for $|z|<1$
+$$
+(1+z)^{-n}=\frac{1}{(1+z)^n}=\sum_{k=0}^{\infty}(-1)^k \binom{n+k-1}{k} z^k
+$$
+
+\subsubsection{一般生成函数}
+无穷数列$h_0,h_1,\cdots $的生成函数为$g(x)=h_0+h_1 x+h_2x^2+\cdots $
+\\
+
+生成函数的一些性质\\
+设$H$为数列,$F$为其对应的生成函数\\
+1. $cH \rightarrow cF$\\
+2. $H_1+H_2 \rightarrow F_1 +F_2$\\
+3.${0,0,0,\cdots}+H \rightarrow x^kF$\\
+4. $iH(H_1,2H_2,\cdots) \rightarrow F'$\\
+5. 令$G_n=\sum_{i+j=n} H_{1i}\cdot H_{2j}$
+那么$G\rightarrow F_1\cdot F_2$\\
+一面介绍两种重要的生成函数即:多重集合的$n$组合级数的生成函数\\
+根据泰勒级数
+\[
+\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n
+\]
+我们可以解$h_n$表示
+\[
+e_1+e_2+\cdots+e_k=n
+\]
+的非负整数解的个数。
+
+其生成函数为
+$$
+g(x)=\sum_{n=0}^{\infty} \binom{n+k-1}{n}x^n=\frac{1}{(1-x)^k}
+$$
+
+\begin{example}
+  设$x_1+x_2+x_3+x_4=n$的整数解个数,其中$x_1$是偶数,$x_2$是5的倍数,$x_3\le 4$,$x_4\le 1$ \\
+  解:\\
+  $$
+  \begin{aligned}
+    g(x)&=(1+x^2+x^4+\cdots)(1+x^5+\cdots)(1+x+x^2+x^3+x^4)(1+x)\\
+    &=\frac{1}{1-x^2} \frac{1}{1-x^5} \frac{1-x^5}{1-x} (1+x)\\
+    &=\frac{1}{(1-x)^2}\\
+    &=\sum_{n=0}^{\infty} \binom{n+1}{n} x^n
+  \end{aligned}
+  $$
+  故为n+1.
+\end{example}
+我们得到几个小结论:\\
+1.限制$\ge k$,可以乘$x^k$\\
+2.限制$\le k$,少写几项\\
+3.是$k$的倍数,整体代换\\
+
+\subsubsection{指数生成函数}
+无穷数列$h_0,h_1,\cdots $的指数生成函数为$g(x)=h_0+h_1 \frac{x}{1!}+h_2 \frac{x^2}{2!}+\cdots $\\
+下面给出一类常用的指数生成函数,即多重集合的n排列数的生成函数.\\
+\begin{theorem}
+  设$S$ 是多重集合$\{n_1 a_1\,\cdots n_k a_k\}$,其中$n_i\ge 0$,那么数列的指数生成函数为\\
+  $$
+  g(x)=f_{n_1}(x)f_{n_2}(x) \cdots f_{n_k} (x)
+  $$
+  其中
+  $$
+  f_{n_i}(x)=\sum_{k=0}^{n_i} \frac{x^k}{k!}
+  $$
+\end{theorem} 
+
+\begin{example}
+  用红,白,蓝,绿色给$1\times n$棋盘染色,其中要求红色为偶数,白色是奇数,求方案数\\
+  解:\\
+  $$
+  \begin{aligned}
+    g(x)&=\left(\sum_{n=0}^{\infty}\frac{x^n}{n!} \right)^2\left(1+\frac{x^2}{2!}+\cdots \right)\left(x+\frac{x^3}{3!}+\cdots \right)\\
+    &=e^{2x}\left(\frac{e^x+e^{-x}}{2} \right) \left( \frac{e^x-e^{-x}}{2} \right)\\
+    &=\frac{e^{4x}-1}{4}\\
+    &=\frac{1}{4}\sum_{n=0}^{\infty} 4^{n} \frac{x^n}{n!}-\frac{1}{4}\\
+    &=\sum_{n=1}^{\infty} 4^{n-1} \frac{x^n}{n!}
+    \end{aligned}
+  $$
+  故为$4^{n-1}$
+\end{example}
+1.对于偶数限制此项为\\
+\[
+\frac{e^x-e^{-x}}{2}
+\]
+2.奇数限制\\
+\[
+\frac{e^x+e^{-x}}{2}
+\]
+对于求解线性齐次递推关系这里不做介绍
+
+
+\section{卡特兰数和第二类斯特林数}
+\subsection{卡特兰数}
+折线图\\
+只有两类线段(a,b)-(a+1,b+1)或(a,b)-(a+1,b-1)\\
+\begin{proposition}
+  $A_0(a_0,b_0)$,$A_n(a_n,b_n)$能用折线连接的充要条件是\\
+  $|b_n-b_0|\le a_n-a_0=n$且$2|(|b_n-b_0|+n)$\\
+  连接这两点的折线有
+  $$
+  \binom{n}{\frac{n+b_n-b_0}{2}}
+  $$
+  条.
+\end{proposition}
+卡特兰数:\\
+$$
+C_n=\frac{1}{n+1}\binom{2n}{n}=\binom{2n}{n}-\binom{2n}{n-1}
+$$
+递推式\\
+$$
+C_n=\sum_{k=1}^{n}C_{k-1}C_{n-k}=\frac{1}{n+1} (4n-2)C_{n-1}
+$$
+Catalan 数列$C_n$可以应用于以下问题：\\
+
+
+\subsection{第二类斯特林数}
+
+
+
+
+%下一章节~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\chapter{数论}
+\section{整除}
+
+\begin{proposition}
+  令$a,b,c$为整数,那么有:
+  $$
+  \gcd(a+cb,b)=\gcd(a,b)
+  $$
+\end{proposition}
+
+\begin{definition}
+  $a,b,m,n\in \mathcal{Z}$,称$ma+nb$为$a,b$的线性组合
+\end{definition}
+
+
+\begin{theorem}
+  裴蜀定理:\\
+  如果$a,b$均为整数,则有整数$m$和$n$,使得
+  $$
+  ma+nb=\gcd(a,b)
+  $$
+\end{theorem}
+其中该等式又被称为裴蜀等式,$m,n$被称为裴蜀数.\\
+可以用扩展欧几里得算法求出$ma+nb=\gcd(a,b)$的特解,然后有通解
+$$
+\begin{cases}
+  m&=m_0+k\frac{b}{\gcd(a,b)}\\
+  n&=n_0-k\frac{a}{\gcd(a,b)}
+\end{cases}
+$$
+注意到
+$$
+a(m+bu)+b(n-au)=\gcd(a,b)
+$$
+故满足等式的$m,n$有无穷多对.
+\begin{lemma}
+  两个不全为0的整数$a,b$的最大公因数是其线性组合中最小的正整数.
+\end{lemma}
+
+\begin{proof}
+  不妨设$d$是$a,b$线性组合中最小的正整数.
+  考虑带余除法:\\
+  $a=dq+r$从而有
+  $r=a-dq=a-q(ma+nb)=(1-qm)a-qnb$\\
+  因此$d|a$,同理$d|b$,故$d$为公因数.\\
+  不妨设$e=\gcd(a,b)$,那么$d|e$,又$e|(ma+nb)$,即$e|d$\\
+  故$e=d$
+\end{proof}
+
+\begin{theorem}
+  如果$a,b$是整数,那么所有 $a,b$ 的线性组合所构成的集合与所有
+  $\gcd(a,b)$  的倍数所构成的集合相同.
+  换言之,所有 $a,b$ 的线性组合,都是 $\gcd(a,b)$ 的倍数.
+\end{theorem}
+
+\begin{theorem}
+  如果 $a,b$ 是不全为0的整数,那么正整数 $d$ 是 $a,b$的最大公因数,当且仅当
+  1.$d|a,d|b$
+  2.若$c|a,c|b$,那么$c|d$
+\end{theorem}
+
+\begin{definition}
+  令 $a_1,a_2,\cdots ,a_n$为不全为0的整数,如果 $d$
+ 为他们公因子中最大的一个,则称 $d$
+ 为 $a_1,a_2,\cdots ,a_n$ 的最大公因数.
+记为
+  $ \gcd(a_1,a_2,\cdots ,a_n)=d$
+
+\end{definition}
+
+\begin{theorem}
+$$
+\gcd(a_1,a_2,\cdots ,a_n)=\gcd(a_1,a_2,\cdots, \gcd(a_{k-1},a_k),\cdots a_n)
+$$
+\end{theorem}
+
+
+\begin{definition}
+  我们称 $a_1,a_2,\cdots ,a_n $ 互素 如果 $ \gcd(a_1,a_2,\cdots ,a_n)=1$
+\end{definition}
+
+\begin{definition}
+  我们称 $a_1,a_2,\cdots ,a_n $两两互素,如果任意两个数互素
+\end{definition}
+
+\begin{theorem}
+  若$\gcd(a,m)=1$,$\gcd(b,m)=1$,则$\gcd(ab,m)=1$\\
+  若$\gcd(a,b)=1$,则$\gcd(a^k,b^l)=1$
+\end{theorem}
+
+\begin{theorem}
+  设正整数$a,b$之积 是一个整数的 $k(k\ge 2)$ 次幂.若
+  $\gcd(a,b)=1$. 则 $a,b$都是整数的  $k$次幂.
+  一般地:设正整数 $ a_1,a_2,\cdots ,a_n $ 之积是一个正整数的 $k$ 次幂.若 
+  $a_1,a_2,\cdots ,a_n$ 两两互素,则 $a_1,a_2,\cdots ,a_n$
+ 都是整数的 $k$
+ 次幂.
+\end{theorem}
+
+\begin{lemma}
+$$
+\gcd(a_1^k,a_2^k,\cdots ,a_n^k)=gcd^k(a_1,a_2,\cdots ,a_n)
+$$
+\end{lemma}
+
+
+\begin{corollary}
+  裴蜀定理可以推广到 $n$ 个整数的情形：设 $a_1, a_2, \dots, a_n$
+   是不全为零的整数，则存在整数 $x_1, x_2, \dots, x_n$, 使得 $a_1 x_1 + a_2 x_2 + \cdots + a_n x_n=\gcd(a_1, a_2, \dots, a_n)$。
+   其逆定理也成立：设 $a_1, a_2, \dots, a_n$ 是不全为零的整数，$d > 0$ 是 $a_1, a_2, \dots, a_n$ 的公因数，
+   若存在整数 $x_1, x_2, \dots, x_n$, 使得 $a_1 x_1 + a_2 x_2 + \cdots + a_n x_n=d$，则 $d = \gcd(a_1, a_2, \dots, a_n)$。
+\end{corollary}
+
+\begin{corollary}
+  对自然数 $a、b$ 和整数$ n，a$ 与 $b $互素，考察不定方程：$ax+by=n$
+ 其中 $x$ 和 $y$ 为自然数。如果方程有解，称 $n$ 可以被 $a、b$ 表示。
+ 记 $C=ab-a-b$。由 $a$ 与 $b$ 互素，$C$ 必然为奇数。则有结论：
+对任意的整数 $n$，$n$ 与 $C-n$ 中有且仅有一个可以被表示。
+即：可表示的数与不可表示的数在区间 $[0,C]$ 对称（关于 $C$ 的一半对称）。$0$ 可被表示，$C$ 不可被表示；负数不可被表示，大于 $C$ 的数可被表示。
+\end{corollary}
+
+\begin{corollary}
+  二元一次不定方程有非负整数解的条件\\
+  $a,b>0$,若$ax+by=n$,$(a,b)=1$,则$n>ab-a-b$时有解,解的个数为$\left\lfloor \frac{n}{ab} \right\rfloor$
+  $\left\lfloor \frac{n}{ab} \right\rfloor+1$ 
+\end{corollary}
+
+\newp{3}
+一些小结论\\
+  1.在[1e18]的范围下,一个数最多与连续7个数不互质.\\
+  2.一个数能被4整除,当且仅当末尾两位能被4整除\\
+  3.一个数能被25整除,当且仅当末尾两位能被25整除\\
+  4. 一个数能被8整除,当且仅当末尾三位能被8整除\\
+  5.一个数能被125整除,当且仅当末尾三位能被125整除\\
+  6. 一个数能被3整除,当且仅当各位数之和能被3整除\\
+  7. 一个数能被9整除,当且仅当各位数之和能被9整除\\
+  8. 能被7整除的数的特征：a.抹去个位数b.减去原个位数的2倍c.其差能被7整除。\\
+  9. 能被11整除的数的特征: a.抹去个位数　b.减去原个位数 c.其差能被11整除。或：奇数位上的数字和与偶数位上的数和相减,其差能被11整除
+\section{同余}
+以下所有参数未特殊说明,均为默认整数,模数默认正整数\\
+
+\subsection{同余}
+
+\begin{definition}
+  设$m$是正整数,若$m|(a-b)$,则称$a$和$b$模$m$同余.记作$a \equiv b(\mod m)$
+\end{definition}
+
+性质\\
+1. $a \equiv b (\mod m) \iff \exists k (k\in Z),a=b+kz$\\
+2. $a \equiv a(\mod m)$\\
+3. $a \equiv b(\mod m) \rightarrow b \equiv a(\mod m)$\\
+4. $a \equiv b(\mod m),b \equiv c(\mod m) \rightarrow a \equiv c(\mod m)$\\
+5. $a \equiv b(\mod m),c \equiv d(\mod m)\rightarrow a+c \equiv b+d(\mod m) ,a-c \equiv b-d(\mod m),ac \equiv bd(\mod m)$\\
+6. $a^n \equiv b^n(\mod m)$\\
+7. $ac \equiv bc (\mod m),d=\gcd(c,m)\rightarrow a \equiv b (\mod m/d)$\\
+8. $a \equiv b (\mod m),n|m \rightarrow a \equiv b (\mod n)$\\
+9. $a \equiv b (\mod m),a \equiv b (\mod n)\rightarrow a \equiv b (\mod lcm(m,n))$\\
+
+
+\begin{definition}
+  设模为$n$，则根据余数可将所有的整数分为$n$类，
+  把所有与整数$a$模$n$同余的整数构成的集合叫做模$n$的一个剩余类，
+  记作$[a]$。并把$a$叫作剩余类$[a]$的一个代表元。
+\end{definition}
+
+\begin{definition}
+  从模$n$的每个剩余类中各取一个数，得到一个由$n$个数组成的集合，叫做模$n$的一个完全剩余系。
+\end{definition}
+
+\begin{proposition}
+  若$r_1,r_2,\dots ,r_m$ 是模$m$的一个完全剩余系,且正整数$a$满足$\gcd(a,m)=1$,则对任何整数$b$,$ar_i+b$也为一个完全剩余类.
+\end{proposition}
+
+\begin{proof}
+  若不然,则存在$ar_i+b \equiv ar_j+b (\mod m) \iff ar_i \equiv ar_j (\mod m) \iff m|a(r_i-r_j) \iff m|a_i-a_j \iff r_i \equiv r_j (\mod m)$与条件矛盾.故得证
+\end{proof}
+
+
+\begin{proposition}
+  $a_1,a_2,\dots,a_m$ 是模$m$的一个完全剩余系,$b_1,b_2,\dots b_n$ 是模$n$ 的一个完全剩余系, 
+  且$\gcd(n,m)=1$那么$na_i+mb_j$ 是模$mn$ 的一个完全剩余系
+\end{proposition}
+
+\begin{proof}
+  首先由乘法原理知道有$mn$个数,那么只需证两两不同余即可\\
+若不然则对于$(a,b)\neq(a',b')$
+$na+mb \equiv na'+mb' (\mod mn) \iff mn|n(a-a')+m(b-b') \iff
+m|(a-a'),n|(b-b') \iff a \equiv a' (\mod m),b \equiv b' (\mod n)$ 与条件矛盾.故得证.
+\end{proof}
+
+\begin{definition}
+  简化剩余系也称既约剩余系或缩系，是$m$的完全剩余系中与$m$互素的数构成的子集，
+  如果模$m$的一个剩余类里所有数都与$m$互素，就把它叫做与模$m$互素的剩余类。在与模$m$互素的全体剩余类中，
+  从每一个类中各任取一个数作为代表组成的集合，叫做模$m$的一个简化剩余系。
+\end{definition}
+
+\begin{proposition}
+  若$r_1,r_2,\dots ,r_m$ 是模$m$的一个缩系,且正整数$a$满足$\gcd(a,m)=1$,则$ar_i$也为一个缩系.
+\end{proposition}
+
+
+\begin{proof}
+  由完系性质$1$可知其两两不同余,故只需证明其与均$m$互质即可.
+因为$gcd(r_i,m)=1,gcd(a,m)=1\Rightarrow gcd(ar_i,m)=1$得证
+\end{proof}
+
+\begin{proposition}
+  $a_1,a_2,\dots,a_m$ 是模$m$的一个缩系,$b_1,b_2,\dots b_n$ 是模$n$ 的一个缩系, 且$gcd(n,m)=1$那么$na_i+mb_j$ 是模$mn$ 的一个缩系
+\end{proposition}
+
+\begin{proof}
+  只需证明其是所有与$mn$互质的剩余类.
+$$
+\begin{aligned}
+  &\gcd(a_i,m)=1,\gcd(b_j,n)=1,\gcd(n,m)=1 \\&\Rightarrow \gcd(na_i,m)=1,\gcd(mb_j,n)=1\\  &\Rightarrow \gcd(na_i+mb_j,n)=1,\gcd(na_i+mb_j,m)=1\\& \Rightarrow \gcd(na_i+mb_j,mn)=1
+\end{aligned}
+$$
+若将$a_i,b_j$扩展成完系,若$\gcd(na_i+mb_j,mn)=1 \Rightarrow \gcd(na_i+mb_j,m)=1,\gcd(na_i+mb_j,n)=1\Rightarrow \dots$ 逆着证回去即可.
+\end{proof}
+
+
+\subsection{线性同余方程}
+\begin{definition}
+  形如$ax \equiv b (\mod m)$ 的同余式称为一元线性同余方程
+\end{definition}
+
+\begin{theorem}
+  $\gcd(a,m)=d,d\nmid b$,则无解,否则恰好有$d$个模$m$不同余的解.
+\end{theorem}
+
+
+\begin{proof}
+  若$d\nmid b$,则 $ax \equiv b (\mod m)\iff ax-ym=b$,根据贝祖定理显然无解.\\
+若$d\mid b$,则显然有无穷多组解,我们设其中一组特解为$x_0,y_0$ \\
+其通解为$x=x_0+(m/d)t,y=y_0+(a/d)t$\\
+设$x_1=x_0+(m/d)t_1,x_2=x_0+(m/d)t_2$\\
+$x_1 \equiv x_2 (\mod m) \iff t_1 \equiv t_2 (\mod d)$\\
+所以有$d$ 个不同于的解.
+\end{proof}
+
+
+\begin{definition}
+  $\gcd(a,m)=1,ax \equiv 1 (\mod m)$ 则称该同余方程的一个解为$a$模$m$的逆,记为$a^{-1}$.
+显然$\gcd(a^{-1},m)=1$
+\end{definition}
+
+\begin{theorem}
+  设$p$ 为素数,正整数$a=a^{-1}$ ,当且仅当$a \equiv \pm 1(\mod p)$.
+\end{theorem}
+
+
+\begin{proof}
+$a \equiv \pm 1(\mod p) \iff a^{2} \equiv 1(\mod p)$
+反过来.有\\
+$a^{2} \equiv 1(\mod p) \Rightarrow p|(a^2-1) \Rightarrow p|(a+1) 或p|(a-1) \Rightarrow a \equiv \pm 1(\mod p)$
+\end{proof}
+
+\begin{theorem}
+  威尔逊定理\\
+  若$p$是素数,则$(p-1)! \equiv -1 (\mod p)$
+\end{theorem}
+
+\begin{proof}
+  $p=2$ 显然成立.\\
+否则对于$1 \leq a \leq p-1$,可以找到其逆元与之配对,且除$1$和$p-1$都能两两配对.\\
+故$(p-1)! \equiv p-1 \equiv -1 (\mod p)$
+\end{proof}
+
+\begin{theorem}
+  威尔逊定理逆定理\\
+  若$n\geq 2$是正整数,且$(n-1)! \equiv -1 (\mod n)$则 $n$为质数
+\end{theorem}
+
+\begin{proof}
+  若不然,设$n$ 为合数,则其必存在小于$n$ 的素因子$p$\\
+所以有$(n-1)! \equiv -1 (\mod n),p|n \Rightarrow (n-1)! \equiv -1 (\mod p)$,\\
+但是 $(n-1)! \equiv 0 (\mod p)$\\
+而$n>1$ 矛盾.故得证.
+\end{proof}
+
+\begin{theorem}
+  费马小定理\\
+  如果$p$是一个素数，$a$是正整数且$a$不是$p$的倍数，则$a^{p-1} \equiv 1 \pmod{p}$。
+\end{theorem}
+
+\begin{proof}
+  因为$\gcd(a,p)=1$\\
+所以 $\prod_{i=1}^{p-1} ia \equiv \prod_{i=1}^{p-1} i \pmod{p} \Rightarrow a^{p-1} \equiv 1 \pmod{p}$ 得证.
+\end{proof}
+
+\begin{definition}
+  欧拉函数\\
+  对于正整数 $n$,小于等于 $n$ 且与 $n$ 互质的正整数的个数,称为欧拉函数,记作$\phi{(n)}$
+\end{definition}
+
+\begin{theorem}
+  设$m$ 是一个正整数,$a$ 是一个正整数且$\gcd(a,m)=1,那么a^{\phi(m)} \equiv 1 \pmod{m}$
+\end{theorem}
+
+\begin{proof}
+  设$r_1,r_2,\dots r_{\phi(m)}$,是不超过$m$ 的模$m$的一个缩系.\\
+那么$ar_1,ar_2,\dots ar_{\phi(m)}$也是一个缩系\\
+故$ar_1ar_2\dots ar_n \equiv r_1r_2\dots r_n \pmod{m} \iff a^{\phi(m)} \equiv 1 \pmod{m}$\\
+得证.
+\end{proof}
+
+\begin{definition}
+  同余方程组是指一组形如下面的方程的集合：
+$$
+\begin{cases}
+a_1 &\equiv b_1 \pmod{m_1} \\
+a_2 &\equiv b_2 \pmod{m_2} \\
+\vdots \\
+a_n &\equiv b_n \pmod{m_n}
+\end{cases}
+$$
+
+其中，$a_i$和$b_i$是整数，$m_i$是正整数。
+这组方程要求对于每个$i$，$a_i$除以$m_i$的余数等于$b_i$除以$m_i$的余数，即$a_i$与$b_i$在模$m_i$下同余。
+解同余方程组就是要找到满足所有这些条件的整数解。
+\end{definition}
+
+\begin{example}
+  $$
+\begin{cases}
+x \equiv 1 \pmod{3} \\
+x \equiv 2 \pmod{5} \\
+\vdots \\
+x \equiv 3 \pmod{7}
+\end{cases}
+$$
+
+我们可以使用迭代法(逐级满足法)解决.
+由第一个式子得 $x=3t+1$
+然后带入$3t+1 \equiv 2 \pmod{5} \iff t \equiv 4\pmod{5}$
+以此类推.
+但是这只能解决一些简单的问题,下面我们给出一般地解法.
+\end{example}
+
+
+\begin{theorem}
+  中国剩余定理(CRT)\\
+  设$m_1,m_2,\dots ,m_r$ 是两两互素的正整数,则同余方程
+$$
+\begin{cases}
+x \equiv a_1 \pmod{m_1} \\
+x \equiv a_2 \pmod{m_2} \\
+\vdots \\
+x \equiv a_r \pmod{m_r}
+\end{cases}
+$$
+有模$m_1m_2\dots m_r$ 的唯一解
+$$
+x=\sum_{i=1}^{r} a_iM_iM_i^{-1} 
+$$
+其中
+$$
+M_i= \frac{1}{m_i}\prod_{j=1}^r m_j ,\qquad M_iM_i^{-1} \equiv 1 \pmod{m_i}
+$$
+\end{theorem}
+
+\begin{proof}
+  先证明$x$是方程组的解.\\
+对于任意一个方程有,\\
+$x \equiv a_kM_kM_k^{-1}  \equiv a_k \pmod{m_k}$ ,显然成立.\\
+下证唯一性.\\
+若$x_1,x_2$ 为方程组的2个解,则有$x_1 \equiv x_2 \pmod{m_k} \iff m_k|(x_1-x_2) \iff M|(x_1-x_2) \iff x1 \equiv x2 \pmod{M}$
+\end{proof}
+
+
+\begin{theorem}
+  拉格朗日定理\\
+  $p$为素数,$f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots +a_1x+a_0(p \nmid a_n)$ 
+  是模$p$意义下的整系数多项式方程,则同余方程$f(x) \equiv 0 \pmod{p}$ 在模$p$ 意义下至多有$n$ 个不同的解.
+\end{theorem}
+
+
+\begin{corollary}
+  若超过$n$个解,则$p \mid a_i(i=0,1,\dots n)$,即$f(x) \text{是模p意义下的零多项式}$
+\end{corollary}
+
+\begin{corollary}
+  若$n \leq p$ 则同余式$f(x)=x^n+a_{n-1}x^{n-1}+\dots +a_1x+a_0 \equiv 0 \pmod{p}$有$n$ 
+  个解的充要条件是$x^p-x$ 除以$f(x)$所得的余式的一切系数都是$p$ 的倍数
+\end{corollary}
+这里介绍一个比较重要的多项式,常用于构造\\
+$$
+f(x)=\prod_{i=1}^{p-1}(x-i) -(x^{p-1}-1)
+$$ 
+
+\begin{theorem}
+  wolstenholme定理\\
+  若$p$为大于3的素数,则
+  $$
+  \sum_{k=1}^{p-1} \frac{(p-1)!}{k} \equiv 0 \pmod{p^2} 
+  $$
+\end{theorem}
+
+
+
+\section{乘性函数}
+
+\begin{definition}
+  算术函数\\
+  定义在所有正整数上的函数称为算数函数.
+\end{definition}
+
+\begin{definition}
+  乘性函数\\
+  若$\gcd(m,n)=1$,均有 $f(mn)=f(m)f(n)$,则称$f$ 为乘性函数.
+\end{definition}
+
+\begin{proposition}
+  若$f$为乘性函数,$n=\prod_{i=1}^{k} p_i^{a_i}$ 为一个素因数分解.则$f(n)=\prod_{i=1}^k f(p_i^{a_i})$
+由定义显然成立.
+\end{proposition}
+
+\begin{definition}
+  和函数\\
+  $f$ 为一个算术函数,$F(n)=\sum_{d \mid n} f(d)$ 称为$f$ 的和函数
+\end{definition}
+
+\begin{definition}
+  欧拉函数\\
+  $\phi(n)=\sum_{i=1}^n [gcd(i,n)=1]$ ,称为欧拉函数.
+\end{definition}
+
+\begin{proposition}
+  设$p$是素数,$\phi(p^a)=p^a-p^{a-1} $
+\end{proposition}
+
+\begin{proof}
+  由定义,$\phi(p^a)= \sum_{i=1}^{p^a} [gcd(i,p^a)=1]= \sum_{i=1}^{p^a} 1-[gcd(i,p^a) \neq 1]=p^a- \sum_{i=1}^{p^a} [gcd(i,p^a) \neq 1]$,
+  这样的$i$ 显然只有$p$的倍数,有$p^{a-1}$ 个,证毕.
+\end{proof}
+
+\begin{proposition}
+  欧拉函数是乘性函数
+\end{proposition}
+
+\begin{proof}
+  若$gcd(m,n)=1$
+由缩系的定义知道,显然模$m$的缩系有$\phi(m)$个数,模$n$的缩系有$\phi(n)$个数,由缩系的一个性质知模$mn$ 的缩系有$\phi(m)\phi(n)$个数.故$\phi(mn)=\phi(m)\phi(n)$
+\end{proof}
+
+\begin{proposition}
+  $n>2$,$\phi(n)$ 为偶数
+\end{proposition}
+
+\begin{proposition}
+ $$
+ \phi(n)=n\prod_{i=1}^k(1-\frac{1}{p_i})
+ $$
+\end{proposition}
+
+\begin{proof}
+  容斥原理可证明
+这里用乘性函数的性质证明
+$$
+\begin{aligned}
+  \phi(n)&=\prod_{i=1}^k \phi(p_i^{a_i})\\
+  &=\prod_{i=1}^k(p^{a_i}-p^{a_i-1})\\
+  &=\prod_{i=1}^{k} p_i^{a_i}\prod_{i=1}^k(1-\frac{1}{p_i})\\
+  &= n\prod_{i=1}^k(1-\frac{1}{p_i})
+\end{aligned}
+$$
+\end{proof}
+
+
+\begin{proposition}
+  欧拉函数的和函数
+  $$
+  F(n)=\sum_{d \mid n} \phi(d)=n
+  $$
+\end{proposition}
+
+\begin{proposition}
+  定义$C_d$ 为$1$到$n$中与$n$最大公因数为$d$ 的集合容易证明其是$1$到$n$构成的正整数集合的一个划分.
+而$C_d$中有$\phi(n/d) $ 个元素,(若$a\in C_d$ 则$ gcd(a/d,n/d)=1 $),故$n=\sum_{d|n}C_d=\sum_{d|n}\phi(n/d)=\sum_{d|n}\phi(d)$ 得证.
+\end{proposition}
+
+\begin{definition}
+  狄利克雷卷积\\
+  $f$,$g$ 为算数函数,定义狄利克雷积为
+  $$
+  (f*g)(n)=\sum_{d|n}f(d)g\left(\frac{n}{d} \right)
+  $$
+\end{definition}
+实际上这整数上一章的卷积在整除关系上的定义\\
+
+
+性质\\
+1. $f*g=g*f$\\
+2. $(f*g)*h=f*(g*h) $\\
+3. $f*(g+h)=f*g+f*h $\\
+
+这里的算数函数就是$f(1,x)\in \mathcal{F}$\\
+故有逆元的条件是$f(1)\neq 0$\\
+
+\begin{theorem}
+  如果$f$,$g$ 是乘性函数,则$f*g$也是乘性函数
+\end{theorem}
+
+
+\begin{theorem}
+  若$F=f*g$,$h$ 是$g$ 的逆函数,那么$f=F*h$
+\end{theorem}
+
+\begin{theorem}
+  乘性函数的和函数也是乘性函数
+\end{theorem}
+
+\begin{definition}
+  因子和与因子个数函数\\
+  $\sigma(n)=\sum_{d|n} d $\\
+  $\tau(n)=\sum_{d|n}1 $
+\end{definition}
+
+\begin{proposition}
+  因子和与因子个数函数均为乘性函数
+\end{proposition}
+
+\begin{proposition}
+  设$n=\prod_{i=1}^{k} p_i^{a_i}$\\
+  \[
+    \begin{aligned}
+      \sigma(n)&=\prod_{j=1}^{k} \frac{p_j^{a_j+1}-1}{p_j-1}\\
+      \tau(n)&=\prod_{j=1}^{k} (a_j+1)
+    \end{aligned}
+  \]
+\end{proposition}
+
+
+\begin{definition}
+  莫比乌斯函数\\
+  \[
+  \mu(n)=\begin{cases}
+    1,& (n=1)\\
+    (-1)^r,& (n=\prod_{i=1}^{r}p_i)\\
+    0,& (other)
+    \end{cases}
+  \]
+\end{definition}
+
+\begin{theorem}
+  $f=F*\mu$
+\end{theorem}
+
+\chapter{求和}
+%该章节内容基本来自《具体数学》
+
+一些记号
+
+\textbf{调和数（harmonic numbe）}
+$$
+H_n=\sum_{k=1}^{n} \frac{1}{k}
+$$
+
+基本公式
+$$
+(x+y)^n=\sum_{k=0}^{n}\binom{n}{k}x^{n-k}y^{k}
+$$
+
+$$
+a^n-b^n=(a-b)\sum_{1 \le k\le n} a^{n-k}b^{k-1}
+$$
+
+\section{递归问题　RECURRENT PROBLEMS}
+
+\subsection{repertoire method}
+例
+$$
+\begin{aligned}
+f(1)&=\alpha\\
+f(2n)&=2f(n)+\beta\\
+f(2n+1)&=2f(n)+\gamma
+\end{aligned}
+$$
+知
+$$
+f(n)=A(n)\alpha+B(n)\beta+C(n)\gamma
+$$
+通过对$f(n)$赋值或$(\alpha,\beta,\gamma)$赋值，求解。\\
+
+在参数较少的情况下，可以将一些相同参数，分别设为独立参数，更容易找到有解的情况。
+\subsection{约瑟夫问题}
+形如
+$$
+\begin{aligned}
+f(j)&=\alpha_j,\qquad &&1\le j<d\\
+f(dn+j)&=cf(n)+\beta_j,\qquad  &&0\le j<d,n\ge 1
+\end{aligned}
+$$
+有
+$$
+f((b_mb_{m-1}...b_0)_d)=(\alpha_{b_m}\beta_{b_{m-1}}...\beta_{b_0})_c
+$$
+
+
+
+
+\section{和式 SUMS} 
+
+用
+$$
+\sum_{P(k)} a_k
+$$
+表示。
+
+\subsection{和式和递归式 SUMS AND RECURRENCES}
+
+和式可以表示为递归形式：
+$$
+\begin{aligned}
+&S_0=a_0\\
+&S_{n+1}=S_{n}+a_{n+1}
+\end{aligned}
+$$
+用repertoire method解。\\
+\begin{example}
+  计算
+$$
+\sum_{k=0}^{n}(a+bn)
+$$
+写成递归式
+$$
+\begin{aligned}
+&S_0=\alpha\\
+&S_n=S_{n-1}+\beta n+\gamma
+\end{aligned}
+$$
+其中
+$$
+\alpha=\gamma=a,\beta =b
+$$
+设
+$$
+S_n=A(n) \alpha +B(n) \beta+C(n) \gamma
+$$
+带入$1,n,n^2$
+
+解出
+$$
+\begin{cases}
+&A(n)=1\\
+&B(n)=\frac{n(n+1)}{2}\\
+&C(n)=n
+\end{cases}
+$$
+故
+$$
+S_n=a+na+\frac{n(n+1)}{2}b
+$$
+\end{example}
+\newp{2}
+
+递归式可以转化为和式\\
+
+对于形如
+$$
+a_nT_n=b_nT_{n-1}+c_n
+$$
+的递归式，可以设\textbf{求和因子（summation factor）}
+$$
+s_n=\frac{\prod\limits_{i=1}^{n}a_i}{\prod\limits_{i=1}^{n}b_i}\cdot\frac{b_1}{a_n}
+$$
+然后同时乘上\textbf{求和因子}即可得出
+$$
+T_n=\frac{1}{s_na_n}\left(s_1b_1T_0+\sum_{k=1}^{n}c_ks_k \right)
+$$
+注意：求和因子不能为0
+
+\subsection{和式的处理 MANIPULATION OF SUMS}
+
+\textbf{和式的变换}
+$$
+\begin{aligned}
+&\sum_{k\in K}c a_k=c\sum_{k\in K}a_k\\
+&\sum_{k\in K}(a_k+b_k)=\sum_{k \in K}a_k +\sum_{k \in K}b_k\\
+&\sum_{k\in K} a_k =\sum_{p(k) \in K} a_{p(k)}\\
+&\sum_{k\in K }a_k +\sum_{k\in K'} a_k=\sum_{k\in K\cap K'}a_k + \sum_{k\in K\cup K'} a_k
+\end{aligned}
+$$
+其中对于$n\in K$，有且仅有一个整数满足$p(k)=n$\\
+
+\subsection{扰动法 （perturbation method）}
+
+对一个和式记其为$S_n$，将其第一项和最后一项分离出来，用两种方法改写$S_{n+1}$。\\
+
+类似于\textbf{算两次}法
+
+\begin{example}
+  如求和式
+  $$
+  S_n=\sum_{0\le k \le n} k2^k
+  $$
+  有
+  $$
+  \begin{aligned}
+  S_n+(n+1)2^{n+1}&=S_{n+1}\\
+  &=\sum_{0 \le k \le n}(k+1)2^{k+1}\\
+  &=2S_n+\sum_{0\le k \le n} 2^{k+1}
+  \end{aligned}
+  $$
+  有
+  $$
+  \begin{aligned}
+  S_n&=(n+1)2^{n+1}-\sum_{0 \le k \le n} 2^{k+1}\\
+  &=(n+1)2^{n+1}-\frac{2(1-2^{n+1})}{1-2}\\
+  &=(n-1)2^{n+1}+2
+  \end{aligned}
+  $$
+\end{example}
+
+\subsection{多重和式 MULTIPLE SUMS }
+
+基本性质
+$$
+\sum_j\sum_ka_{j,k}[P(j,k)]=\sum_{P(j,k)}a_{j,k}=\sum_{k}\sum_ja_{j,k}[P(j,k)]
+$$
+
+$$
+\sum_{j\in J}\sum_{k\in K(j)} a_{j,k} =\sum_{k\in K'}\sum_{j\in J'(k)} a_{j,k}
+$$
+
+$$
+\sum_{j\in J}a_{f(j)}=\sum_{j\in J,k\in K} a_k[f(j)=k]=\sum_{k\in K} a_k \sum_{j\in J} [f(j)=k]
+$$
+
+其中$f: J\rightarrow K$
+
+\begin{example}
+  求
+$$
+S_n=\sum_{1\le j <k\le n}\frac{1}{k-j}
+$$
+有
+$$
+\begin{aligned}
+S_n&=\sum_{1\le k \le n} \sum_{1\le j<k}\frac{1}{k-j}\\
+&=\sum_{1\le k \le n} \sum_{0<j\le k-1}\frac{1}{j}\\
+&=\sum_{1\le k \le n} H_{k-1}
+\end{aligned}
+$$
+不太好做，（可以交换求和次序解 ）
+
+考虑直接把$k-j$当成一个整体。
+$$
+\begin{aligned}
+S_n&=\sum_{1\le j<k+j\le n}\frac{1}{k}\\
+&=\sum_{1\le k \le n}\sum_{1\le j\le n-k} \frac{1}{k}\\
+&=\sum_{1\le k \le n} \frac{n-k}{k}\\
+&=nH_{n}-n
+\end{aligned}
+$$
+有
+$$
+\sum_{0\le k <n} H_k=nH_{n}-n
+$$
+\end{example}
+
+\newp{2}
+思考：\\
+
+对含$k+f(j)$的二重和式，可以考虑用$k-f(j)$替换$k$，并先对$j$求和比较好。\\
+
+几何观点： 按对角线求和。
+
+\subsection{一般性的方法 GENERAL METHODS }
+
+以
+$$
+S_n=\sum_{0\le k \le n} k^2
+$$
+为例
+
+\subsubsection{归纳法}
+如果注意到
+$$
+S_n=\frac{n(n+\frac{1}{2})(n+1)}{3}
+$$
+就可以使用数学归纳法
+
+\subsubsection{扰动法}
+
+观察
+$$
+\begin{aligned}
+\sum_{0\le k \le n} k^2+(n+1)^2&=S_{n+1}\\
+&=\sum_{1 \le  k\le n+1} k^2\\
+&=\sum_{0 \le k \le n}(k+1)^2\\
+&=\sum_{0\le k \le n} k^2+2\sum_{0\le k \le n} k+n+1
+\end{aligned}
+$$
+虽然没有成功，但注意到我们，成功地解出了
+$$
+\sum_{0 \le k \le n} k
+$$
+考虑对
+$$
+T_n=\sum_{0 \le k \le n} k^3
+$$
+操作，有
+$$
+\begin{aligned}
+T_n+(n+1)^3&=T_{n+1}\\
+&=\sum_{1 \le k \le n+1} k^3\\
+&=\sum_{0 \le k \le n} (k+1)^3\\
+&=T_n+3S_n+3\sum_{0 \le k \le n}k+n+1
+\end{aligned}
+$$
+得到
+$$
+\begin{aligned}
+3S_n&=(n+1)^3-3\frac{n(n+1)}{2}-(n+1)\\
+&=(n+1)\left(n^2+\frac{1}{2}n\right)\\
+&=n(n+\frac{1}{2})(n+1)
+\end{aligned}
+$$
+
+\subsubsection{成套方法}
+
+有
+$$
+\begin{aligned}
+&R_0=d\\
+&R_n=R_{n-1}+an^2+bn+c
+\end{aligned}
+$$
+其解的一般形式为
+$$
+R_n=aA(n)+bB(n)+cC(n)+dD(n)
+$$
+设$R_n=1,n,n^2,n^3$
+
+解得
+$$
+\begin{cases}
+A(n)=\frac{n(n+\frac{1}{2})(n+1)}{3}\\
+B(n)=\frac{1}{2}(n^2+n)\\
+C(n)=n\\
+D(n)=1
+\end{cases}
+$$
+故
+$$
+R_n=A(n)
+$$
+事实上对(a,b,c,d)赋值更简单。
+
+\subsubsection{微积分法}
+
+求
+$$
+\begin{aligned}
+S_n-\int_0^nx^2 dx&=\sum_{1 \le k \le n}\left(k^2-\int_{k-1}^{k} x^2dx \right)\\
+&=\sum_{1\le k \le n}(k-\frac{1}{3})\\
+&=\frac{n(n+1)}{2}+\frac{n}{3}
+\end{aligned}
+$$
+
+\subsubsection{展开和收缩}
+
+转化为二重和式，以简化通项。
+$$
+\begin{aligned}
+S_n&=\sum_{1 \le k \le n} k^2\\
+&=\sum_{1 \le k \le n}k \sum_{1\le j \le k}1 \\
+&=\sum_{1 \le j \le n} \sum_{j\le k \le n} k\\
+&=\sum_{1 \le j \le n} \frac{(j+n)(n-j+1)}{2}\\
+&=\frac{n^3+n^2}{2}+\frac{1}{2}\frac{n(n+1)}{2}- \frac{1}{2} S_n
+\end{aligned}
+$$
+
+\subsubsection{有限微积分}
+
+有$k^2=k^{\underline{2}}+k^{\underline{1}}$\\
+
+故
+$$
+\begin{aligned}  
+\sum_{0 \le k \le n} k^2 &= \sum_{0 \le k < n+1} k^{\underline{2}} + k^{\underline{1}} \\
+&= \left. \left( \frac{k^{\underline{3}}}{3} + \frac{k^{\underline{2}}}{2} \right) \right|_{0}^{n+1} \\
+&= \left( \frac{(n+1)^{\underline{3}}}{3} + \frac{(n+1)^{\underline{2}}}{2} \right) \\
+&= \frac{(n+1)(n+\frac{1}{2})n}{3}.  
+\end{aligned}
+$$
+
+
+\subsection{有限微积分}
+
+类似微分算子$D$
+$$
+D f(x)=\lim\limits_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
+$$
+定义差分算子$\Delta$
+$$
+\Delta f(x)= f(x+1)-f(x)
+$$
+定义\textbf{下降阶乘幂 （falling factorial power）}
+$$
+x^{\underline{m}}=x(x-1)\cdots(x-m+1)\qquad (m\ge 0 \in Z)
+$$
+和\textbf{上升阶乘幂 （rising factorial power）}
+$$
+x^{\overline{m}}=x(x+1)\cdots(x+m-1)\qquad (m\ge 0 \in Z)
+$$
+注意到：$n!=n^{\underline{n}}=1^{\overline{n}}$
+
+有
+$$
+\Delta(x^{\underline{m}})=mx^{\underline{m-1}}
+$$
+类比积分，我们定义\textbf{不定和式 （indefinite sum）}
+$$
+\sum g(x)\delta x
+$$
+满足
+$$
+g(x)=\Delta f(x)\iff \sum g(x)\delta x=f(x)+C
+$$
+其中$C$为满足$p(x+1)=p(x)$的任意一个函数$p(x)$。\\
+
+有限微积分有确定的和式 （sum）
+$$
+\sum_a^b g(x)\delta x=f(x)|_a^b=f(b)-f(a)
+$$
+有以下性质
+$$
+\begin{aligned}
+&\sum_a^b g(x)\delta x= \sum_{a\le k < b} g(x) \qquad a\le b\\
+&\sum_a^{b}g(x) \delta x =-\sum_{b}^ag(x)\delta x\\
+&\sum_a^b+\sum_b^c=\sum_a^c
+\end{aligned}
+$$
+\textbf{并且阶乘幂满足二项式定理}\\
+
+负指数的下降阶乘幂定义如下
+$$
+x^{\underline{-m}}= \frac{1}{(x+1)(x+2)\cdots(x+m)} \qquad m>0
+$$
+
+从而有以下性质
+$$
+x^{\underline{m+n}}=x^{\underline{m}}(x-m)^{\underline{n}}
+$$
+
+$$
+\sum_{a}^{b} x^{\underline{m}}  \delta x=\left. \frac{x^{\underline{m+1}}}{m+1}\right|_a^b, \qquad (m\neq -1)
+$$
+
+若$m=-1$ 则为$H_b-H_a$
+
+% ![image-20250206212422837](Concrete-Mathematics.assets/image-20250206212422837.png)
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  \( f = \sum g \) & \( \Delta f = g \) & \( f = \sum g \) & \( \Delta f = g \) \\
+  \hline
+  \( x^{\underline{0}} = 1 \)    & 0                & \( 2^x \)        & \( 2^x \)          \\
+  \hline
+  \( x^{\underline{1}} = x \) & 1                & \( c^x \)        & \( (c - 1)c^x \)   \\
+  \hline
+  \( x^{\underline{2}} = x(x - 1) \) & \( 2x \)      & \( \frac{c^x}{c - 1} \) & \( c^x \)     \\
+  \hline
+  \( x^{\underline{m}} \)         & \( mx^{m-1} \)   & \( cu \)         & \( c\Delta u \)    \\
+  \hline
+  \( \frac{x^{\underline{m+1}}}{m + 1} \) & \( x^m \) & \( u + v \)      & \( \Delta u + \Delta v \) \\
+  \hline
+  \( H_x \)         & \( x^{\underline{-1}} = \frac{1}{x + 1} \) & \( uv \) & \( u\Delta v + Ev\Delta u \) \\
+  \hline
+  \end{tabular}
+
+\subsubsection{分部求和 （summation by parts)}
+
+有
+$$
+\Delta(u(x)v(x))=u(x)\Delta v(x)+Ev(x)\Delta u(x)
+$$
+其中，\textbf{E为移位算子 （shift operator）}$Ef(x)=f(x+1)$
+
+简记为
+$$
+\Delta(uv)=u\Delta v+Ev \Delta u
+$$
+从而有
+$$
+\sum u\Delta v=uv-\sum Ev\Delta u
+$$
+如
+\begin{example}
+  $$
+\begin{aligned}
+\sum_{k=0}^{n}k 2^k&=\sum_{0}^{n+1}x2^x\delta x\\
+&=\sum_{0}^{n+1}x\delta 2^x\\
+&=(n+1)2^{n+1}-\sum_{0}^{n+1}2^{x+1}\delta x\\
+&=(n+1)2^{n+1}-2^{n+2}+2\\
+&=(n-1)2^{n+1}+2
+\end{aligned}
+$$
+\end{example}
+
+\begin{example}
+  $$
+\begin{aligned}
+\sum_{0\le k< n} k H_k&=\sum_{0}^{n} xH_x \delta x\\
+&=\frac{1}{2}\left( \sum_0^n H_x\delta x^{\underline{2}}  \right)\\
+&=\frac{1}{2}\left( x^{\underline{2}} H_n- \sum_0^n x \delta x  \right)\\
+&=\frac{1}{2}\left( x^{\underline{2}} H_n- \frac{n^{\underline{2}}}{2}  \right)\\
+&=\frac{n^{\underline{2}}}{2} \left(H_n-\frac{1}{2} \right)
+\end{aligned}
+$$
+\end{example}
+
+\subsection{无限和式 INFINITE SUMS}
+
+容易发现
+$$
+\sum_{k\ge0} x^k=
+\begin{cases}
+\frac{1}{1-x},& 0\le x<1\\
+\infty ,& x\ge1
+\end{cases}
+$$
+交错和
+$$
+\sum_{k\in K}a_k =\sum_{k\in K}a_k^{+}-\sum_{k\in K} a_k^{-}
+$$
+设$A^{+}=\sum_{k\in K}a_k^{+} $，类似定义$A^{-}$\\
+
+a.若均有限的值，则称为绝对收敛。\\
+b.若$A^{+}=\infty$，而后者为有限的值，则称发散于$+\infty$，反之发散于$-\infty$\\
+c.否则不做定义。\\
+
+只要我们处理的是刚才所定义的绝对收敛的和式，这一章里的所有操作都完全成立．\\
+
+对复数分实部和虚部计算即可。\\
+
+\end{document}

@@ -1,0 +1,54 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cm}{/*异或线性基}
+\PYG{c+cm}{ *求数集子集异或和第k小(k从0开始计数)}
+\PYG{c+cm}{ */}
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{Basis}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{u64}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{B}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{cntz}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{c+c1}{//0的个数}
+\PYG{+w}{    }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{ok}\PYG{o}{=}\PYG{n+nb}{false}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{insert}\PYG{p}{(}\PYG{n}{u64}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{+w}{ }\PYG{n}{b}\PYG{o}{:}\PYG{n}{B}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{x}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{x}\PYG{o}{\PYGZca{}}\PYG{n}{b}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{b}\PYG{o}{:}\PYG{+w}{ }\PYG{n}{B}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{b}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,}\PYG{n}{b}\PYG{o}{\PYGZca{}}\PYG{n}{x}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{B}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{x}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k}{else}\PYG{+w}{ }\PYG{n}{cntz}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{\PYGZus{}min}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{sort}\PYG{p}{(}\PYG{n}{B}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),}\PYG{n}{B}\PYG{p}{.}\PYG{n}{end}\PYG{p}{());}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{B}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{o}{=}\PYG{n}{i}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{;}\PYG{n}{j}\PYG{o}{\PYGZgt{}=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{j}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{B}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{B}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],}\PYG{n}{B}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZca{}}\PYG{n}{B}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{//第k小的异或和}
+\PYG{+w}{    }\PYG{n}{u64}\PYG{+w}{ }\PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{,}\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{overphi}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{c+c1}{//第k小,包含空集?(k从0开始数)}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{ok}\PYG{p}{)}\PYG{n}{\PYGZus{}min}\PYG{p}{(),}\PYG{n}{ok}\PYG{o}{=}\PYG{n+nb}{true}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{overphi}\PYG{+w}{ }\PYG{k}{and}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{cntz}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{k}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{k}\PYG{o}{\PYGZgt{}=}\PYG{p}{(}\PYG{l+m+mf}{1l}\PYG{n}{l}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{p}{(}\PYG{n}{B}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())))}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{res}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{B}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{((}\PYG{n}{k}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{n}{i}\PYG{p}{)}\PYG{o}{\PYGZam{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{res}\PYG{o}{\PYGZca{}=}\PYG{n}{B}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{res}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }
+\PYG{+w}{    }\PYG{n}{u64}\PYG{+w}{ }\PYG{n+nf}{querymx}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{query}\PYG{p}{((}\PYG{l+m+mf}{1l}\PYG{n}{l}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{B}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }
+\PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{print}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{B}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{B}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{} \PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }
+\PYG{+w}{    }\PYG{c+c1}{//线性基的合并(双log)}
+\PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{k}{operator}\PYG{o}{+=}\PYG{p}{(}\PYG{n}{Basis}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{\PYGZus{}B}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{b}\PYG{o}{:}\PYG{n}{\PYGZus{}B}\PYG{p}{.}\PYG{n}{B}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{b}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{friend}\PYG{+w}{ }\PYG{n}{Basis}\PYG{+w}{ }\PYG{k}{operator}\PYG{o}{+}\PYG{p}{(}\PYG{n}{Basis}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{b1}\PYG{p}{,}\PYG{n}{Basis}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{b2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{Basis}\PYG{+w}{ }\PYG{n}{res}\PYG{o}{=}\PYG{n}{b1}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{b}\PYG{o}{:}\PYG{n}{b2}\PYG{p}{.}\PYG{n}{B}\PYG{p}{)}\PYG{n}{res}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{b}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{res}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

@@ -1,0 +1,145 @@
+\documentclass[a4paper]{report}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cmap}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{xeCJK}
+\usepackage{minted}
+
+\geometry{margin=1in}
+
+\setCJKmainfont{Source Han Serif CN}
+\setmainfont{Times New Roman}
+\setsansfont{Fira Code}
+\setCJKmonofont{FangSong}
+
+\newcommand{\cppcode}[1]{  
+    \inputminted[mathescape]{cpp}{source/#1}  
+}  
+%取消缩进
+\setlength{\parindent}{0pt}
+
+\title{XCPC 算法模板和结论(补充)}
+\date{\today}
+%\cppcode{}
+\everymath{\displaystyle}
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\chapter{树}
+\section{树的重心}
+计算以无根树每个点为根节点时的最大子树大小，这个值最小的点称为无根树的重心。\\
+一些性质:\\
+1.某个点是树的重心等价于它最大子树大小不大于整棵树大小的一半。\\
+2.树至多有两个重心。如果树有两个重心，那么它们相邻。此时树一定有偶数个节点，且可以被划分为两个大小相等的分支，每个分支各自包含一个重心。\\
+3.树中所有点到某个点的距离和中，到重心的距离和是最小的；如果有两个重心，那么到它们的距离和一样。反过来，距离和最小的点一定是重心。\\
+4.往树上增加或减少一个叶子，如果原节点数是奇数，那么重心可能增加一个，原重心仍是重心；如果原节点数是偶数，重心可能减少一个，另一个重心仍是重心。\\
+5.把两棵树通过一条边相连得到一棵新的树，则新的重心在较大的一棵树一侧的连接点与原重心之间的简单路径上。如果两棵树大小一样，则重心就是两个连接点。\\
+利用性质1,可以很快的找到重心.
+
+
+\chapter{数学}
+
+\section{异或线性基}
+时间复杂度$O(n\log{\max{a}})$
+异或问题,同时又可以找到“子集”“子序列”等字眼，或者是图论中的某条路径的异或和时，就可以往线性基方向想了。\\
+我们可以利用异或线性基实现：\\
+1.判断一个数能否表示成某数集子集的异或和；\\
+2.求一个数表示成某数集子集异或和的方案数；\\
+3.求某数集子集的最大/最小/第 k 大/第 k 小异或和；(注意01Tire是求点对区间的第k大异或对) \\
+4.求一个数在某数集子集异或和中的排名。\\
+\cppcode{basis.cpp}
+模板题:
+最大异或和:https://www.luogu.com.cn/record/204660302
+
+
+\chapter{数据结构}
+\section{线段树二分}
+\cppcode{segment_tree.cpp}
+\section{线段树维护区间gcd}
+$$
+\gcd_{i=l}^{r}=\gcd(a_l,\gcd_{i=l+1}^{r}(a[i]-a[i-1]))
+$$
+这意味着我们无须维护区间加，只要做差分数组并维护单点加就可以了。\\
+\cppcode{segtgcd.cpp}
+
+\section{对顶堆}
+只给出堆的代码.
+\cppcode{Maxheap.cpp}
+对顶堆可以动态维护一个序列上的中位数,或者第k大的数,(k的值可能变化).\\
+对顶堆由一个大根堆与一个小根堆组成，小根堆维护大值即前 k 大的值（包含第 k 个），大根堆维护小值即比第 k 大数小的其他数。\\
+维护:当小根堆的大小小于 k 时，不断将大根堆堆顶元素取出并插入小根堆，直到小根堆的大小等于 k;当小根堆的大小大于 k 时，
+不断将小根堆堆顶元素取出并插入大根堆，直到小根堆的大小等于 k;\\
+插入元素：若插入的元素大于等于小根堆堆顶元素，则将其插入小根堆，否则将其插入大根堆，然后维护对顶堆；\\
+查询第 k 大元素：小根堆堆顶元素即为所求；\\
+删除第 k 大元素：删除小根堆堆顶元素，然后维护对顶堆；\\
+变化k：根据新的 k 值直接维护对顶堆。\\
+时间复杂度$O(\log{n})$
+
+\chapter{trick}
+
+\subsection{枚举子集}
+
+用于循环枚举子集，\textbf{注意枚举不了空集}
+\begin{minted}{cpp}  
+for(int j=st;j;j=(j-1)&st) 
+\end{minted}
+st，为要枚举子集的集合，j为子集\\
+本质是将每一位设为0，1后枚举后面的。\\
+时间复杂度$O(3^n)$
+\subsection{求所有因数}
+利用类似筛法的原理\\
+\begin{minted}{cpp}  
+   for (int i = 1; i <= MX; ++i) {
+    for (int j = i; j <= MX; j += i) {
+      d[j].push_back(i);
+    }
+  }
+\end{minted}
+时间复杂度$O(n\log{n})$
+\chapter{杂项}
+\section{格雷码}
+构造格雷码\\
+$$
+G(n)=n\oplus \left\lfloor\frac{n}{2}\right\rfloor
+$$
+格雷码构造原数\\
+$$
+n_{k-i}=\oplus_{0\le j \le i} g_{k-j}
+$$
+
+\section{pbds}
+\begin{minted}{cpp}  
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>//用tree
+#include<ext/pb_ds/hash_policy.hpp>//用hash
+#include<ext/pb_ds/trie_policy.hpp>//用trie
+#include<ext/pb_ds/priority_queue.hpp>//用priority_queue    
+\end{minted}  
+
+\subsection{哈希表}
+\begin{minted}{cpp}
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/hash_policy.hpp>
+const int RANDOM = time(NULL);
+struct MyHash {int operator() (int x) const {return x ^ RANDOM;}};
+template <class T1, class T2>
+struct std::tr1::hash <std::pair <T1, T2> > {
+  size_t operator() (std::pair <T1, T2> x) const {
+    std::tr1::hash <T1> H1; std::tr1::hash <T2> H2;
+    return H1(x.first) ^ H2(x.second); // 你自定义的 hash 函数。
+  }
+};
+\end{minted}
+直接当没有 \texttt{emplace(),cbegin(),cend()}\texttt{unordered\_map} 用就好了。\\
+
+
+
+\end{document}
+
+

@@ -1,0 +1,546 @@
+\section{整除}
+
+\begin{proposition}
+  令$a,b,c$为整数,那么有:
+  $$
+  \gcd(a+cb,b)=\gcd(a,b)
+  $$
+\end{proposition}
+
+\begin{definition}
+  $a,b,m,n\in \mathcal{Z}$,称$ma+nb$为$a,b$的线性组合
+\end{definition}
+
+
+\begin{theorem}
+  裴蜀定理:\\
+  如果$a,b$均为整数,则有整数$m$和$n$,使得
+  $$
+  ma+nb=\gcd(a,b)
+  $$
+\end{theorem}
+其中该等式又被称为裴蜀等式,$m,n$被称为裴蜀数.\\
+可以用扩展欧几里得算法求出$ma+nb=\gcd(a,b)$的特解,然后有通解
+$$
+\begin{cases}
+  m&=m_0+k\frac{b}{\gcd(a,b)}\\
+  n&=n_0-k\frac{a}{\gcd(a,b)}
+\end{cases}
+$$
+注意到
+$$
+a(m+bu)+b(n-au)=\gcd(a,b)
+$$
+故满足等式的$m,n$有无穷多对.
+\begin{lemma}
+  两个不全为0的整数$a,b$的最大公因数是其线性组合中最小的正整数.
+\end{lemma}
+
+\begin{proof}
+  不妨设$d$是$a,b$线性组合中最小的正整数.
+  考虑带余除法:\\
+  $a=dq+r$从而有
+  $r=a-dq=a-q(ma+nb)=(1-qm)a-qnb$\\
+  因此$d|a$,同理$d|b$,故$d$为公因数.\\
+  不妨设$e=\gcd(a,b)$,那么$d|e$,又$e|(ma+nb)$,即$e|d$\\
+  故$e=d$
+\end{proof}
+
+\begin{theorem}
+  如果$a,b$是整数,那么所有 $a,b$ 的线性组合所构成的集合与所有
+  $\gcd(a,b)$  的倍数所构成的集合相同.
+  换言之,所有 $a,b$ 的线性组合,都是 $\gcd(a,b)$ 的倍数.
+\end{theorem}
+
+\begin{theorem}
+  如果 $a,b$ 是不全为0的整数,那么正整数 $d$ 是 $a,b$的最大公因数,当且仅当
+  1.$d|a,d|b$
+  2.若$c|a,c|b$,那么$c|d$
+\end{theorem}
+
+\begin{definition}
+  令 $a_1,a_2,\cdots ,a_n$为不全为0的整数,如果 $d$
+ 为他们公因子中最大的一个,则称 $d$
+ 为 $a_1,a_2,\cdots ,a_n$ 的最大公因数.
+记为
+  $ \gcd(a_1,a_2,\cdots ,a_n)=d$
+
+\end{definition}
+
+\begin{theorem}
+$$
+\gcd(a_1,a_2,\cdots ,a_n)=\gcd(a_1,a_2,\cdots, \gcd(a_{k-1},a_k),\cdots a_n)
+$$
+\end{theorem}
+
+
+\begin{definition}
+  我们称 $a_1,a_2,\cdots ,a_n $ 互素 如果 $ \gcd(a_1,a_2,\cdots ,a_n)=1$
+\end{definition}
+
+\begin{definition}
+  我们称 $a_1,a_2,\cdots ,a_n $两两互素,如果任意两个数互素
+\end{definition}
+
+\begin{theorem}
+  若$\gcd(a,m)=1$,$\gcd(b,m)=1$,则$\gcd(ab,m)=1$\\
+  若$\gcd(a,b)=1$,则$\gcd(a^k,b^l)=1$
+\end{theorem}
+
+\begin{theorem}
+  设正整数$a,b$之积 是一个整数的 $k(k\ge 2)$ 次幂.若
+  $\gcd(a,b)=1$. 则 $a,b$都是整数的  $k$次幂.
+  一般地:设正整数 $ a_1,a_2,\cdots ,a_n $ 之积是一个正整数的 $k$ 次幂.若 
+  $a_1,a_2,\cdots ,a_n$ 两两互素,则 $a_1,a_2,\cdots ,a_n$
+ 都是整数的 $k$
+ 次幂.
+\end{theorem}
+
+\begin{lemma}
+$$
+\gcd(a_1^k,a_2^k,\cdots ,a_n^k)=gcd^k(a_1,a_2,\cdots ,a_n)
+$$
+\end{lemma}
+
+
+\begin{corollary}
+  裴蜀定理可以推广到 $n$ 个整数的情形：设 $a_1, a_2, \dots, a_n$
+   是不全为零的整数，则存在整数 $x_1, x_2, \dots, x_n$, 使得 $a_1 x_1 + a_2 x_2 + \cdots + a_n x_n=\gcd(a_1, a_2, \dots, a_n)$。
+   其逆定理也成立：设 $a_1, a_2, \dots, a_n$ 是不全为零的整数，$d > 0$ 是 $a_1, a_2, \dots, a_n$ 的公因数，
+   若存在整数 $x_1, x_2, \dots, x_n$, 使得 $a_1 x_1 + a_2 x_2 + \cdots + a_n x_n=d$，则 $d = \gcd(a_1, a_2, \dots, a_n)$。
+\end{corollary}
+
+\begin{corollary}
+  对自然数 $a、b$ 和整数$ n，a$ 与 $b $互素，考察不定方程：$ax+by=n$
+ 其中 $x$ 和 $y$ 为自然数。如果方程有解，称 $n$ 可以被 $a、b$ 表示。
+ 记 $C=ab-a-b$。由 $a$ 与 $b$ 互素，$C$ 必然为奇数。则有结论：
+对任意的整数 $n$，$n$ 与 $C-n$ 中有且仅有一个可以被表示。
+即：可表示的数与不可表示的数在区间 $[0,C]$ 对称（关于 $C$ 的一半对称）。$0$ 可被表示，$C$ 不可被表示；负数不可被表示，大于 $C$ 的数可被表示。
+\end{corollary}
+
+\begin{corollary}
+  二元一次不定方程有非负整数解的条件\\
+  $a,b>0$,若$ax+by=n$,$(a,b)=1$,则$n>ab-a-b$时有解,解的个数为$\left\lfloor \frac{n}{ab} \right\rfloor$
+  $\left\lfloor \frac{n}{ab} \right\rfloor+1$ 
+\end{corollary}
+
+\newp{3}
+一些小结论\\
+  1.在[1e18]的范围下,一个数最多与连续7个数不互质.\\
+  2.一个数能被4整除,当且仅当末尾两位能被4整除\\
+  3.一个数能被25整除,当且仅当末尾两位能被25整除\\
+  4. 一个数能被8整除,当且仅当末尾三位能被8整除\\
+  5.一个数能被125整除,当且仅当末尾三位能被125整除\\
+  6. 一个数能被3整除,当且仅当各位数之和能被3整除\\
+  7. 一个数能被9整除,当且仅当各位数之和能被9整除\\
+  8. 能被7整除的数的特征：a.抹去个位数b.减去原个位数的2倍c.其差能被7整除。\\
+  9. 能被11整除的数的特征: a.抹去个位数　b.减去原个位数 c.其差能被11整除。或：奇数位上的数字和与偶数位上的数和相减,其差能被11整除
+\section{同余}
+以下所有参数未特殊说明,均为默认整数,模数默认正整数\\
+
+\subsection{同余}
+
+\begin{definition}
+  设$m$是正整数,若$m|(a-b)$,则称$a$和$b$模$m$同余.记作$a \equiv b(\mod m)$
+\end{definition}
+
+性质\\
+1. $a \equiv b (\mod m) \iff \exists k (k\in Z),a=b+kz$\\
+2. $a \equiv a(\mod m)$\\
+3. $a \equiv b(\mod m) \rightarrow b \equiv a(\mod m)$\\
+4. $a \equiv b(\mod m),b \equiv c(\mod m) \rightarrow a \equiv c(\mod m)$\\
+5. $a \equiv b(\mod m),c \equiv d(\mod m)\rightarrow a+c \equiv b+d(\mod m) ,a-c \equiv b-d(\mod m),ac \equiv bd(\mod m)$\\
+6. $a^n \equiv b^n(\mod m)$\\
+7. $ac \equiv bc (\mod m),d=\gcd(c,m)\rightarrow a \equiv b (\mod m/d)$\\
+8. $a \equiv b (\mod m),n|m \rightarrow a \equiv b (\mod n)$\\
+9. $a \equiv b (\mod m),a \equiv b (\mod n)\rightarrow a \equiv b (\mod lcm(m,n))$\\
+
+
+\begin{definition}
+  设模为$n$，则根据余数可将所有的整数分为$n$类，
+  把所有与整数$a$模$n$同余的整数构成的集合叫做模$n$的一个剩余类，
+  记作$[a]$。并把$a$叫作剩余类$[a]$的一个代表元。
+\end{definition}
+
+\begin{definition}
+  从模$n$的每个剩余类中各取一个数，得到一个由$n$个数组成的集合，叫做模$n$的一个完全剩余系。
+\end{definition}
+
+\begin{proposition}
+  若$r_1,r_2,\dots ,r_m$ 是模$m$的一个完全剩余系,且正整数$a$满足$\gcd(a,m)=1$,则对任何整数$b$,$ar_i+b$也为一个完全剩余类.
+\end{proposition}
+
+\begin{proof}
+  若不然,则存在$ar_i+b \equiv ar_j+b (\mod m) \iff ar_i \equiv ar_j (\mod m) \iff m|a(r_i-r_j) \iff m|a_i-a_j \iff r_i \equiv r_j (\mod m)$与条件矛盾.故得证
+\end{proof}
+
+
+\begin{proposition}
+  $a_1,a_2,\dots,a_m$ 是模$m$的一个完全剩余系,$b_1,b_2,\dots b_n$ 是模$n$ 的一个完全剩余系, 
+  且$\gcd(n,m)=1$那么$na_i+mb_j$ 是模$mn$ 的一个完全剩余系
+\end{proposition}
+
+\begin{proof}
+  首先由乘法原理知道有$mn$个数,那么只需证两两不同余即可\\
+若不然则对于$(a,b)\neq(a',b')$
+$na+mb \equiv na'+mb' (\mod mn) \iff mn|n(a-a')+m(b-b') \iff
+m|(a-a'),n|(b-b') \iff a \equiv a' (\mod m),b \equiv b' (\mod n)$ 与条件矛盾.故得证.
+\end{proof}
+
+\begin{definition}
+  简化剩余系也称既约剩余系或缩系，是$m$的完全剩余系中与$m$互素的数构成的子集，
+  如果模$m$的一个剩余类里所有数都与$m$互素，就把它叫做与模$m$互素的剩余类。在与模$m$互素的全体剩余类中，
+  从每一个类中各任取一个数作为代表组成的集合，叫做模$m$的一个简化剩余系。
+\end{definition}
+
+\begin{proposition}
+  若$r_1,r_2,\dots ,r_m$ 是模$m$的一个缩系,且正整数$a$满足$\gcd(a,m)=1$,则$ar_i$也为一个缩系.
+\end{proposition}
+
+
+\begin{proof}
+  由完系性质$1$可知其两两不同余,故只需证明其与均$m$互质即可.
+因为$gcd(r_i,m)=1,gcd(a,m)=1\Rightarrow gcd(ar_i,m)=1$得证
+\end{proof}
+
+\begin{proposition}
+  $a_1,a_2,\dots,a_m$ 是模$m$的一个缩系,$b_1,b_2,\dots b_n$ 是模$n$ 的一个缩系, 且$gcd(n,m)=1$那么$na_i+mb_j$ 是模$mn$ 的一个缩系
+\end{proposition}
+
+\begin{proof}
+  只需证明其是所有与$mn$互质的剩余类.
+$$
+\begin{aligned}
+  &\gcd(a_i,m)=1,\gcd(b_j,n)=1,\gcd(n,m)=1 \\&\Rightarrow \gcd(na_i,m)=1,\gcd(mb_j,n)=1\\  &\Rightarrow \gcd(na_i+mb_j,n)=1,\gcd(na_i+mb_j,m)=1\\& \Rightarrow \gcd(na_i+mb_j,mn)=1
+\end{aligned}
+$$
+若将$a_i,b_j$扩展成完系,若$\gcd(na_i+mb_j,mn)=1 \Rightarrow \gcd(na_i+mb_j,m)=1,\gcd(na_i+mb_j,n)=1\Rightarrow \dots$ 逆着证回去即可.
+\end{proof}
+
+
+\subsection{线性同余方程}
+\begin{definition}
+  形如$ax \equiv b (\mod m)$ 的同余式称为一元线性同余方程
+\end{definition}
+
+\begin{theorem}
+  $\gcd(a,m)=d,d\nmid b$,则无解,否则恰好有$d$个模$m$不同余的解.
+\end{theorem}
+
+
+\begin{proof}
+  若$d\nmid b$,则 $ax \equiv b (\mod m)\iff ax-ym=b$,根据贝祖定理显然无解.\\
+若$d\mid b$,则显然有无穷多组解,我们设其中一组特解为$x_0,y_0$ \\
+其通解为$x=x_0+(m/d)t,y=y_0+(a/d)t$\\
+设$x_1=x_0+(m/d)t_1,x_2=x_0+(m/d)t_2$\\
+$x_1 \equiv x_2 (\mod m) \iff t_1 \equiv t_2 (\mod d)$\\
+所以有$d$ 个不同于的解.
+\end{proof}
+
+
+\begin{definition}
+  $\gcd(a,m)=1,ax \equiv 1 (\mod m)$ 则称该同余方程的一个解为$a$模$m$的逆,记为$a^{-1}$.
+显然$\gcd(a^{-1},m)=1$
+\end{definition}
+
+\begin{theorem}
+  设$p$ 为素数,正整数$a=a^{-1}$ ,当且仅当$a \equiv \pm 1(\mod p)$.
+\end{theorem}
+
+
+\begin{proof}
+$a \equiv \pm 1(\mod p) \iff a^{2} \equiv 1(\mod p)$
+反过来.有\\
+$a^{2} \equiv 1(\mod p) \Rightarrow p|(a^2-1) \Rightarrow p|(a+1) 或p|(a-1) \Rightarrow a \equiv \pm 1(\mod p)$
+\end{proof}
+
+\begin{theorem}
+  威尔逊定理\\
+  若$p$是素数,则$(p-1)! \equiv -1 (\mod p)$
+\end{theorem}
+
+\begin{proof}
+  $p=2$ 显然成立.\\
+否则对于$1 \leq a \leq p-1$,可以找到其逆元与之配对,且除$1$和$p-1$都能两两配对.\\
+故$(p-1)! \equiv p-1 \equiv -1 (\mod p)$
+\end{proof}
+
+\begin{theorem}
+  威尔逊定理逆定理\\
+  若$n\geq 2$是正整数,且$(n-1)! \equiv -1 (\mod n)$则 $n$为质数
+\end{theorem}
+
+\begin{proof}
+  若不然,设$n$ 为合数,则其必存在小于$n$ 的素因子$p$\\
+所以有$(n-1)! \equiv -1 (\mod n),p|n \Rightarrow (n-1)! \equiv -1 (\mod p)$,\\
+但是 $(n-1)! \equiv 0 (\mod p)$\\
+而$n>1$ 矛盾.故得证.
+\end{proof}
+
+\begin{theorem}
+  费马小定理\\
+  如果$p$是一个素数，$a$是正整数且$a$不是$p$的倍数，则$a^{p-1} \equiv 1 \pmod{p}$。
+\end{theorem}
+
+\begin{proof}
+  因为$\gcd(a,p)=1$\\
+所以 $\prod_{i=1}^{p-1} ia \equiv \prod_{i=1}^{p-1} i \pmod{p} \Rightarrow a^{p-1} \equiv 1 \pmod{p}$ 得证.
+\end{proof}
+
+\begin{definition}
+  欧拉函数\\
+  对于正整数 $n$,小于等于 $n$ 且与 $n$ 互质的正整数的个数,称为欧拉函数,记作$\phi{(n)}$
+\end{definition}
+
+\begin{theorem}
+  设$m$ 是一个正整数,$a$ 是一个正整数且$\gcd(a,m)=1,那么a^{\phi(m)} \equiv 1 \pmod{m}$
+\end{theorem}
+
+\begin{proof}
+  设$r_1,r_2,\dots r_{\phi(m)}$,是不超过$m$ 的模$m$的一个缩系.\\
+那么$ar_1,ar_2,\dots ar_{\phi(m)}$也是一个缩系\\
+故$ar_1ar_2\dots ar_n \equiv r_1r_2\dots r_n \pmod{m} \iff a^{\phi(m)} \equiv 1 \pmod{m}$\\
+得证.
+\end{proof}
+
+\begin{definition}
+  同余方程组是指一组形如下面的方程的集合：
+$$
+\begin{cases}
+a_1 &\equiv b_1 \pmod{m_1} \\
+a_2 &\equiv b_2 \pmod{m_2} \\
+\vdots \\
+a_n &\equiv b_n \pmod{m_n}
+\end{cases}
+$$
+
+其中，$a_i$和$b_i$是整数，$m_i$是正整数。
+这组方程要求对于每个$i$，$a_i$除以$m_i$的余数等于$b_i$除以$m_i$的余数，即$a_i$与$b_i$在模$m_i$下同余。
+解同余方程组就是要找到满足所有这些条件的整数解。
+\end{definition}
+
+\begin{example}
+  $$
+\begin{cases}
+x \equiv 1 \pmod{3} \\
+x \equiv 2 \pmod{5} \\
+\vdots \\
+x \equiv 3 \pmod{7}
+\end{cases}
+$$
+
+我们可以使用迭代法(逐级满足法)解决.
+由第一个式子得 $x=3t+1$
+然后带入$3t+1 \equiv 2 \pmod{5} \iff t \equiv 4\pmod{5}$
+以此类推.
+但是这只能解决一些简单的问题,下面我们给出一般地解法.
+\end{example}
+
+
+\begin{theorem}
+  中国剩余定理(CRT)\\
+  设$m_1,m_2,\dots ,m_r$ 是两两互素的正整数,则同余方程
+$$
+\begin{cases}
+x \equiv a_1 \pmod{m_1} \\
+x \equiv a_2 \pmod{m_2} \\
+\vdots \\
+x \equiv a_r \pmod{m_r}
+\end{cases}
+$$
+有模$m_1m_2\dots m_r$ 的唯一解
+$$
+x=\sum_{i=1}^{r} a_iM_iM_i^{-1} 
+$$
+其中
+$$
+M_i= \frac{1}{m_i}\prod_{j=1}^r m_j ,\qquad M_iM_i^{-1} \equiv 1 \pmod{m_i}
+$$
+\end{theorem}
+
+\begin{proof}
+  先证明$x$是方程组的解.\\
+对于任意一个方程有,\\
+$x \equiv a_kM_kM_k^{-1}  \equiv a_k \pmod{m_k}$ ,显然成立.\\
+下证唯一性.\\
+若$x_1,x_2$ 为方程组的2个解,则有$x_1 \equiv x_2 \pmod{m_k} \iff m_k|(x_1-x_2) \iff M|(x_1-x_2) \iff x1 \equiv x2 \pmod{M}$
+\end{proof}
+
+
+\begin{theorem}
+  拉格朗日定理\\
+  $p$为素数,$f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots +a_1x+a_0(p \nmid a_n)$ 
+  是模$p$意义下的整系数多项式方程,则同余方程$f(x) \equiv 0 \pmod{p}$ 在模$p$ 意义下至多有$n$ 个不同的解.
+\end{theorem}
+
+
+\begin{corollary}
+  若超过$n$个解,则$p \mid a_i(i=0,1,\dots n)$,即$f(x) \text{是模p意义下的零多项式}$
+\end{corollary}
+
+\begin{corollary}
+  若$n \leq p$ 则同余式$f(x)=x^n+a_{n-1}x^{n-1}+\dots +a_1x+a_0 \equiv 0 \pmod{p}$有$n$ 
+  个解的充要条件是$x^p-x$ 除以$f(x)$所得的余式的一切系数都是$p$ 的倍数
+\end{corollary}
+这里介绍一个比较重要的多项式,常用于构造\\
+$$
+f(x)=\prod_{i=1}^{p-1}(x-i) -(x^{p-1}-1)
+$$ 
+
+\begin{theorem}
+  wolstenholme定理\\
+  若$p$为大于3的素数,则
+  $$
+  \sum_{k=1}^{p-1} \frac{(p-1)!}{k} \equiv 0 \pmod{p^2} 
+  $$
+\end{theorem}
+
+
+
+\section{乘性函数}
+
+\begin{definition}
+  算术函数\\
+  定义在所有正整数上的函数称为算数函数.
+\end{definition}
+
+\begin{definition}
+  乘性函数\\
+  若$\gcd(m,n)=1$,均有 $f(mn)=f(m)f(n)$,则称$f$ 为乘性函数.
+\end{definition}
+
+\begin{proposition}
+  若$f$为乘性函数,$n=\prod_{i=1}^{k} p_i^{a_i}$ 为一个素因数分解.则$f(n)=\prod_{i=1}^k f(p_i^{a_i})$
+由定义显然成立.
+\end{proposition}
+
+\begin{definition}
+  和函数\\
+  $f$ 为一个算术函数,$F(n)=\sum_{d \mid n} f(d)$ 称为$f$ 的和函数
+\end{definition}
+
+\begin{definition}
+  欧拉函数\\
+  $\phi(n)=\sum_{i=1}^n [gcd(i,n)=1]$ ,称为欧拉函数.
+\end{definition}
+
+\begin{proposition}
+  设$p$是素数,$\phi(p^a)=p^a-p^{a-1} $
+\end{proposition}
+
+\begin{proof}
+  由定义,$\phi(p^a)= \sum_{i=1}^{p^a} [gcd(i,p^a)=1]= \sum_{i=1}^{p^a} 1-[gcd(i,p^a) \neq 1]=p^a- \sum_{i=1}^{p^a} [gcd(i,p^a) \neq 1]$,
+  这样的$i$ 显然只有$p$的倍数,有$p^{a-1}$ 个,证毕.
+\end{proof}
+
+\begin{proposition}
+  欧拉函数是乘性函数
+\end{proposition}
+
+\begin{proof}
+  若$gcd(m,n)=1$
+由缩系的定义知道,显然模$m$的缩系有$\phi(m)$个数,模$n$的缩系有$\phi(n)$个数,由缩系的一个性质知模$mn$ 的缩系有$\phi(m)\phi(n)$个数.故$\phi(mn)=\phi(m)\phi(n)$
+\end{proof}
+
+\begin{proposition}
+  $n>2$,$\phi(n)$ 为偶数
+\end{proposition}
+
+\begin{proposition}
+ $$
+ \phi(n)=n\prod_{i=1}^k(1-\frac{1}{p_i})
+ $$
+\end{proposition}
+
+\begin{proof}
+  容斥原理可证明
+这里用乘性函数的性质证明
+$$
+\begin{aligned}
+  \phi(n)&=\prod_{i=1}^k \phi(p_i^{a_i})\\
+  &=\prod_{i=1}^k(p^{a_i}-p^{a_i-1})\\
+  &=\prod_{i=1}^{k} p_i^{a_i}\prod_{i=1}^k(1-\frac{1}{p_i})\\
+  &= n\prod_{i=1}^k(1-\frac{1}{p_i})
+\end{aligned}
+$$
+\end{proof}
+
+
+\begin{proposition}
+  欧拉函数的和函数
+  $$
+  F(n)=\sum_{d \mid n} \phi(d)=n
+  $$
+\end{proposition}
+
+\begin{proposition}
+  定义$C_d$ 为$1$到$n$中与$n$最大公因数为$d$ 的集合容易证明其是$1$到$n$构成的正整数集合的一个划分.
+而$C_d$中有$\phi(n/d) $ 个元素,(若$a\in C_d$ 则$ gcd(a/d,n/d)=1 $),故$n=\sum_{d|n}C_d=\sum_{d|n}\phi(n/d)=\sum_{d|n}\phi(d)$ 得证.
+\end{proposition}
+
+\begin{definition}
+  狄利克雷卷积\\
+  $f$,$g$ 为算数函数,定义狄利克雷积为
+  $$
+  (f*g)(n)=\sum_{d|n}f(d)g\left(\frac{n}{d} \right)
+  $$
+\end{definition}
+实际上这整数上一章的卷积在整除关系上的定义\\
+
+
+性质\\
+1. $f*g=g*f$\\
+2. $(f*g)*h=f*(g*h) $\\
+3. $f*(g+h)=f*g+f*h $\\
+
+这里的算数函数就是$f(1,x)\in \mathcal{F}$\\
+故有逆元的条件是$f(1)\neq 0$\\
+
+\begin{theorem}
+  如果$f$,$g$ 是乘性函数,则$f*g$也是乘性函数
+\end{theorem}
+
+
+\begin{theorem}
+  若$F=f*g$,$h$ 是$g$ 的逆函数,那么$f=F*h$
+\end{theorem}
+
+\begin{theorem}
+  乘性函数的和函数也是乘性函数
+\end{theorem}
+
+\begin{definition}
+  因子和与因子个数函数\\
+  $\sigma(n)=\sum_{d|n} d $\\
+  $\tau(n)=\sum_{d|n}1 $
+\end{definition}
+
+\begin{proposition}
+  因子和与因子个数函数均为乘性函数
+\end{proposition}
+
+\begin{proposition}
+  设$n=\prod_{i=1}^{k} p_i^{a_i}$\\
+  \[
+    \begin{aligned}
+      \sigma(n)&=\prod_{j=1}^{k} \frac{p_j^{a_j+1}-1}{p_j-1}\\
+      \tau(n)&=\prod_{j=1}^{k} (a_j+1)
+    \end{aligned}
+  \]
+\end{proposition}
+
+
+\begin{definition}
+  莫比乌斯函数\\
+  \[
+  \mu(n)=\begin{cases}
+    1,& (n=1)\\
+    (-1)^r,& (n=\prod_{i=1}^{r}p_i)\\
+    0,& (other)
+    \end{cases}
+  \]
+\end{definition}
+
+\begin{theorem}
+  $f=F*\mu$
+\end{theorem}

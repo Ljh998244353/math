@@ -1,0 +1,139 @@
+\section{期望经典问题入门}
+\url{https://notes.sshwy.name/Math/Expectation/Classic/#E-%E7%BB%8F%E5%85%B8%E9%A2%98}
+重要公式与结论
+1. 期望具有线性性\\
+2. 独立事件的期望有
+$$
+E(XY)=EXEY
+$$
+3.
+$$
+E(X)=E(E(X|Y))
+$$
+\subsection{普通}
+\begin{proposition}
+  有 $n$ 个随机变量$\langle X_n \rangle$，每个随机变量量都是从[1,m]中随机一个整数，$\max{\langle X_n \rangle}$的期望
+  为
+  $$
+  m-\frac{1}{m^n}\sum_{i=1}^{m-1}i^{n}
+  $$。
+\end{proposition}
+
+\begin{proof}
+  设$Y=\max{\langle X_n \rangle}$ , 有
+  $$
+  \begin{aligned}
+    EY&=\sum_{1\le i \le m} P(Y=i)i\\
+    &=\sum_{1\le i\le m} i(F_y(i)-F_y(i-1))\\
+    &=\frac{1}{m^n}\left( \sum_{1\le i\le m} i^{n+1}-i\cdot (i-1)^{n}\right) \\
+    &=\frac{1}{m^n}\left( \sum_{1\le i\le m} i^{n+1}-\sum_{0\le i\le m-1} i^{n+1} +i^{n}\right)\\
+    &=\frac{1}{m^n}\left( m^{n+1}-\sum_{0\le i\le m-1}i^{n}\right)\\
+    &=m-\frac{1}{m^n}\sum_{i=1}^{m-1}i^{n}
+  \end{aligned}
+  $$
+\end{proof}
+
+\begin{proposition}
+  概率为$p$的事件期望$\frac{1}{p}$次发生.
+\end{proposition}
+\begin{proof}
+  设随机变量$X$表示其在第$x$次发生. 
+  $$
+  \begin{aligned}
+    EX&=\sum_{i=1}^{\infty} P(X=i)i\\
+      &=\sum_{i=1}^{\infty} P(X=i) \sum_{j=1}^{i} 1\\
+      &=\sum_{j=1}^{\infty} P(X\ge j)\\
+      &=\sum_{j=1}^{\infty} (1-p)^{j-1}\\
+      &=\sum_{j=0}^{\infty} (1-p)^j\\
+      &=\frac{1}{1-(1-p)}\\
+      &=\frac{1}{p}
+  \end{aligned}
+  $$
+\end{proof}
+
+\begin{proposition}
+  现在红包发了一个$w$元的红包，有 $n$ 个人来抢(均匀分布)。那么请问第 $k$ 个人期望抢到$\frac{w}{2^k}$.
+\end{proposition}
+
+\begin{proof}
+设第$k$个人抢到$X$,前面的人抢$Y$.
+有
+$$
+E(X)=E(E(X|Y))=E(\frac{w-Y}{2})=\frac{w}{2}-\frac{1}{2}E(Y)
+$$
+然后容易解出答案.\\
+离散情况这样难以求解,在取球一节有其他解法\\
+\end{proof}
+
+\begin{proposition}赠券收集问题\\
+  一个$n$面的骰子，期望$nH_n$ 次能使得每一面都被掷到。
+\end{proposition}
+
+\begin{proof}
+$t_x$为设已经出现了$x-1$面,掷出第$x$面的次数.\\
+设$T=\sum t$.有
+$$
+E(T)=\sum_{i=1}^{n}E(t_i)
+$$
+由于掷出第$x$面的概率为$\frac{n-x+1}{n}$,固
+$$
+\begin{aligned}
+  E(T)&=\sum_{i=1}^{n}E(t_i)\\
+  &=\sum_{x=1}^{n} \frac{n-x+1}{n}\\
+  &=n\cdot H_n
+\end{aligned}
+$$
+\end{proof}
+同时他们也是相互独立的.\\
+
+
+\subsection{拿球}
+\begin{proposition}
+  箱子里有$n$个球$1,2,⋯,n$, 你要从里面拿$m$次球，拿了后不放回，取出的数字之和的期望为$\frac{m(n+1)}{2}$。
+\end{proposition}
+
+\begin{proof}
+  设随机变量$x_i$:\\
+  $$x_i=\begin{cases}
+  i\quad&, \text{if i is chosen}\\
+  0\quad&, \text{if i isn't chosen}
+  \end{cases}
+  $$
+  那么有
+  $$
+  \begin{aligned}
+    E\left(\sum_{i=1}^{n}x_i\right)&=\sum_{i=1}^{n}E(x_i)\\
+    &=\sum_{i=1}^{n} \frac{m}{n} i\\
+    &=\frac{m(n+1)}{2}
+  \end{aligned}
+  $$
+  发现是否放回不影响期望\\
+\end{proof}
+
+
+\begin{proposition}
+  箱子里有$n$个球$1,2,⋯,n$，你要从里面拿$m$次球，拿了后以$p_1$的概率放回，$p_2$
+  的概率放回两个和这个相同的球（相当于增加一个球），取出的数字之和的期望为 $\frac{m(n+1)}{2}$。
+\end{proposition}
+
+\begin{proof}
+  设$x_i$为第$i$个球的贡献, $y_i$ 为其被拿出来的次数 ,那么$x_i=i\cdot y_i$
+  $$
+  E\left(\sum_{i=1}^{n}x_i\right)=\sum_{i=1}^{n}E(y_i)\cdot i
+  $$
+  因为$E(y_i)=E(y_j)$, $\sum y_i =m$ 得出$E(y_i)=\frac{m}{n}$
+  故上式答案为$\frac{m(n+1)}{2}$
+\end{proof}
+
+\subsection{游走}
+\begin{proposition}
+  在一条$n$个点的链上游走，求从一端走到另一端的期望步数。
+\end{proposition}
+
+\begin{proof}
+  
+\end{proof}
+
+\subsection{解题方法}
+1.贡献法,\\
+若不行可以尝试更换计算贡献的东西(如边->点)\\

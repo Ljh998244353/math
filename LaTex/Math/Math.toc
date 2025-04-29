@@ -39,3 +39,12 @@
 \contentsline {subsection}{\numberline {3.2.6}有限微积分}{40}{subsection.3.2.6}%
 \contentsline {subsubsection}{分部求和 （summation by parts)}{42}{subsubsection*.11}%
 \contentsline {subsection}{\numberline {3.2.7}无限和式 INFINITE SUMS}{43}{subsection.3.2.7}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}概率论}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}基本概念和公式}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}重要公式与结论}{49}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}数学期望（均值）与方差}{51}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}期望经典问题入门}{53}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}普通}{53}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}拿球}{56}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}游走}{57}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}解题方法}{57}{subsection.4.3.4}%

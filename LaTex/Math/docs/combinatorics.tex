@@ -1,0 +1,630 @@
+\section{基本排列组合公式}
+1. 线性排列:n个数的r排列 $P(n,r)=\frac{n!}{(n-r)!}$\\
+2. 圆排列:n个数的r排列 $\frac{P(n,r)}{r}$\\
+3. 项链数:$n$ 个不同的珠子串成一串项链,则得到不同的项链数为
+$$
+p=\begin{cases}
+  1,& \left( n<=2\right) \\
+  \frac{(n-1)!}{2},& \left( otherwise\right)
+  \end{cases}
+$$
+4. 多重集合的排列: 有$k$ 种元素,每种$n_1,n_2,\dots n_k$个,的排列公式为
+$$
+\frac{n!}{\prod_{i=1}^{k}\left(n_i!\right)} 
+$$
+或记为
+$$
+\binom{n}{n1,n2,\cdots,n_k} 
+$$
+5. 组合: 
+$$
+\binom{n}{r}=\frac{P(n,r)}{r!} 
+$$
+
+6. 多重集的组合
+设$S$是有$k$ 种元素的集合,每种元素无限个$(\geq r)$,则其$r$ 组合的个数为:
+$$
+\binom{r+k-1}{r} 
+$$
+或者说有
+\begin{proposition}
+$x_1+x_2+\dots+x_k=r(x_i\geq 0)$的整数解有
+$$
+\binom{r+k-1}{r} 
+$$
+种.
+\end{proposition}
+
+\newp{3}
+
+\section{重要组合恒等式}
+1. Pascal公式
+$$
+\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1} 
+$$
+
+2.
+$$
+\sum_{i=0}^{n} \binom{n}{i}=2^n 
+$$
+
+3. 
+$$
+ m\cdot \binom{n}{m}=n\cdot \binom{n-1}{m-1}
+$$
+
+4.
+$$ 
+\sum_{k=1}^{n} k\cdot\binom{n}{k}=n\cdot \sum_{k=1}^{n}\binom{n-1}{k-1}=n\cdot2^{n-1} 
+$$
+
+5. 朱世杰恒等式
+$$
+\binom{m+n+1}{n+1}=\sum_{i=0}^{m} \binom{n+i}{n}
+$$
+
+6.范德蒙德恒等式
+$$
+\binom{a+b}{n}=\sum_{i=0}^{k}\binom{a}{i}\binom{b}{n-i}
+$$
+
+特别地:
+$$
+\binom{2n}{n}=\sum_{i=0}^{n}\binom{n}{i}\binom{n}{n-i}
+$$
+
+\begin{proposition}
+$m$ 个$a$,和最多$n$ 个b的排列数等于
+$$
+\binom{m+n+1}{m+1} 
+$$
+\end{proposition}
+
+\begin{proposition}
+  最多 $m$ 个$a$,和最多$n$ 个b的排列数等于
+  $$
+  \binom{n+m+2}{m+1}-1
+  $$
+\end{proposition}
+
+7.
+$$
+\sum_{1\le k \le n} k\binom{n}{k} =n2^{n-1} \qquad (n\ge 1)
+$$
+8.
+利用导数可以得到
+$$
+\sum_{1\le k \le n} k^2 \binom{n}{k} =n(n+1)2^{n-2}  \qquad (n\ge 1)
+$$
+
+\newp{3}
+
+\section{二项式系数}
+
+\begin{proposition}
+在杨辉三角中规定只能向下或者右下移动,从(0,0)到(n,k)的路径数为$\binom{n}{k}$
+\end{proposition}
+
+\begin{theorem}
+二项式定理
+$$
+(x+y)^n=\sum_{k=0}^{n}\binom{n}{k} x^{n-k}y^k
+$$
+\end{theorem}
+
+\begin{theorem}
+Sperner定理:\\
+设$S$是$n$ 元素集合.那么$S$上的一个反链至多包含$\binom{n}{\lfloor \frac{n}{2} \rfloor} $个集合.\\
+其中,这里的反链指的是以集合包含为偏序关系的反链,即$S$ 的一个子集的集合,任何两个集合没有关系.
+\end{theorem}
+
+\begin{proposition}
+多项式系数的帕斯卡公式
+$$
+\binom{n}{n_1,n_2,\cdots,n_t}=\binom{n-1}{n_1-1,n_2,\cdots,n_t}+\binom{n-1}{n_1,n_2-1,\cdots,n_t}+\cdots+\binom{n-1}{n_1,n_2,\cdots,n_t-1}
+$$
+\end{proposition}
+
+\begin{theorem}
+多项式定理
+$$
+(x_1+s_2+\cdots+x_t)^n=\sum \binom{n}{n_1,n_2,\cdots,n_t}x_1^{n_1}x_x^{n_2}\cdots x_t^{n_t}
+$$
+\end{theorem}
+
+\begin{theorem}
+牛顿多项式定理
+  $$
+  (1+z)^a=\sum_{k=0}^{\infty} \binom{a}{n} z^k \qquad  (a\in R,|z|<1)
+  $$
+\end{theorem}
+
+\begin{theorem}
+Dilworth定理\\
+设$(X,\leq)$是有限偏序集合,而$m$是反链的最大大小,则$X$可以被划分为$m$个链,但不能被划分成小于$m$个链.\\
+设$(X,\leq)$是有限偏序集合,而$r$是链的最大大小,则$X$可以被划分为$r$个反链,但不能被划分成小于$r$个反链.
+\end{theorem}
+\newp{3}
+\section{抽屉原理}
+简单形式
+\begin{proposition}
+如果要把$n+1$个物体放进$n$个盒子,那么至少有一个盒子有至少$2$个物体
+\end{proposition}
+加强形式
+
+\begin{proposition}
+设$q_1,q_2,\dots q_n$ 是正整数.如果将$q_1+q_2+\dots +q_n-n+1$个物体放进$n$ 个盒子.那么要么要么第一个盒子含有$q_1$个物体,$\dots$ ,要么第$n$ 个物体含有$q_n$个物体.
+\end{proposition}
+
+\begin{theorem}
+Ramsey定理\\
+在$6$个人(或者更多),要么有$3$个人互相认识,要么有$3$个人互相都不认识.\\
+或者说\\
+对于$K_n(n \geq 6)$我们给他的所有边染红色或蓝色,总存在一个红$K_3$ 或蓝$K_3$,记为$K_6\rightarrow K_3,K_3$
+\end{theorem}
+
+推广 
+\begin{theorem}
+若$m,n \geq2 $,存在正整数$p$,使得$K_p\rightarrow K_m,K_n $
+事实上,注意到若$p$成立,则对于$q\geq p$都成立,取一个子图即可.
+我们记Ramsey数$r(m,n)$为使之成立的最小的数.Ramsey定理保证这样的数一定存在.
+注意到$$r(m,n)=r(n,m)$$
+以及$$r(2,m)=m $$ 当$m\geq2$时,$r(2,m)$称为平凡的Ramsey数(交换同理).
+\end{theorem}
+
+性质\\
+1. $$r(m,n)\leq r(m-1,n)+r(m,n-1)(m,n \geq 3) $$
+2. $$r(m,n)\leq \binom{m+n-2}{n-1} $$(数学归纳法证明)
+\newp{3}
+
+\section{容斥原理}
+\subsection{容斥原理}
+\begin{theorem}
+容斥原理
+$$
+|\overline{A_1}\cap \overline{A_2} \cap \cdots \cap \overline{A_n}|=|S|-\sum|A_i|+\sum|A_i\cap A_j|+\cdots+(-1)^n|A_1\cap A_2\cap \cdots \cap A_n|
+$$
+\end{theorem}
+可根据贡献法证明.\\
+应用:不定方程整数解个数问题
+\begin{example}
+  求下列方程整数解个数
+  $$
+  x_1+x_2+x_3+x_4=18
+  $$
+  满足
+  $$
+  1\leq x_1 \leq 5 ,\quad -2\leq x_2\leq4,\quad0\leq x_3\leq 5,\quad 3\leq x_4\leq 9
+  $$
+  解:\\
+  等价于
+  $$
+  a_1+a_2+a_3+a_4=16
+  $$
+  满足
+  $$
+  0\leq a_1 \leq 4 ,\quad 0\leq a_2\leq6,\quad0\leq a_3\leq 5,\quad 0\leq a_4\leq 6
+  $$
+  不加范围的解的个数为
+  $$
+  |S|=\binom{16+4-1}{16}=969
+  $$
+  其中设$A_1$为$a_1$大于$4$的解的集合$A_2$为$a_2$大于6的解的集合$\cdots$
+  $$
+  \begin{aligned}
+  |A_1|=&\binom{11+4-1}{11}=364\\
+  |A_2|=&\binom{9+4-1}{9}=220\\
+  |A_3|=&\binom{13}{10}=286\\
+  |A_4|=&\binom{12}{9}=220\\
+  \end{aligned}
+  $$
+  同理算交集.然后根据容斥原理可得出答案为$55$
+\end{example}
+
+\begin{proposition}
+  错位排列
+  $$
+  D_n=n!\left(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\cdots+(-1)^n\frac{1}{n!}\right)
+  $$
+\end{proposition}
+有性质\\
+1.$$\frac{D_n}{n!}\approx e^{-1}$$
+2.
+$D_1=0,D_2=1$
+$$
+D_n=(n-1)(D_{n-1}+D_{n-2})
+$$
+3.
+$$
+\begin{aligned}
+&D_n=(n-1)(D_{n-1}+D_{n-2})\\
+\iff&D_n-nD_{n-1}=-(D_{n-1}-(n-1)D_{n-2})\\
+\iff&D_n=nD_{n-1}+(-1)^n
+\end{aligned}
+$$
+
+\begin{proposition}
+$$ 
+ Q_n=n!-\binom{n-1}{1}(n-1)!+\binom{n-1}{2}(n-2)!-\binom{n-1}{3}(n-3)!+\cdots+(-1)^{n-1}\binom{n-1}{n-1}1!
+$$
+\end{proposition}
+为不出现$i(i+1)$的排列数
+并且有
+$$
+Q_n=D_n+D_{n-1}
+$$
+\subsection{莫比乌斯反演}
+容斥原理是莫比乌斯反演在有限偏序集上的一个实例.\\
+偏序集形式的容斥原理\\
+对于一个偏序集$ (\mathcal{P}(X_n),\subseteq) $, ($X_n$为$n$元集) ,若
+$$
+F,G:\mathcal{P}(X_n)\rightarrow R
+$$
+且
+$$
+G(K)=\sum_{L\subseteq K} F(L)\qquad (K\subseteq X_n)
+$$
+考虑反解,有:
+$$
+F(K)=\sum_{L\subseteq K} (-1)^{|K|-|L|}G(L)
+$$
+\begin{proof}
+$$
+\begin{aligned}
+\sum_{L\subseteq K} (-1)^{|K|-|L|} G(L)&= \sum_{L\subseteq K} (-1)^{|K|-|L|} \sum_{T\subseteq L} F(T)\\
+&= \sum_{T\subseteq K} F(T) \sum_{T\subseteq L\subseteq K} (-1)^{|K|-|L|}\\
+&=F(K)
+\end{aligned}
+$$
+\end{proof}
+这就是莫比乌斯反演.\\
+因此我们可以对$F,G$下定义,令$A_1,A_2,\cdots,A_n$是有限集$S$的子集,且$K\subseteq X_n$,$F(K)$为恰好属于所有$A_i$ that $i\notin K$的元素
+个数,即
+$$
+F(K)=\left| \bigcap_{i\notin K} A_i -\bigcup_{i \in K} A_i \right|
+$$
+显然有
+$$
+F(X_n)=n-\left| \bigcup_{i \in X_n} A_i  \right|
+$$
+然后令
+$$
+G(K) =\sum_{L\subseteq K} F(L)=\left| \bigcap_{i \notin K} A_i \right|
+$$
+由莫比乌斯反演有
+$$
+F(K)=\sum_{L\subseteq K} (-1)^{|K|-|L|}G(L)
+$$
+有
+$$
+|\overline{A_1}\cap \overline{A_2} \cap \cdots \cap \overline{A_n}|=\sum_{J\subseteq K} (-1)^{|J|} \left|\bigcap_{i\in J}A_i \right|
+$$
+等价于上面的容斥原理.
+
+\subsubsection{偏序集里的莫比乌斯反演}
+建议先看看代数系统.
+%%%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+下面将莫比乌斯反演推广到偏序集$(X,\le)$ 里.以下介绍的函数满足
+$$
+f:X \times X \rightarrow \mathcal{R}
+$$
+且$f(x,y)=0$ if $x\nleq y$.
+下面考察代数系统$<\mathcal{F},*>$,设其为A
+\begin{definition}
+令$h=f*g$为$f$和$g$的卷积,如果满足:
+$$
+h(x,y)=\begin{cases} \sum_{z:x\leq z\leq y} f(x,z)g(z,y) \qquad&,x\leq y\\ 0\qquad &,other\end{cases}
+$$
+\end{definition}
+显然卷积运算在该偏序集上是封闭的,故这是一个广群.
+并且显然其是满足 \textbf{结合律} ,故其是一个半群.
+\begin{definition}
+科罗内尔delta函数:
+$$
+\delta(x,y)=\begin{cases}1\qquad ,x=y\\ 0\qquad,other\end{cases}
+$$
+\end{definition}
+显然有$f*\delta=\delta*f=f$,显然其为\textbf{卷积运算的幺元}.
+故这个一个独异点.
+
+\begin{definition}
+$\zeta$函数:
+$$
+\zeta(x,y)=\begin{cases}1\qquad,x\leq y\\ 0\qquad,other\end{cases}
+$$
+\end{definition}
+
+
+\begin{definition}
+逆函数:\\
+对于$X$中所有的$y$满足$f(y,y)\neq 0$,有其逆元.
+$$
+g(x,y)=\begin{cases}
+  \frac{1}{f(y,y)} ,& x=y\\
+  -\frac{1}{f(y,y)}\sum_{x\le z < y} g(x,z)f(z,y),&x< y\\
+  0,&other
+\end{cases}
+$$
+\end{definition}
+
+
+\begin{proof}
+  若$x\neq y$
+  $$
+  \begin{aligned}
+  (g*f)(x,y)&=g(x,y)f(y,y)+\sum_{x \le z <y} g(x,z)f(z,y)\\
+  &=-\sum_{x \le z <y} g(x,z)f(z,y)+\sum_{x \le z <y} g(x,z)f(z,y)\\
+  &=0
+  \end{aligned}
+  $$
+  故g是其左逆元,类似地可以证明其是右逆元.故其是f的逆元.
+\end{proof}
+
+
+\begin{definition}
+  莫比乌斯函数:\\
+  莫比乌斯函数为 $\zeta$函数的逆函数.\\
+  具体地:
+  $$
+  \mu(x,y)=\begin{cases}
+    1&,x=y\\
+    -\sum_{x\leq z<y} \mu(x,z)& ,x<y
+    \end{cases}
+  $$
+\end{definition}
+
+\newp{3}
+
+下面给出一些常见偏序集的莫比乌斯函数: 
+
+1.$(\mathcal{P}(X_n),\subseteq)$ \\
+\[
+\mu(A,B)=(-1)^{|B|-||A}
+\]
+
+2.$(X_n,\le)$ 即正整数集合上的全序关系\\
+\[
+\mu(k,l)=\begin{cases}
+  1&\qquad,l=k\\
+  -1&\qquad,l=k+1\\
+  0&\qquad,other
+  \end{cases}
+\]
+3.$(X_n,|)$,即正整数集合上的整除关系\\
+有$\mu(a,b)=\mu\left(1,\frac{b}{a}\right)$
+\[
+  \mu(1,n)=\begin{cases}
+    1&\qquad,n=1\\
+    (-1)^k&\qquad,\text{n是互不相同的素数乘积}\\
+    0,&\qquad,other
+    \end{cases}
+\]
+
+4.直积的莫比乌斯函数\\
+线性有限偏序集$(X,\le_1)$,$(Y,\le_2)$,且$\mu_1$,$\mu_2$分别为其莫比乌斯函数,定义其笛卡尔积的偏序为
+$$
+(x,y)\le (x',y') \iff x\le x' \text{and} y \le y'
+$$
+那么新偏序集$(X\times Y ,\le_3 )$的莫比乌斯函数为
+$$
+\mu((x,y),(x',y'))=\mu_1(x,x')\mu_2(y,y')
+$$
+
+
+\begin{theorem}
+  莫比乌斯反演:\\
+设$(X,\le)$是一个具有最小元的线性偏序集.令$\mu$ 是其莫比乌斯函数,定义在$X$上的实值函数$F,G:X\rightarrow \mathcal{R}$满足
+$$
+G(x)=\sum_{z\le x} F(z),\qquad (x\in X)
+$$
+那么有
+$$
+F(x)=\sum_{y\le x} \mu(y,x) G(y),\qquad (x\in X)
+$$
+\end{theorem}
+
+\begin{proof}
+  $$
+  \begin{aligned}
+  \sum_{y \le x} \mu(y,x) G(y) &=\sum_{y \le x} \mu(y,x) \sum_{z\le y} F(z)\\
+  &=\sum_{z \le x}F(z) \sum_{ z\le y \le x} \zeta(z,y)\mu(y,x)\\
+  &=\sum_{z\le x} F(z) \delta(z,x)\\
+  &=F(x)
+  \end{aligned}
+  $$
+\end{proof}
+这里最小元保证了和式有限,因此不用判断敛散性.(这里对和式的一些变换在无穷和式有的有时不成立)\\ 
+事实上,莫比乌斯反演是卷积结合律的一个推论.\\
+\begin{proof}
+  不妨设最小元为0,定义$f,g\in \mathcal{F}(X)$
+  $$
+  f(x,y)=\begin{cases}
+  F(y)&, x=0\\
+  0&,other
+  \end{cases}
+  $$
+
+  $$
+  g(x,y)=\begin{cases}
+  G(y)&, x=0\\
+  0&,other
+  \end{cases}
+  $$
+  从而有$g=f*\zeta$,从而有$g*\mu=f$,
+
+\end{proof}
+%但若是满足$\forall x \in X ,\sum_{z\le x} F(z) ,\sum_{z \le x} G(z)$绝对收敛,就不再需要最小元这一条件.\\
+
+
+\newp{3}
+\section{递推关系和生成函数}
+一些斐波拉契数列的性质:\\
+1.
+$$
+\begin{pmatrix}
+  F_n &F_{n+1}
+\end{pmatrix}=
+\begin{pmatrix}
+  F_0 &F_1
+\end{pmatrix}
+\begin{pmatrix}
+  0 &1\\1&1
+\end{pmatrix}^n
+$$
+2.
+$F_{2k}=F_k(2F_{k+1}-F_k)$; 
+$F_{2k+1}=F_{k+1}^2+F_{k}^2$
+
+3.
+$$
+\sum_{i=0}^{n} f_i=f_{n+2}-1
+$$
+
+4.
+$$
+2|f_n\iff3|n
+$$
+
+\subsection{生成函数}
+这里只做简单介绍\\
+牛顿二项式定理
+\begin{theorem}
+  设$\alpha$ 是一个实数.对于任意$x,y$ with $0\le |x| <|y|$,有性质
+  $$
+  (x+y)^{\alpha} =\sum_{k=0}^{\infty} \binom{\alpha}{k} x^{k} y^{\alpha-k}
+  $$
+  where
+  $$
+  \binom{\alpha} {k}=\frac{\alpha (\alpha-1) \cdots (\alpha -k+1)}{k!}
+  $$
+\end{theorem}
+设$|z|<1$,特别地有
+$$
+(1+z)^{\alpha} =\sum_{k=0}^{\infty} \binom{\alpha}{k} z^k
+$$
+
+\begin{proposition}
+  若$\alpha$是一个负整数,且$\alpha = -n$then
+  $$
+  \begin{aligned}
+    \binom{\alpha}{k}&=\binom{-n}{k}\\
+    &=\frac{-n (-n-1)\cdots (-n-k+1)}{k!}\\
+    &=(-1)^k\binom{n+k-1}{k}
+  \end{aligned}
+  $$
+\end{proposition}
+thus: for $|z|<1$
+$$
+(1+z)^{-n}=\frac{1}{(1+z)^n}=\sum_{k=0}^{\infty}(-1)^k \binom{n+k-1}{k} z^k
+$$
+
+\subsubsection{一般生成函数}
+无穷数列$h_0,h_1,\cdots $的生成函数为$g(x)=h_0+h_1 x+h_2x^2+\cdots $
+\\
+
+生成函数的一些性质\\
+设$H$为数列,$F$为其对应的生成函数\\
+1. $cH \rightarrow cF$\\
+2. $H_1+H_2 \rightarrow F_1 +F_2$\\
+3.${0,0,0,\cdots}+H \rightarrow x^kF$\\
+4. $iH(H_1,2H_2,\cdots) \rightarrow F'$\\
+5. 令$G_n=\sum_{i+j=n} H_{1i}\cdot H_{2j}$
+那么$G\rightarrow F_1\cdot F_2$\\
+一面介绍两种重要的生成函数即:多重集合的$n$组合级数的生成函数\\
+根据泰勒级数
+\[
+\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n
+\]
+我们可以解$h_n$表示
+\[
+e_1+e_2+\cdots+e_k=n
+\]
+的非负整数解的个数。
+
+其生成函数为
+$$
+g(x)=\sum_{n=0}^{\infty} \binom{n+k-1}{n}x^n=\frac{1}{(1-x)^k}
+$$
+
+\begin{example}
+  设$x_1+x_2+x_3+x_4=n$的整数解个数,其中$x_1$是偶数,$x_2$是5的倍数,$x_3\le 4$,$x_4\le 1$ \\
+  解:\\
+  $$
+  \begin{aligned}
+    g(x)&=(1+x^2+x^4+\cdots)(1+x^5+\cdots)(1+x+x^2+x^3+x^4)(1+x)\\
+    &=\frac{1}{1-x^2} \frac{1}{1-x^5} \frac{1-x^5}{1-x} (1+x)\\
+    &=\frac{1}{(1-x)^2}\\
+    &=\sum_{n=0}^{\infty} \binom{n+1}{n} x^n
+  \end{aligned}
+  $$
+  故为n+1.
+\end{example}
+我们得到几个小结论:\\
+1.限制$\ge k$,可以乘$x^k$\\
+2.限制$\le k$,少写几项\\
+3.是$k$的倍数,整体代换\\
+
+\subsubsection{指数生成函数}
+无穷数列$h_0,h_1,\cdots $的指数生成函数为$g(x)=h_0+h_1 \frac{x}{1!}+h_2 \frac{x^2}{2!}+\cdots $\\
+下面给出一类常用的指数生成函数,即多重集合的n排列数的生成函数.\\
+\begin{theorem}
+  设$S$ 是多重集合$\{n_1 a_1\,\cdots n_k a_k\}$,其中$n_i\ge 0$,那么数列的指数生成函数为\\
+  $$
+  g(x)=f_{n_1}(x)f_{n_2}(x) \cdots f_{n_k} (x)
+  $$
+  其中
+  $$
+  f_{n_i}(x)=\sum_{k=0}^{n_i} \frac{x^k}{k!}
+  $$
+\end{theorem} 
+
+\begin{example}
+  用红,白,蓝,绿色给$1\times n$棋盘染色,其中要求红色为偶数,白色是奇数,求方案数\\
+  解:\\
+  $$
+  \begin{aligned}
+    g(x)&=\left(\sum_{n=0}^{\infty}\frac{x^n}{n!} \right)^2\left(1+\frac{x^2}{2!}+\cdots \right)\left(x+\frac{x^3}{3!}+\cdots \right)\\
+    &=e^{2x}\left(\frac{e^x+e^{-x}}{2} \right) \left( \frac{e^x-e^{-x}}{2} \right)\\
+    &=\frac{e^{4x}-1}{4}\\
+    &=\frac{1}{4}\sum_{n=0}^{\infty} 4^{n} \frac{x^n}{n!}-\frac{1}{4}\\
+    &=\sum_{n=1}^{\infty} 4^{n-1} \frac{x^n}{n!}
+    \end{aligned}
+  $$
+  故为$4^{n-1}$
+\end{example}
+1.对于偶数限制此项为\\
+\[
+\frac{e^x-e^{-x}}{2}
+\]
+2.奇数限制\\
+\[
+\frac{e^x+e^{-x}}{2}
+\]
+对于求解线性齐次递推关系这里不做介绍
+
+
+\section{卡特兰数和第二类斯特林数}
+\subsection{卡特兰数}
+折线图\\
+只有两类线段(a,b)-(a+1,b+1)或(a,b)-(a+1,b-1)\\
+\begin{proposition}
+  $A_0(a_0,b_0)$,$A_n(a_n,b_n)$能用折线连接的充要条件是\\
+  $|b_n-b_0|\le a_n-a_0=n$且$2|(|b_n-b_0|+n)$\\
+  连接这两点的折线有
+  $$
+  \binom{n}{\frac{n+b_n-b_0}{2}}
+  $$
+  条.
+\end{proposition}
+卡特兰数:\\
+$$
+C_n=\frac{1}{n+1}\binom{2n}{n}=\binom{2n}{n}-\binom{2n}{n-1}
+$$
+递推式\\
+$$
+C_n=\sum_{k=1}^{n}C_{k-1}C_{n-k}=\frac{1}{n+1} (4n-2)C_{n-1}
+$$
+Catalan 数列$C_n$可以应用于以下问题：\\
+
+
+\subsection{第二类斯特林数}

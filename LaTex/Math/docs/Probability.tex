@@ -1,0 +1,239 @@
+\section{基本概念和公式}
+对概率运算规定一些简单的基本法则：\\
+1. 设$A$是随机事件，则$0 \leq P(A) \leq 1$,\\
+2. 设$\Omega$为必然事件，则$P(\Omega)=1$,\\
+3. 若事件$A$和$B$不相容，则$P(A\cup B)=P(A)+P(B)$,\\
+可推广至无穷：$$P(\bigcup_{i=1}^{n}A_i)=\sum_{i=1}^{\infty}P(A_i)$$.\\
+4. 一般情况下，$P(A\cup B)=P(A)+P(B)-P(AB)$，$P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)$ \\
+5. $P(\overline{A})=1-P(A)$\\
+6. $P(A-B)=P(A)-P(AB)$\\
+
+\begin{theorem}全概率公式\\
+  设$B_1,B_2,...B_n$是样本空间$\Omega$中的\textbf{两两不相容}的一组事件，
+  即$B_i B_j=\phi$，$i\neq j$，且满足$\bigcup_{i=1}^{n}B_i=\Omega$，则称$B_1,B_2,...B_n$
+  是样本空间$\Omega$的一个分割（又称为完备事件群，英文为partition）。
+  设$\{B_1,B_2,...B_n\}$是样本空间$\Omega$的一个分割，$A$为$\Omega$的一个事件，则
+  $$
+  P(A)=\sum_{i=1}^{n}P(A|B_i)P(B_i)
+  $$
+\end{theorem}
+
+\begin{theorem}贝叶斯公式\\
+  设$\{B_1, B_2, ...B_n\}$是样本空间的一个分割，$A$为$\Omega$中的一个事件，$P(B_i)>0$，$i=1,2,...,n$，$P(A)>0$，则
+$$
+P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}
+$$
+用于因果转换.
+\end{theorem}
+
+\begin{definition}事件的独立性\\
+  设$A$，$B$是随机试验中的两个事件，若满足$P(AB)=P(A)P(B)$，则称事件$A$和$B$相互独立。\\
+  判断事件的独立，应该是\textbf{从实际出发}，如果能够判断事件$B$的发生与否对事件$A$的发生与否不产生影响，则事件$A$，$B$即为独立。\\
+  设$\widetilde{A}$表示事件$A$发生和不发生之一，$\widetilde{B}$表示事件$B$发生和不发生之一。有独立性的定义可推至$P(\widetilde{A}\widetilde{B})=P(\widetilde{A})P(\widetilde{B})$（一共有四个等式）。可推广至：
+$$
+P(\widetilde{A}_1\widetilde{A}_2...\widetilde{A}_n)=P(\widetilde{A}_1)...P(\widetilde{A}_n)
+$$
+上面有$2^n$个等式。\\
+独立一定相容
+\end{definition}
+
+\textbf{重要公式与结论}
+$$
+\begin{aligned}
+&(1)\ P(\overline{A})=1-P(A)\\
+\\
+&(2)\ P(A \cup B)=P(A)+P(B)-P(AB)\\
+\\
+&(3)\ P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)\\
+\\
+&(4)\ P(A-B)=P(A)-P(AB)\\
+\\
+&(5)\ P(A\overline{B})=P(A)-P(AB),P(A)=P(AB)+P(A\overline{B}),\\
+&\ \ \ \ \ \ P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)\\
+\\
+&(6)\ P(\overline{A}_1|B)=1-P(A_1|B),P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)-P(A_1A_2|B)\\
+&\ \ \ \ \ P(A_1A_2|B)=P(A_1|B)P(A_2|A_1B)\\
+\\
+&(7)\ 若A_1,A_2,...A_n相独立，则P(\bigcap_{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i),P(\bigcup_{i=1}^{n}A_i)=\prod_{i=1}^{n}(1-P(A_i))
+\end{aligned}
+$$
+
+随机变量（Random variable）：值随机会而定的变量，研究随机试验的一串事件。可按维数分为一维、二维至多维随机变量。按性质可分为离散型随机变量以及连续型随机变量。\\
+分布（Distribution）：事件之间的联系，用来计算概率。\\
+示性函数（Indication function）：$I_A(\omega)=\begin{cases}
+    1& \omega \in A \\ 
+    0& \text{ 反之}
+   \end{cases}$，事件$A$有随机变量$I_A$表示出来，$I_A$称为事件$A$的示性函数。\\
+
+\begin{definition}
+  概率函数：\\
+  设$X$为一随机变量，其全部可能值为$\{a_1, a_2,...\}$，则$p_i=P(X=a_i),i=1,2,...$称为$X$的概率函数。
+\end{definition}
+
+\begin{definition}
+  概率分布函数：\\
+  定义：设$X$为一随机变量，则函数
+$$
+F(X)=P(X\leq x)\quad(-\infty<x<\infty)
+$$
+称为$X$的分布函数。（注：这里并未限定$X$为离散型的，它对任何随机变量都有定义。）\\
+
+\end{definition}
+性质：\\
+   $F(x)\text{是单调非降的：当}$ $x_1<x_2$时，有$F(x_1)\leq F(X_2)$.\\
+   当$x \rightarrow \infty$时，$F(x)\rightarrow1$；当$x \rightarrow-\infty$时，$F(x)\rightarrow0$.\\
+   离散型随机变量分布函数：\\
+   对于离散型随机变量，$F(X)=P(X\leq x)=\sum_{\{i|a_i\leq x\}}p_i, \quad p_i=P(X=i)=F(i)-F(i-1)$。\\
+   1. 连续型随机变量：设$X$为一随机变量，如果$X$不仅有无限个而且有不可数个值，则称$X$为一个连续型随机变量。
+
+   \begin{definition}
+    概率密度函数：\\
+    设连续型随机变量$X$有概率分布函数$F(x)$，则$F(x)$的导数$f(x)=F'(x)$称为$X$的概率密度函数。
+   \end{definition}
+   性质\\
+     1.对于所有的$-\infty<x<+\infty$，有$f(x)\ge 0$；\\
+     2.$\int_{-\infty}^{+\infty}f(x)dx=1$；\\
+     3.对于任意的$-\infty<a\leq b<+\infty$，有$P(a\leq X\leq b)=F(b)-F(a)=\int_{a}^{b}f(x)dx$.\\
+   注：\\
+     1.对于任意的$-\infty<x<+\infty$，有$P(X=x)=\int_{x}^{x}f(u)du=0$.\\
+     2.假设有总共一个单位的质量连续地分布在$a\leq x\leq b$上，那么$f(x)$表示在点$x$的质量密度且$\int_{c}^{d}f(x)dx$表示在区间$[c, d]$上的全部质量。\\
+     \begin{definition}
+      概率分布函数：\\
+      设$X$为一连续型随机变量，则
+      $$
+      F(x)=\int_{-\infty}^xf(u)du,\quad-\infty<x<+\infty
+      $$
+     \end{definition}
+
+\section{重要公式与结论}
+二项分布$X\sim B(n,p)$的期望为np,方差为np(1-p)\\
+均匀分布$X\sim U(a,b)$的期望为$\frac{a+b}{2}$ ,方差为$\frac{1}{12}(b-a)^2$\\
+\begin{definition}
+  边缘分布:\\
+  因为$X$的每个分量$X_i$都是一维随机变量，故它们都有各自的分布$F_i\ (i=1,...,n)$，这些都是一维分布，称为随机向量$X$或其分布$F$的边缘分布。\\
+  离散随机变量:\\
+  $$
+  \begin{aligned}
+    p_X(x_i)&=P(X=x_i)\\
+    &=\sum_{j}^{m}P(X=x_i,Y=y_j)\\
+    &=\sum_{j}^{m}p_{ij}=p_{i\cdot},\quad i=1,2,...,n
+  \end{aligned}
+  $$
+
+  $$
+  \begin{aligned}
+    p_Y(y_i)&=P(Y=y_i)\\
+    &=\sum_{i}^{m}P(X=x_i,Y=y_j)\\
+    &=\sum_{i}^{m}p_{ij}=p_{j\cdot},\quad j=1,2,...,n
+  \end{aligned}
+  $$
+  连续随机变量:\\
+  为求某分量$X_i$的概率密度函数，只需把$f(x_1,...,x_n)$中的$x_i$固定，然后对$x_1,...,x_{i-1},x_{i+1},...,x_n$在$-\infty$到$\infty$之间做定积分，如
+  $$
+  (X,Y)\sim f(x, y)\\
+  f_X(u)=\int^{+\infty}_{-\infty}f(u,v)dv\\
+  f_Y(u)=\int^{+\infty}_{-\infty}f(u,v)du\\
+  $$
+\end{definition}
+
+\begin{definition}
+  离散型随机变量的条件分布：设$(X,Y)$为二维离散型随机变量，对于给定的事件$\{Y=y_j\}$，其概率$P(Y=y_j)>0$，则称\\
+   $$
+   P(X=x_i|Y=y_j)=\frac{P(X=x_i,Y=y_j)}{P(Y=y_j)}=\frac{p_{ij}}{p_{\cdot j}},\quad i=1,2,...
+   $$
+   为在给定$Y=y_j$的条件下$X$的条件分布律。类似的，称
+   $$
+   P(Y=y_i|X=x_j)=\frac{P(X=x_i,Y=y_j)}{P(X=x_j)}=\frac{p_{ij}}{p_{i\cdot}},\quad j=1,2,...
+   $$
+   为在给定$X=x_j$的条件下$Y$的条件分布律。
+
+ 连续型随机变量的条件分布：设$(X,Y)$为二维连续型随机变量，对于给定条件$Y=y$下的条件概率密度为\\
+   $$
+   f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}, \quad f_Y(y)>0.\\
+   $$
+   类似的，在$X=x$下的条件概率密度为
+   $$
+   f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}, \quad f_X(x)>0.\\
+   $$
+\end{definition}
+可推广\\
+
+
+\begin{definition}
+  随机变量的独立性\\
+  称随机变量$X_1, ...,X_n$相互独立，\\
+  1.离散型随机变量\\
+     则联合分布律等于各自的边缘分布律的乘积，即
+     $$
+     P(X_1=x_1,...,X_n=x_n)=P(X_1=x_1)...P(X_n=x_n)
+     $$
+     其中$(x_1,...x_n)$为$(X_1,...,X_n)$的值域中的任意一点。
+  2.连续型随机变量\\
+     则联合密度等于各自的边缘密度的乘积，即
+     $$
+     f(x_1,...,x_n)=f_1(x_1)...f_n(x_n),\quad \forall(x_1,...,x_n)\in R ^n
+     $$
+   3.一般地\\
+     设$X_1,...,X_n$为$n$个随机变量，如果它们的联合分布函数等于各自边缘分布函数的乘积，即
+     $$
+     F(X_1, ...,x_n)=F_1(x_1)...F_n(x_n),\quad \forall (x_1,...,x_n)\in R^n
+     $$
+     则称随机变量$X_1, ...,X_n$相互独立。
+\end{definition}
+
+\textbf{以下内容才是重点!!!!!}\\
+\textbf{以下内容才是重点!!!!!}\\
+\textbf{以下内容才是重点!!!!!}\\
+
+\subsection{数学期望（均值）与方差}
+\begin{definition}
+  数学期望\\
+  设随机变量$X$只取有限个可能值$a_1,...,a_m$，其概率分布为$P(X=a_i)=p_i\ (i=1,...,m)$.\\
+  则$X$的数学期望记作$EX$或$E(X)$， 定义为$E(X)=a_1p_1+a_2p_2+...+a_mp_m$.\\
+  数学期望也常称为均值，即指以概率为权的加权平均。\\
+  1.离散型变量的数学期望：$E(X)=\sum^\infty_{i=1}a_ip_i.$（当级数绝对收敛，即$\sum_{i=1}^\infty|a_i|p_i<\infty$）\\
+  2.连续型变量的数学期望：$E(X)=\int_{-\infty}^\infty xf(x)dx$.（当$\int_{-\infty}^\infty |x|f(x)dx<\infty$）
+\end{definition}
+性质\\
+  1.若干个随机变量之和的期望等于各变量的期望值和，即
+     $$
+     E(X_1+X_2+...+X_n)=E(X_1)+E(X_2)+...+E(X_n).
+     $$
+  2.若干个独立随机变量之积的期望等于各变量的期望之积，即
+     $$
+     E(X_1X_2...X_n)=E(X_1)E(X_2)...E(X_n).
+     $$
+  3.设随机变量$X$为离散型，有分布$P(X=a_i)=p_i(i=1,2,...)$；或者为连续型，有概率密度函数$f(x)$.则
+    $$
+      E(g(x))=\sum_ig(a_i)p_i\quad (\text{当}\sum_i|g(a_i)|p_i<\infty \text{时})
+    $$
+      或
+    $$
+      E(g(x))=\int_{-\infty}^\infty g(x)f(x)dx \quad (\text{当}\int_{-\infty}^{\infty}|g(x)|f(x)dx<\infty\text{时})
+   $$
+  4.若$c$为常数，则$E(cX)=cE(X)$.\\
+  \begin{definition}
+    条件数学期望\\
+    随机变量Y的条件期望就是它在给定的某种附加条件下的数学期望。\\
+    $E(Y|x)=\int_{-\infty}^{\infty}yf(y|x)dy$.它反映了随着$X$取值$x$的变化$Y$的平均变化的情况如何。\\
+    在统计上，常把条件期望$E(Y|x)$作为$x$的函数，称为$Y$对$X$的回归函数。
+  \end{definition}
+  性质：
+    1.$E(Y)=\int_{-\infty}^{\infty}E(Y|x)f_X(x)dx$.\\
+    2. $E(Y)=E[E(Y|X)]$.
+
+\begin{definition}
+  方差与标准差\\
+  设$X$为随机变量，分布为$F$，则$Var(X)=E(X-EX)^2$称为$X$（或分布$F$）的方差，\\
+  其平方根$\sqrt{Var(X)}$（取正值）称为$X$（或分布$F$）的标准差。
+\end{definition}
+性质：
+  1.$Var(X)=E(X^2)-(EX)^2$.\\
+  2. 常数的方差为0，即$Var(c)=0$.\\
+  3.若$c$为常数，则$Var(X+c)=Var(X)$.\\
+  4.若$c$为常数，则$Var(cX)=c^2Var(X)$.\\
+  5.独立随机变量和的方差等于各变量方差和，即$Var(X_1+...+X_n)=Var(X_1)+...+Var(X_n)$.\\
+
+
+
+

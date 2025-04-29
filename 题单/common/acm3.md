@@ -256,3 +256,10 @@ while(n){
 ## 18.[I. Good Partitions](https://codeforces.com/gym/105486)(简单数学, 数据结构 , 线段树维护gcd)(1800-1900/0)
 
 ## 19.[B. Athlete Welcome Ceremony](https://codeforces.com/gym/105486)(dp , 前缀和)(1800-1900/0)
+
+## 20.C[. Clamped Sequence](https://qoj.ac/contest/1096)(思维)(1600-1700/0)
+
+## 21.[F. Half Mixed](https://qoj.ac/contest/1096)(构造)(1800-1900/0)
+
+## 22.[A. Absolute Difference](https://qoj.ac/contest/1096)(数学,期望)(2000-2100/0)
+

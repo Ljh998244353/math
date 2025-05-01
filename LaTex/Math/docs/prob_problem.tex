@@ -127,12 +127,58 @@ $$
 
 \subsection{游走}
 \begin{proposition}
-  在一条$n$个点的链上游走，求从一端走到另一端的期望步数。
+  在一条$n$个点的链上游走，从一端走到另一端的期望步数为$(n-1)^2$。
 \end{proposition}
 
 \begin{proof}
-  
+  假设步数是$S$，求$S$的期望。我们定义一个随机变量$x_i$表示从i出发随机游走，第一次到$i+1$的步数。
+  $$
+  E\left(\sum_{i=1}^{n-1}x_i\right)= \sum_{i=1}^{n-1}E(x_i)
+  $$
+  又
+  $$
+  EX_{i+1}=\frac{1}{2}+\frac{1}{2}(1+EX_i+EX_{i+1})
+  $$
+  故
+  $$
+  EX_{i+1}=EX_{i}+2
+  $$
 \end{proof}
+
+\begin{proposition}
+  在一个$n$个点的完全图上游走，从一个点走到另一个点的期望步数为$n-1$。
+\end{proposition}
+
+\begin{proof}
+  由于是完全图, 所以任意两个点为起点和终点的期望步数是相同的.于是有
+  $$
+  E=\frac{1}{n-1}+\frac{n-2}{n-1}(1+E)
+  $$
+  得到$E=n-1$
+\end{proof}
+
+\begin{proposition}
+  在一个$n$个点的完全二分图$K_{n,n}$上游走，从一个点走到另一个点的期望步数为$2n-1$。
+\end{proposition}
+
+\begin{proof}
+  $E_1$表示异侧点的期望，$E_2$表示同侧点的期望。
+  $$
+  \begin{aligned}
+    E_1&=\frac{1}{n}+\frac{n-1}{n}(1+E_2)\\
+    E_2&=1+E_1
+  \end{aligned}
+  $$
+  故 $E_1=2n-1 ,E_2=2n$
+\end{proof}
+
+\begin{proposition}
+  在一个$n$个点的菊花图上游走，从一个点走到另一个点的期望步数为$2n-3$。
+\end{proposition}
+
+证明与上类似\\
+
+
 
 \subsection{解题方法}
 1.贡献法,\\

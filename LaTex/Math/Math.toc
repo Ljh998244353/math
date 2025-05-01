@@ -46,5 +46,5 @@
 \contentsline {section}{\numberline {4.3}期望经典问题入门}{53}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}普通}{53}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}拿球}{56}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}游走}{57}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}游走}{56}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}解题方法}{57}{subsection.4.3.4}%

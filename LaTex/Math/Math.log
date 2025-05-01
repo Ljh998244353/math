@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  29 APR 2025 13:24
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  29 APR 2025 13:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -426,8 +426,7 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup9
 )
 \c@theorem=\count318
-
-No file Math.aux.
+ (./Math.aux)
 \openout1 = `Math.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -507,14 +506,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 19.
 Package hyperref Info: Link coloring OFF on input line 19.
+ (./Math.out) (./Math.out)
 \@outlinefile=\write3
 \openout3 = `Math.out'.
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
-(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
@@ -527,21 +524,19 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 
-]
-No file Math.toc.
+] (./Math.toc [1
+
+])
 \tf@toc=\write4
 \openout4 = `Math.toc'.
 
-[1
-
-]
+LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
+(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 30.
+ [2]
 第一章
 (./docs/combinatorics.tex [1
 
-]
-LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 80.
- [2]
+] [2]
 Overfull \hbox (71.12303pt too wide) detected at line 125
 [] \OT1/cmr/m/n/12 = [] + [] + [] + []
  []
@@ -894,12 +889,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
  []
 
 Missing character: There is no ⋯ (U+22EF) in font [lmroman12-regular]:mapping=tex-text;!
-)
-Underfull \hbox (badness 10000) in paragraph at lines 131--48
+[56])
+Underfull \hbox (badness 10000) in paragraph at lines 150--48
 
  []
 
-[56] [57] (./Math.aux)
+[57] (./Math.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -908,22 +903,16 @@ L3 programming layer <2022/07/14>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `Math.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Math.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3F6D0F061C7122F3990C8495A979F8B8;4619.
+Package rerunfilecheck Info: File `Math.out' has not changed.
+(rerunfilecheck)             Checksum: 3F6D0F061C7122F3990C8495A979F8B8;4619.
  ) 
 Here is how much of TeX's memory you used:
- 16399 strings out of 474773
- 367238 string characters out of 5761289
+ 16423 strings out of 474773
+ 367523 string characters out of 5761289
  1936842 words of memory out of 5000000
- 38282 multiletter control sequences out of 15000+600000
+ 38298 multiletter control sequences out of 15000+600000
  574174 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,13n,97p,537b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Math.pdf (59 pages).
+Output written on Math.pdf (60 pages).

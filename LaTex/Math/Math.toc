@@ -47,4 +47,6 @@
 \contentsline {subsection}{\numberline {4.3.1}普通}{53}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}拿球}{56}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}游走}{56}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}解题方法}{57}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.4}解题方法}{58}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}杂}{59}{chapter.5}%
+\contentsline {section}{\numberline {5.1}最小二乘法}{59}{section.5.1}%

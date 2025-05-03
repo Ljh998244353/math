@@ -263,3 +263,14 @@ while(n){
 
 ## 22.[A. Absolute Difference](https://qoj.ac/contest/1096)(数学,期望)(2000-2100/0)
 
+## 23[D. Baggage Claim](https://codeforces.com/contest/2098/problem/D)(思维,数学,图论(并查集),计数)(2200-2300/0)
+
+## 24[Train Wreck](https://ac.nowcoder.com/acm/contest/108199/F)(思维,模拟)(2000-2100/0)
+
+将其转化为在一颗树上移动
+
+## 25[Needle in a Numstack](https://codeforces.com/contest/2108/problem/D)(交互,思维,二分)(2000-2100/0)
+
+二分好题
+
+**通过二分找到两种条件的分界处**

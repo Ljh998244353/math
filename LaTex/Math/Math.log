@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  29 APR 2025 13:44
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  3 MAY 2025 15:28
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **Math
@@ -889,12 +889,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
  []
 
 Missing character: There is no ⋯ (U+22EF) in font [lmroman12-regular]:mapping=tex-text;!
-[56])
-Underfull \hbox (badness 10000) in paragraph at lines 150--48
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
-[57] (./Math.aux)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 184--48
+
+ []
+
+[57] [58]
+第五章
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+[59
+
+] (./Math.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -904,15 +918,15 @@ L3 programming layer <2022/07/14>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Math.out' has not changed.
-(rerunfilecheck)             Checksum: 3F6D0F061C7122F3990C8495A979F8B8;4619.
+(rerunfilecheck)             Checksum: 6D29BFD65AA2674D9DD06DBBEACA924A;4766.
  ) 
 Here is how much of TeX's memory you used:
- 16423 strings out of 474773
- 367523 string characters out of 5761289
+ 16424 strings out of 474773
+ 367534 string characters out of 5761289
  1936842 words of memory out of 5000000
- 38298 multiletter control sequences out of 15000+600000
+ 38299 multiletter control sequences out of 15000+600000
  574174 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,13n,97p,537b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Math.pdf (60 pages).
+Output written on Math.pdf (62 pages).

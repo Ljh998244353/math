@@ -46,4 +46,18 @@
 \input{docs/Probability.tex}
 \input{docs/prob_problem.tex}
 
+\chapter{杂}
+\section{最小二乘法}
+误差的平方和最小\\
+$$
+  L=\sum_{i=1}^{n} (y_i-f(x_i))^2
+$$
+拟合直线$y=kx+b$ 
+$$
+  \begin{cases}
+    k&=\frac{\sum xy- n \overline{x}\overline{y}}{\sum x^2-n\overline{x}^2}\\
+    b&=\overline{y}-k\overline{x}
+  \end{cases}
+$$
+
 \end{document}

@@ -274,3 +274,72 @@ while(n){
 二分好题
 
 **通过二分找到两种条件的分界处**
+
+## 26[Link with Bracket Sequence I](https://ac.nowcoder.com/acm/contest/108216/K)(计数,dp)(1800-1900/0)
+
+别想歪去弄卡特兰数就简单
+
+`dp[i][j][k]`为找到第i个(最多)能匹配j个,当前序列状态为k的方案数
+
+```cpp
+ for (int i=1;i<=m;++i) {
+    for (int j=0;j<=min(i,n);++j) {
+      int now=(s[j]=='(')-(s[j]==')');
+      for (int k=0;k<=m/2;++k) {
+        int res=0;
+        if (j and k-now>=0 and k-now<=m/2 and f[i-1][j-1][k-now]>0) res+=f[i-1][j-1][k-now],res%=mod;
+        if (j==n) {
+          if (k+1 >=0 and k+1<=m/2 and f[i-1][j][k+1]>0) res+=f[i-1][j][k+1],res%=mod;
+          if (k-1 >=0 and k-1<=m/2 and f[i-1][j][k-1]>0) res+=f[i-1][j][k-1],res%=mod;
+        }else {
+          int nnow=(s[j+1]=='(')-(s[j+1]==')');
+          if (k+nnow>=0 and k+nnow<=m/2 and f[i-1][j][k+nnow]>0) res+=f[i-1][j][k+nnow],res%=mod;
+        }
+        f[i][j][k]=res;
+      }
+    }
+```
+
+## 27. [Cycling (Easy Version)](https://codeforces.com/contest/2107/problem/F1)(思维,暴力, dp)(2000-2100/0)
+
+dp，因为交换之间不会相交。而最先可能进行交换的一定是最小且最先出现的元素（可以不换）。
+
+```cpp
+  f[n+1]=0;
+  for (int i=n;i>=1;--i) {
+    int p=i;
+    for (int j=i;j<=n;++j) if (a[j]<a[p]) p=j;
+    int cnt=0;
+    for (int j=p;j<=n;++j) {
+      if (a[j]==a[p]) cnt++;
+      f[i]=min(f[i],f[j+1]+(j-i+1)*1ll*a[p]+(j-p)+(j-i+1)-cnt);
+    }
+  }
+```
+
+但是可以证明最优的情况一定不会垮过相同的值。因为直接后面的换显然更优。
+
+因此直接去掉`cnt`也是可以的。
+
+---
+
+下面指大交换（距离大于1）
+
+注意到若存在相邻的$[l_1,r_1],[l_2,r_2]$ 进行交换，那么直接换$[l_1,r_2]$也一定不会变差（这里显然要求前一个的区间长度大于1（即后面所有元素都比$a_{l_1}$小）而对后一个没有要求）。
+
+于是我们发现最优的情况一定可以通过交换$[x,n]$产生。
+
+```cpp
+  i64 ans=linf;
+  for (int i=n;i>=1;--i) {
+    swap(a[i],a[n]);
+    i64 res=n-i,mi=linf;
+    for (int j=n;j>=1;--j) {
+      res+=min(mi+1,a[j]*1ll);
+      mi=min(a[j]*1ll,mi);
+    }
+    ans=min(ans,res);
+    swap(a[i],a[n]);
+  }
+```
+

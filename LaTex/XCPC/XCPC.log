@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  29 APR 2025 11:50
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  6 MAY 2025 19:27
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -680,13 +680,18 @@ LaTeX Warning: No \author given.
 
 ]
 Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
 [2
 
 
 ]
 Chapter 2.
 (./_minted-XCPC/default.pygstyle) (./_minted-XCPC/A0A383D48F2B39AB30717BF36C1FB19BEACAB40F7668858C4143690DABB9F943.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 49--1
+Underfull \hbox (badness 10000) in paragraph at lines 52--1
 
  []
 
@@ -726,7 +731,7 @@ Chapter 3.
 (./_minted-XCPC/D4D70342B49E59C9EDA39D56FBFE982C92EA9D29C4F83980E6AC9F50CCC18B4D.pygtex [5
 
 ] [6] [7]) (./_minted-XCPC/2993B887D2AC7584BA8DAB364168CC816F8BD9E92318E59F12F218A4812F9B44.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 67--1
+Underfull \hbox (badness 10000) in paragraph at lines 70--1
 
  []
 
@@ -734,7 +739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--1
 Chapter 4.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 86.
+(hyperref)                than one, level fixed on input line 89.
 
 \openout3 = `XCPC.pyg'.
 
@@ -742,7 +747,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 \openout3 = `XCPC.pyg'.
 
  (./_minted-XCPC/2B1DE751F292DD954108EC7388D662A4063079CEF51D968434C136339BD25CC3.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 96--1
+Underfull \hbox (badness 10000) in paragraph at lines 99--1
 
  []
 
@@ -751,12 +756,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--1
 ]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--112
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
@@ -766,7 +771,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--112
 \openout3 = `XCPC.pyg'.
 
  (./_minted-XCPC/11FF1A9775FCA118026BCC9EA15F4580063079CEF51D968434C136339BD25CC3.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
@@ -782,7 +787,7 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `XCPC.out' has not changed.
-(rerunfilecheck)             Checksum: E31C750D944BE54576C3616892695D26;1229.
+(rerunfilecheck)             Checksum: 2944ABA9BB9560F48915FDDF86A30622;1316.
 runsystem(del XCPC.pyg)...executed.
 
  ) 

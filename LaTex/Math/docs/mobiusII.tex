@@ -1,0 +1,88 @@
+\subsubsection{格}
+\begin{definition}
+  设R为非空集合A上的关系，如果R是自反的，反对称的，可传递的，则称R为A上的偏序关系，简称偏序，记作≤ 。
+\end{definition}
+
+\begin{definition}[覆盖 (Covering relation)]
+  设 $(P,\le)$ 为偏序集，记严格顺序 $<$ 为 $x<y\iff x\le y\land x\neq y$。若对 $x,y\in P$ 有 $x<y$，
+  且不存在 $z\in P$ 使得 $x<z<y$，
+  则称 $y$ 覆盖（covers） $x$，记作 $x\lessdot y$。  
+\end{definition}
+
+\begin{definition}[哈斯图 (Hasse diagram)]
+    哈斯图是有限偏序集 $(P,\le)$ 的传递约简 (transitive reduction) 的图形表示：
+    将每个元素画为点；若 $y$ 覆盖 $x$，则在 $x$ 下方画一条无向（或向上）的线段连接 $x$ 与 $y$；
+    省略所有反身和传递边。  
+\end{definition}
+
+\begin{definition}[最小元 (Least element)]
+ 若 $m\in P$ 满足对一切 $x\in P$ 均有 $m\le x$，则称 $m$ 为偏序集的\emph{最小元}。此元至多唯一。  
+\end{definition}
+\begin{definition}[最大元 (Greatest element)]
+  若 $g\in P$ 满足对一切 $x\in P$ 均有 $x\le g$，则称 $g$ 为偏序集的\emph{最大元}。此元至多唯一。  
+\end{definition}
+
+\begin{definition}[极小元 (Minimal element)]
+   若 $m\in P$ 且不存在 $x\in P$ 满足 $x<m$，则称 $m$ 为\emph{极小元}。偏序集中可有多个极小元。  
+\end{definition}
+
+\begin{definition}[极大元 (Maximal element)]
+  若 $M\in P$ 且不存在 $x\in P$ 满足 $M<x$，则称 $M$ 为\emph{极大元}。偏序集中可有多个极大元。  
+\end{definition}
+      
+\begin{definition}[上界 (Upper bound)]
+   设 $S\subseteq P$。若 $u\in P$ 满足对所有 $s\in S$ 有 $s\le u$，则称 $u$ 为 $S$ 的\emph{上界}。  
+\end{definition}
+
+\begin{definition}[下界 (Lower bound)]
+  设 $S\subseteq P$。若 $\ell\in P$ 满足对所有 $s\in S$ 有 $\ell\le s$，则称 $\ell$ 为 $S$ 的\emph{下界}。  
+\end{definition}
+
+\begin{definition}[最小上界 / 上确界 (Least upper bound / Supremum)]
+  设 $S\subseteq P$，若 $s^* \in P$ 同时满足：
+  \begin{enumerate}
+    \item 对所有 $s\in S$ 有 $s\le s^*$；  
+    \item 任意上界 $u$ 均满足 $s^*\le u$，
+  \end{enumerate}
+  则称 $s^*$ 为 $S$ 的\emph{最小上界}（上确界，supremum）。  
+  \end{definition}
+  
+  \begin{definition}[最大下界 / 下确界 (Greatest lower bound / Infimum)]
+  设 $S\subseteq P$，若 $\ell^* \in P$ 同时满足：
+  \begin{enumerate}
+    \item 对所有 $s\in S$ 有 $\ell^*\le s$；  
+    \item 任意下界 $\ell$ 均满足 $\ell\le \ell^*$，
+  \end{enumerate}
+  则称 $\ell^*$ 为 $S$ 的\emph{最大下界}（下确界，infimum）。  
+  \end{definition}
+
+
+\begin{definition}
+  设 $(P,\le)$ 为偏序集。如果对任意 $x,y\in P$，集合 $\{x,y\}$ 都有最小上界（并） $x\vee y$ 与最大下界（交） $x\wedge y$，
+  则称 $(P,\le)$ 为\emph{格}。  
+\end{definition}
+
+\begin{proposition}[代数刻画]
+  格可等价地定义为代数结构 $(L,\vee,\wedge)$，满足对所有 $a,b,c\in L$：  
+  \[
+  \begin{aligned}
+  &\text{交换律: } a\vee b = b\vee a,\quad a\wedge b = b\wedge a;\\
+  &\text{结合律: } (a\vee b)\vee c = a\vee(b\vee c),\quad (a\wedge b)\wedge c = a\wedge(b\wedge c);\\
+  &\text{吸收律: } a\vee(a\wedge b)=a,\quad a\wedge(a\vee b)=a;\\
+  &\text{幂等律: } a\vee a = a,\quad a\wedge a = a.
+  \end{aligned}
+  \]  
+  此代数定义与偏序定义等价。  
+\end{proposition}
+
+\subsection{有界格与分配格}
+
+\begin{itemize}
+  \item 若格中存在最小元 $0$ 和最大元 $1$，称为\emph{有界格}。  
+  \item 若对任意 $a,b,c\in L$，均满足分配律
+  \[
+    a\vee(b\wedge c)=(a\vee b)\wedge(a\vee c),\quad
+    a\wedge(b\vee c)=(a\wedge b)\vee(a\wedge c),
+  \]
+  则称为\emph{分配格}。  
+\end{itemize}

@@ -5,11 +5,12 @@
 \contentsline {section}{\numberline {1.4}抽屉原理}{4}{section.1.4}%
 \contentsline {section}{\numberline {1.5}容斥原理}{6}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}容斥原理}{6}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}莫比乌斯反演}{7}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}莫比乌斯反演I}{7}{subsection.1.5.2}%
 \contentsline {subsubsection}{偏序集里的莫比乌斯反演}{9}{subsubsection*.2}%
+\contentsline {subsection}{\numberline {1.5.3}莫比乌斯反演II}{12}{subsection.1.5.3}%
 \contentsline {section}{\numberline {1.6}递推关系和生成函数}{12}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}生成函数}{13}{subsection.1.6.1}%
-\contentsline {subsubsection}{一般生成函数}{13}{subsubsection*.3}%
+\contentsline {subsubsection}{一般生成函数}{14}{subsubsection*.3}%
 \contentsline {subsubsection}{指数生成函数}{15}{subsubsection*.4}%
 \contentsline {section}{\numberline {1.7}卡特兰数和第二类斯特林数}{16}{section.1.7}%
 \contentsline {subsection}{\numberline {1.7.1}卡特兰数}{16}{subsection.1.7.1}%

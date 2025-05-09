@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  3 MAY 2025 15:36
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  9 MAY 2025 14:22
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **Math
@@ -562,66 +562,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 436--439
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 522--524
+Underfull \hbox (badness 10000) in paragraph at lines 533--535
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 550--552
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--566
+Underfull \hbox (badness 10000) in paragraph at lines 561--563
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 568--570
+Underfull \hbox (badness 10000) in paragraph at lines 573--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 579--581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--584
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
+Underfull \hbox (badness 10000) in paragraph at lines 593--595
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 598--600
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--610
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--620
+Underfull \hbox (badness 10000) in paragraph at lines 619--621
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--624
+Underfull \hbox (badness 10000) in paragraph at lines 633--635
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--628
+Underfull \hbox (badness 10000) in paragraph at lines 637--639
 
  []
 
-[16]) [17]
+) [17]
 第二章
 (./docs/number_.tex [18
 
@@ -917,8 +917,14 @@ L3 programming layer <2022/07/14>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Math.out' has not changed.
-(rerunfilecheck)             Checksum: 6D29BFD65AA2674D9DD06DBBEACA924A;4766.
+
+Package rerunfilecheck Warning: File `Math.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Math.out':
+(rerunfilecheck)             Before: 0F99948B737A552D999988D4AF112170;5009
+(rerunfilecheck)             After:  BE8B2563212BBD24BCFC3CA98866D1DD;4891.
  ) 
 Here is how much of TeX's memory you used:
  16424 strings out of 474773
@@ -927,6 +933,6 @@ Here is how much of TeX's memory you used:
  38299 multiletter control sequences out of 15000+600000
  574174 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,13n,97p,537b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,13n,97p,537b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Math.pdf (62 pages).

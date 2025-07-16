@@ -21,7 +21,7 @@
 }  
 %取消缩进
 \setlength{\parindent}{0pt}
-
+\linespread{1.5}
 \title{XCPC 算法模板和结论(补充)}
 \date{\today}
 %\cppcode{}
@@ -31,15 +31,9 @@
 \tableofcontents
 \clearpage
 
-\chapter{dp}
-\section{四边形不等式优化dp}
-如果 $f(l,r)$ 和$ g(l,r)$ 符合四边形不等式/区间包含单调性，则对于任意 $A,B≥0$ ，$ Af(l,r)+Bg(l,r)$ 也符合四边形不等式/区间包含单调性。
-
-如果存在$f(x) $和$ g(x) $使$ w(l,r)=f(r)−g(l) $，则$ w(l,r) $符合 \textbf{四边形恒等式}（即等号总是成立的四边形不等式）。如果$ f ， g $单增，则 $w $还符合区间包含单调性。
-
-若 $h(x$) 单增且下凸， $w(l,r)$ 符合四边形不等式和区间包含单调性，则$ h(w(l,r)) $也符合四边形不等式和区间包含单调性。
-
-若$ h(x) $下凸，$w(l,r)$ 符合四边形\textbf{恒}等式和区间包含单调性，则 $h(w(l,r))$ 也符合四边形不等式。
+\chapter{几何}
+\section{极角排序}
+\cppcode{psort.cpp}
 
 \chapter{树}
 \section{树的重心}
@@ -85,7 +79,6 @@ $$
 \cppcode{segtgcd.cpp}
 
 \section{对顶堆}
-只给出堆的代码.
 \cppcode{Maxheap.cpp}
 对顶堆可以动态维护一个序列上的中位数,或者第k大的数,(k的值可能变化).\\
 对顶堆由一个大根堆与一个小根堆组成，小根堆维护大值即前 k 大的值（包含第 k 个），大根堆维护小值即比第 k 大数小的其他数。\\
@@ -96,6 +89,10 @@ $$
 删除第 k 大元素：删除小根堆堆顶元素，然后维护对顶堆；\\
 变化k：根据新的 k 值直接维护对顶堆。\\
 时间复杂度$O(\log{n})$
+\cppcode{对顶堆.cpp}
+
+\section{手写Bitset}
+\cppcode{Bitset.cpp}
 
 \chapter{trick}
 

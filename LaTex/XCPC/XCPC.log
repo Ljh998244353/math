@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  16 JUL 2025 14:59
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  16 JUL 2025 15:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -736,10 +736,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--1
 
  []
 
-[11] [12] [13]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [14]) (./_minted-XCPC/5705C17B533EAC023EF575B946AE50C7E4EA1D9AE1099185DC6A577AB1E2C569.pygtex [15])
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -o _minted-XCPC/3F05CAF7BE08C70D05F8EC02FA6A5FC4AC04A77324C3277B50234658238A6B4B.pygtex source/Bitset.cpp)...executed.
-
- (./_minted-XCPC/3F05CAF7BE08C70D05F8EC02FA6A5FC4AC04A77324C3277B50234658238A6B4B.pygtex [16]) [17]
+[11] [12] [13]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [14]) (./_minted-XCPC/5705C17B533EAC023EF575B946AE50C7E4EA1D9AE1099185DC6A577AB1E2C569.pygtex [15]) (./_minted-XCPC/3F05CAF7BE08C70D05F8EC02FA6A5FC4AC04A77324C3277B50234658238A6B4B.pygtex [16]) [17]
 Chapter 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -790,14 +787,8 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `XCPC.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `XCPC.out':
-(rerunfilecheck)             Before: B5EC554DD6955D48A4AA44EAD8781FA8;1463
-(rerunfilecheck)             After:  E98DBE2C174F580B2F248592B678FF78;1564.
+Package rerunfilecheck Info: File `XCPC.out' has not changed.
+(rerunfilecheck)             Checksum: E98DBE2C174F580B2F248592B678FF78;1564.
 runsystem(del XCPC.pyg)...executed.
 
  ) 

@@ -1,57 +1,51 @@
 u64 mi[200];
-// for (int i = 0; i < 64; i++) {
-//   mi[i] = (1ULL << i);
-// }
+// for (int i = 0; i < 64; i++) mi[i] = (1ULL << i);
 struct Bit {
-  // max bit =  1,000,064
-  u64 bit[15626];
-  // 记录数组长度
-  int len = 15626;
+  vector<u64> bit;
+  int len;
+
+  Bit(int sz = 0) {
+    len = (sz + 63) >> 6;
+    bit.assign(len, 0);
+  }
+
 #define I inline
-  I void reset() { memset(bit, 0, sizeof(bit)); }
-  Bit() { memset(bit, 0, sizeof(bit)); }
+  I void reset() { fill(bit.begin(), bit.end(), 0); }
+  Bit() { fill(bit.begin(), bit.end(), 0); }
   I void set1(int x) { bit[x >> 6] |= mi[x & 63]; }
   I void set0(int x) { bit[x >> 6] &= ~mi[x & 63]; }
   I void flip(int x) { bit[x >> 6] ^= mi[x & 63]; }
   bool operator[](int x) { return (bit[x >> 6] >> (x & 63)) & 1; }
-
 #define re register
   Bit operator~(void) const {
     Bit res;
     for (re int i = 0; i < len; i++) res.bit[i] = ~bit[i];
     return res;
   }
-
   Bit operator&(const Bit &b) const {
     Bit res;
     for (re int i = 0; i < len; i++) res.bit[i] = bit[i] & b.bit[i];
     return res;
   }
-
   Bit operator|(const Bit &b) const {
     Bit res;
     for (re int i = 0; i < len; i++) res.bit[i] = bit[i] | b.bit[i];
     return res;
   }
-
   Bit operator^(const Bit &b) const {
     Bit res;
     for (re int i = 0; i < len; i++) res.bit[i] = bit[i] ^ b.bit[i];
     return res;
   }
-
   void operator&=(const Bit &b) {
     for (re int i = 0; i < len; i++) bit[i] &= b.bit[i];
   }
-
   void operator|=(const Bit &b) {
     for (re int i = 0; i < len; i++) bit[i] |= b.bit[i];
   }
-
   void operator^=(const Bit &b) {
     for (re int i = 0; i < len; i++) bit[i] ^= b.bit[i];
   }
-
   Bit operator<<(const int t) const {
     Bit res;
     int high = t >> 6, low = t & 63;
@@ -62,7 +56,6 @@ struct Bit {
     }
     return res;
   }
-
   Bit operator>>(const int t) const {
     Bit res;
     int high = t >> 6, low = t & 63;
@@ -73,7 +66,6 @@ struct Bit {
     }
     return res;
   }
-
   void operator<<=(const int t) {
     int high = t >> 6, low = t & 63;
     for (register int i = len - high - 1; ~i; i--) {

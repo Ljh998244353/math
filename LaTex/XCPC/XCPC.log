@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  16 JUL 2025 16:10
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  16 JUL 2025 19:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -737,9 +737,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--1
  []
 
 [11] [12] [13]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [14]) (./_minted-XCPC/5705C17B533EAC023EF575B946AE50C7E4EA1D9AE1099185DC6A577AB1E2C569.pygtex [15])
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -o _minted-XCPC/0EFA1B0B5C8F4451A66793AA21C254A4AC04A77324C3277B50234658238A6B4B.pygtex source/Bitset.cpp)...executed.
+runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -o _minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex source/Bitset.cpp)...executed.
 
- (./_minted-XCPC/0EFA1B0B5C8F4451A66793AA21C254A4AC04A77324C3277B50234658238A6B4B.pygtex [16] [17]) [18]
+ (./_minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex [16] [17]) [18]
 Chapter 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -781,7 +781,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-runsystem(del _minted-XCPC\3F05CAF7BE08C70D05F8EC02FA6A5FC4AC04A77324C3277B50234658238A6B4B.pygtex)...executed.
+runsystem(del _minted-XCPC\0EFA1B0B5C8F4451A66793AA21C254A4AC04A77324C3277B50234658238A6B4B.pygtex)...executed.
 
 [21] (./XCPC.aux)
  ***********

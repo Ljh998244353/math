@@ -1,47 +1,85 @@
-struct Bitset {
-  Bitset() : Bitset(0) {}
-  Bitset(int _sz) {
-    sz = _sz;
-    ptr = 0;
-    vec.resize((_sz + 63) >> 6);
-  }
-  void Add(int cnt, uLL val) {
-    if (cnt <= 64 - (ptr & 63))
-      vec[ptr >> 6] |= val << (ptr & 63);
-    else {
-      uLL mask = BitBetween(0, 64 - (ptr & 63) - 1);
-      vec[ptr >> 6] |= (val & mask) << (ptr & 63);
-      vec[(ptr >> 6) + 1] = val >> (64 - (ptr & 63));
-    }
-    ptr += cnt;
-  }
-  void GetSame(const Bitset& rhs) {
-    while (sz != ptr || rhs.sz != rhs.ptr);
-    for (int i = 0; i < vec.size(); i++) vec[i] ^= ~rhs.vec[i];
-    int mn_sz = min(sz, rhs.sz);
-    for (int i = mn_sz >> 6; i < vec.size(); i++) {
-      int l_bit = max(0, mn_sz - (i << 6));
-      int r_bit = 63;
-      vec[i] &= ~BitBetween(l_bit, r_bit);
-    }
-  }
-  uLL Calc() const {
-    uLL ret = 0;
-    for (int i = 0, ri = 0; i < vec.size(); i++) {
-      Update(vec[i] & (S - 1), ret, ri);
-      Update(vec[i] >> 16 & (S - 1), ret, ri);
-      Update(vec[i] >> 32 & (S - 1), ret, ri);
-      Update(vec[i] >> 48 & (S - 1), ret, ri);
-    }
-    return ret;
-  }
-  void out() const {
-    fprintf(stderr, "sz = %d : ", sz);
-    for (int i = 0; i < sz; i++)
-      fprintf(stderr, "%llu", (vec[i >> 6] >> (i & 63)) & 1);
-    fprintf(stderr, "\n");
+u64 mi[200];
+// for (int i = 0; i < 64; i++) {
+//   mi[i] = (1ULL << i);
+// }
+struct Bit {
+  // max bit =  1,000,064
+  u64 bit[15626];
+  // 记录数组长度
+  int len = 15626;
+#define I inline
+  I void reset() { memset(bit, 0, sizeof(bit)); }
+  Bit() { memset(bit, 0, sizeof(bit)); }
+  I void set1(int x) { bit[x >> 6] |= mi[x & 63]; }
+  I void set0(int x) { bit[x >> 6] &= ~mi[x & 63]; }
+  I void flip(int x) { bit[x >> 6] ^= mi[x & 63]; }
+  bool operator[](int x) { return (bit[x >> 6] >> (x & 63)) & 1; }
+
+#define re register
+  Bit operator~(void) const {
+    Bit res;
+    for (re int i = 0; i < len; i++) res.bit[i] = ~bit[i];
+    return res;
   }
 
-  int sz, ptr;
-  vector<uLL> vec;
+  Bit operator&(const Bit &b) const {
+    Bit res;
+    for (re int i = 0; i < len; i++) res.bit[i] = bit[i] & b.bit[i];
+    return res;
+  }
+
+  Bit operator|(const Bit &b) const {
+    Bit res;
+    for (re int i = 0; i < len; i++) res.bit[i] = bit[i] | b.bit[i];
+    return res;
+  }
+
+  Bit operator^(const Bit &b) const {
+    Bit res;
+    for (re int i = 0; i < len; i++) res.bit[i] = bit[i] ^ b.bit[i];
+    return res;
+  }
+
+  void operator&=(const Bit &b) {
+    for (re int i = 0; i < len; i++) bit[i] &= b.bit[i];
+  }
+
+  void operator|=(const Bit &b) {
+    for (re int i = 0; i < len; i++) bit[i] |= b.bit[i];
+  }
+
+  void operator^=(const Bit &b) {
+    for (re int i = 0; i < len; i++) bit[i] ^= b.bit[i];
+  }
+
+  Bit operator<<(const int t) const {
+    Bit res;
+    int high = t >> 6, low = t & 63;
+    u64 last = 0;
+    for (register int i = 0; i + high < len; i++) {
+      res.bit[i + high] = (last | (bit[i] << low));
+      if (low) last = (bit[i] >> (64 - low));
+    }
+    return res;
+  }
+
+  Bit operator>>(const int t) const {
+    Bit res;
+    int high = t >> 6, low = t & 63;
+    u64 last = 0;
+    for (register int i = len - 1; i >= high; i--) {
+      res.bit[i - high] = last | (bit[i] >> low);
+      if (low) last = bit[i] << (64 - low);
+    }
+    return res;
+  }
+
+  void operator<<=(const int t) {
+    int high = t >> 6, low = t & 63;
+    for (register int i = len - high - 1; ~i; i--) {
+      bit[i + high] = (bit[i] << low);
+      if (low && i) bit[i + high] |= bit[i - 1] >> (64 - low);
+    }
+    for (register int i = 0; i < high; i++) bit[i] = 0;
+  }
 };

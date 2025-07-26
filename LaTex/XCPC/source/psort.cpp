@@ -44,5 +44,5 @@ using Points = vector<Point<int>>;
 double theta(auto p) { return atan2(p.y, p.x); }
 void psort(Points &ps, Point<int> c = {0, 0}) {
   sort(ps.begin(), ps.end(),
-       [&](auto p1, auto p2) { return lt(theta(p1 - c), theta(p2 - c)); });
+       [&](auto p1, auto p2) { return theta(p1 - c) < theta(p2 - c); });
 }

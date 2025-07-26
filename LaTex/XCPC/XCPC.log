@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  16 JUL 2025 19:42
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  26 JUL 2025 18:08
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -680,7 +680,7 @@ LaTeX Warning: No \author given.
 
 ]
 Chapter 1.
-(./_minted-XCPC/default.pygstyle) (./_minted-XCPC/24926009134C2311529A975EC7F660292DB7CD57753E6EFA95903F0CD86D834C.pygtex
+(./_minted-XCPC/default.pygstyle) (./_minted-XCPC/0A91DEDAE15E234DEAC0442B56FA21D52DB7CD57753E6EFA95903F0CD86D834C.pygtex
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -714,36 +714,33 @@ LaTeX Font Warning: Font shape `TU/FangSong(0)/m/it' undefined
 [2
 
 
-]) [3]
+]) (./_minted-XCPC/827F4DC81B1C8661A10C4622EA15C2CD430C318F865406BDB58DE6009EC96E96.pygtex [3] [4]) [5]
 Chapter 2.
-[4
+[6
 
 ]
 Chapter 3.
 (./_minted-XCPC/A0A383D48F2B39AB30717BF36C1FB19BEACAB40F7668858C4143690DABB9F943.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 59--1
+Underfull \hbox (badness 10000) in paragraph at lines 63--1
 
  []
 
-[5
+[7
 
-]) [6]
+]) [8]
 Chapter 4.
-(./_minted-XCPC/D4D70342B49E59C9EDA39D56FBFE982C92EA9D29C4F83980E6AC9F50CCC18B4D.pygtex [7
+(./_minted-XCPC/D4D70342B49E59C9EDA39D56FBFE982C92EA9D29C4F83980E6AC9F50CCC18B4D.pygtex [9
 
-] [8] [9] [10]) (./_minted-XCPC/2993B887D2AC7584BA8DAB364168CC816F8BD9E92318E59F12F218A4812F9B44.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 77--1
+] [10] [11] [12]) (./_minted-XCPC/2993B887D2AC7584BA8DAB364168CC816F8BD9E92318E59F12F218A4812F9B44.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 81--1
 
  []
 
-[11] [12] [13]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [14]) (./_minted-XCPC/5705C17B533EAC023EF575B946AE50C7E4EA1D9AE1099185DC6A577AB1E2C569.pygtex [15])
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -o _minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex source/Bitset.cpp)...executed.
-
- (./_minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex [16] [17]) [18]
+[13] [14] [15]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [16]) (./_minted-XCPC/5705C17B533EAC023EF575B946AE50C7E4EA1D9AE1099185DC6A577AB1E2C569.pygtex [17]) (./_minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex [18] [19]) [20]
 Chapter 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 99.
+(hyperref)                than one, level fixed on input line 103.
 
 \openout3 = `XCPC.pyg'.
 
@@ -751,21 +748,21 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 \openout3 = `XCPC.pyg'.
 
  (./_minted-XCPC/2B1DE751F292DD954108EC7388D662A4063079CEF51D968434C136339BD25CC3.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 109--1
+Underfull \hbox (badness 10000) in paragraph at lines 113--1
 
  []
 
-) [19
+) [21
 
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--125
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
@@ -774,16 +771,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--125
 (./_minted-XCPC/470D69E8F462F058BD434D7D724A5AD0063079CEF51D968434C136339BD25CC3.pygtex)
 \openout3 = `XCPC.pyg'.
 
- (./_minted-XCPC/11FF1A9775FCA118026BCC9EA15F4580063079CEF51D968434C136339BD25CC3.pygtex [20
+ (./_minted-XCPC/11FF1A9775FCA118026BCC9EA15F4580063079CEF51D968434C136339BD25CC3.pygtex [22
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-runsystem(del _minted-XCPC\0EFA1B0B5C8F4451A66793AA21C254A4AC04A77324C3277B50234658238A6B4B.pygtex)...executed.
-
-[21] (./XCPC.aux)
+[23] (./XCPC.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -793,17 +788,17 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `XCPC.out' has not changed.
-(rerunfilecheck)             Checksum: E98DBE2C174F580B2F248592B678FF78;1564.
+(rerunfilecheck)             Checksum: 7DC2E9330A55944DF7348E02B866E81A;1651.
 runsystem(del XCPC.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17734 strings out of 474773
- 383825 string characters out of 5761289
- 1939842 words of memory out of 5000000
- 39566 multiletter control sequences out of 15000+600000
+ 17762 strings out of 474773
+ 385672 string characters out of 5761289
+ 1940842 words of memory out of 5000000
+ 39591 multiletter control sequences out of 15000+600000
  565747 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 74i,6n,86p,622b,753s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,6n,86p,699b,753s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on XCPC.pdf (22 pages).
+Output written on XCPC.pdf (24 pages).

@@ -1,6 +1,6 @@
-# 算法学习笔记.SOSDP(子集和dp)
+# 算法学习笔记.SOSDP(子集和dp)--萝莉控都能看懂的sosdp教程。
 
-> 幼儿园都能看懂的sosdp教程。
+> 萝莉控都能看懂的sosdp教程。
 
 即是**Sum Over Subsets DP**
 

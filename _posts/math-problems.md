@@ -103,7 +103,7 @@ $$
 
 
 
-### problem25（进制(ACM)，对应法）
+### problem25（进制，对应法）
 
 ### problem27（图论,guess）
 

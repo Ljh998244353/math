@@ -1,8 +1,10 @@
-# 算法学习笔记.SOSDP(子集和dp)--萝莉控都能看懂的sosdp教程。
+# 萝莉控都能看懂的sosdp
 
-> 萝莉控都能看懂的sosdp教程。
+> 萝莉控都能看懂的sosdp。
 
-即是**Sum Over Subsets DP**
+**Sum Over Subsets DP**
+
+> 前置知识：容斥原理，莫比乌斯反演，状压dp，分治。
 
 ## 背景
 
@@ -21,13 +23,31 @@ G(\{x_2\})&=F(\{x_2\})+F(\phi)\\
 G(\{x_1,x_2\})&=F(\{x_1,x_2\})+G(\{x_1\})+G(\{x_2\})-G(\phi)
 \end{aligned}
 $$
-推广到$n$元
+推广到$n$元，即容斥原理有
+$$
+F(S)=\sum_{K\subseteq S} (-1)^{|S|-|K|}G(K)
+$$
+即
 $$
 G(S)=F(S)+\sum_{K\subset S}(-1)^{|S|-|K|+1}G(K)
 $$
-时间复杂度为$O(3^n)$
+通过枚举子集
 
-注意到二元形式和二维前缀和很像。如果把一个元素看成一个维度的话，发现其本质就是一个**$n$维前缀和**的问题。
+```cpp
+for(int j=st;j;j=(j-1)&st)
+```
+
+时间复杂度为$O(3^n)$。
+
+我们对每一个元素是否存在用一个二进制位表示：
+
+先对二维尝试
+$$
+G_{1,1}=F_{1,1}+G_{1,0}+G_{0,1}-G_{0,0}
+$$
+不难发现这就是一个二维前缀和。
+
+如果把一个元素看成一个维度的话，发现其本质就是一个**$n$维前缀和**的问题。
 
 ## 高维前缀和
 
@@ -73,7 +93,7 @@ for(int i=0;i<2;++i){
 ```cpp
 int pw[]={1,n,n*n,n*n*n,.....}
 for(int i=0;i<d;++i){
-    for(int j=0;j<n*n;++j){
+    for(int j=0;j<pw[d];++j){
         if((j/pw[i])%n!=0) f[j]+=f[j-pw[i]];
     }
 }
@@ -93,25 +113,9 @@ $$
 
 ---
 
+事实上，这就是每一维大小为2的**n维前缀和**。
 
-
-回归正题。考虑dp
-
-我们定义$f_{i,st}$表示$st$最高可变化位为$i$位的子集和(大于$i$的都固定) 。那么我们有
-
-+ st第$i$位为0，那么$f_{i,st}=f_{i-1,st}$
-
-+ 否则，$f_{i,st}=f_{i-1,st}+f_{i-1,st\oplus 2^i}$
-
-显然可以优化掉第一维。这里就不写了。
-
----
-
-上面的dp还是太吃操作了，还有更**简单强势**的方法理解。
-
-上面的递推式看上去有点像上面的前缀和。事实上，这就是每一维大小为2的**n维前缀和**。
-
-用二进制压缩集合后，对于集合$A,B$，用向量$a(a_1,a_2,\cdots,a_n),b(b_1,b_2,\cdots,b_n)$表示其二进制，我们说
+用二进制压缩集合后，对于集合$A,B$，用向量$a(a_1,a_2,\cdots,a_n),b(b_1,b_2,\cdots,b_n)$表示其二进制，有
 $$
 A\subseteq B \iff a\le b
 $$
@@ -130,9 +134,244 @@ for(int i=0;i<n;++i){
 
 时间复杂度$O(n 2^n)$
 
-> **高维差分**：将循环反向，+变-即可。特别地，sosdp，只用变号
+**高维差分**
+
+即由$G \to F$。考虑上面的代码，显然我们只需要将循环全部反向，并变成减号就行。
+
+**高维后缀和**
+
+即
+$$
+G(K)=\sum_{K\subseteq L }F(L)\qquad (K\subseteq U)
+$$
+全取补集即可变成前缀和。
+
+## 狄利克雷前缀和
+
+$$
+G(n)=\sum_{d|n} F(d)
+$$
+
+朴素的做法是
+
+```cpp
+for(int i = 1; i <= n; ++ i) {
+  for(int j = 1; j * i <= n; ++ j) {
+    G[i * j] += F[j];
+  }
+}
+```
+
+时间复杂度为$O(n\log n)$
+
+根据算数基本定理，我们可以
+$$
+n=\prod_{i=1}^{t} p_i^{k_i}
+$$
+
+> 因此可以将$d|n$转化为更简单的偏序关系即
+> $$
+> a|b \iff \vec{k_a} \le \vec{k_b} 
+> $$
+> 然后就变成了高位前缀和。
+
+有
+$$
+\begin{aligned}
+G(n)&=\sum_{d|n} F(d)\\
+&=\sum_{i_1=0}^{k_1}\cdots\sum_{i_t}^{k_t} F\left(\prod_{j=1}^{t}p_j^{i_j} \right)\\
+&=\sum_{i_1=0}^{k_1}\cdots\sum_{i_t}^{k_t} F\left(\frac{n}{\prod_{j=1}^{t}p_j^{i_j}} \right)
+\end{aligned}
+$$
+令
+$$
+H(n,x)=\sum_{i_1=0}^{k_1}\cdots\sum_{i_x}^{k_x} F\left(\frac{n}{\prod_{j=1}^{x}p_j^{i_j}} \right)
+$$
+若$k_x>0$
+$$
+\begin{aligned}
+H(n,x+1)&=\sum_{i_1=0}^{k_1}\cdots\sum_{i_{x+1}=0}^{k_{x+1}} F\left(\frac{n}{\prod_{j=1}^{x+1}p_j^{i_j}} \right)\\
+&=\sum_{i_{x+1}=0}^{k_{x+1}}  \sum_{i_1=0}^{k_1}\cdots F\left(\frac{n}{\prod_{j=1}^{x+1}p_j^{i_j}} \right)\\
+&=\sum_{i_{x+1}=0}^{k_{x+1}}  H\left(\frac{n}{p_{x+1}^{i_{x+1}}},x \right)\\
+&=H(n,x)+\sum_{i_{x+1}=1}^{k_{x+1}}  H\left(\frac{n}{p_{x+1}^{i_{x+1}}},x \right)\\
+&=H(n,x)+\sum_{i_{x+1}=0}^{k_{x+1}-1}  H\left(\frac{\frac{n}{p_{x+1}}}{p_{x+1}^{i_{x+1}}},x \right)\\
+&=H(n,x)+H\left(\frac{n}{p_{x+1}},x+1 \right)
+\end{aligned}
+$$
+
+```cpp
+// cnt：素数个数
+for(int x = 1; x <= cnt && primes[x] <= n; ++ x) {
+  for(int j = 1; j * primes[i] <= n; ++ j) {
+    H[j * primes[i]] += H[j];
+  }
+}
+```
+
+只要$x$充分大。显然有
+$$
+G(n)=H(n)
+$$
+这个双重循环的总体工作量是：
+$$
+\sum_{x=1}^{\pi(n)} \Bigl\lfloor \frac{n}{p_x} \Bigr\rfloor
+$$
+其中 $p_x$ 表示第 $x$ 个素数，$\pi(n)$ 是不超过 $n$ 的素数个数。
+
+- 对于固定的素数 $p$，内层循环执行次数约为 $\lfloor n/p\rfloor$。
+
+- 因此总复杂度
+  $$
+    T(n)\approx \sum_{p\le n} \frac{n}{p}
+    = n\sum_{p\le n}\frac1p.
+  $$
+
+- 根据数论中的素数倒数调和级数估计，有
+  $$
+    \sum_{p\le n}\frac1p = \ln\ln n + O(1).
+  $$
+
+于是
+$$
+T(n) = n\bigl(\ln\ln n + O(1)\bigr) = O\bigl(n\ln\ln n\bigr).
+$$
+这段代码时间复杂度为$O(n\log \log n)$。
+
+观察这个代码实际上是就是在做**高维前缀和**。
+
+### **狄利克雷后缀和**
+
+$$
+G(d)=\sum_{d|n} F(n)
+$$
+
+类似地可以推出
+$$
+H(d,x+1)=H(d,x)+H(dp_{x+1},x+1)
+$$
+
+```cpp
+for(int i = 1; i <= cnt && primes[i] <= n; ++ i) {
+  for(int j = n / primes[i]; j ; -- j) {
+    H[j] += H[j * primes[i]];
+  }
+}
+```
+
+### 逆狄利克雷前缀和
+
+就是感觉前缀和的柿子，反解$F$。
+
+这相当于进行高维差分。
+
+```cpp
+for(int i = cnt; i ; -- i) {
+  for(int j = n / primes[i]; j ; -- j) {
+    H[j * primes[i]] -= H[j];
+  }
+}
+```
+
+### 逆狄利克雷后缀和
+
+高维差分
+
+```cpp
+for(int i = cnt; i ; -- i) {
+  for(int j = 1; j * primes[i] <= n; ++ j) {
+    H[j] -= H[j * primes[i]];
+  }
+}
+```
+
+## 快速莫比乌斯变换（FMT，或卷积，与卷积，gcd卷积，和lcm卷积）
+
+> 注意下面如果将集合突然换成了数字，就是用二进制数表示了集合。
+
+FMT 可以处理按位与、按位或等的卷积。
+
+如有集合上的函数$F,G,H$，求出
+$$
+H(\mathcal{S})=\sum_{\mathcal{I} \bigcup \mathcal{J}=\mathcal{S}} F(\mathcal{I}) G(\mathcal{J})
+$$
+
+> 如果我们能找到一种变化，使得
+> $$
+> FMT(H)_i= FMT(F)_i \times FMT(G)_i
+> $$
+> 就好了。
+
+~~回忆一下这篇文章的标题~~，我们考虑做高维前缀和。
+
+令
+$$
+\hat{F}_i=\sum_{k\subseteq i} F_k\quad \
+$$
+其他函数同理。
+
+有
+$$
+\begin{aligned}
+\hat{H}_i&=\sum_{k\subseteq i} H_k\\
+&=\sum_{k\subseteq i} \sum_{x \or y=k}F_x G_y \\
+&=\sum_{x\or y \subseteq i} F_xG_y \\
+&=\left( \sum_{x\subseteq i}F_x  \right) \left( \sum_{y\subseteq i} F_y\right)   \\
+&=\hat{F}_i\times \hat{G}_i 
+\end{aligned}
+$$
+最后对做一次高维差分即可还原。
+
+对称地，容易发现对于与卷积，做**高维后缀和**即可。
+
+对于**gcd卷积做狄利克雷后缀和，lcm卷积做狄利克雷前缀和。**
+
+证明完全类似。
+
+> 实际上，gcd就是整除关系里的与，lcm就是整除关系里的或。
+
+## 快速沃尔什变换（FWT，异或卷积）
+
+> 实际上FWT同样可以做或卷积和与卷积，但比较难写。因此一般只会在FMT不能做的地方写，即异或卷积。
 >
-> **高维后缀和：** 倒着算即可。sosdp也可以取补集。
+> 更多的性质应该会在多项式里写。
+
+~~这里是不是跑题跑得太偏了？~~ 所以关于FWT的更多作用就不在这里写了。
+
+定义
+$$
+x \circ y=\text{popcount}(x \and y) \mod 2
+$$
+那么有
+$$
+(x \circ y)\oplus (x \circ z)=x\circ (y \oplus z)
+$$
+这相当于
+
+> 简要证明一下,$x \and  y$和$x \and z$同奇偶，那么右式可以在x含有的元素里面考虑，$y \oplus z$元素个数为2（奇/偶）-2（奇/偶），为偶数。
+
+
+
+构造
+$$
+\hat{F}_i=\sum_{i\circ j=0} a_j-\sum_{i\circ j=1} a_j
+$$
+有
+$$
+\begin{aligned}
+\hat{H}_i&=\sum_{i\circ j=0}H_j-\sum_{i\circ j=1}H_j\\
+&=\sum_{i\circ j=0}\sum_{x\oplus y=j}F_x G_y-\sum_{i\circ j=1}\sum_{x\oplus y=j}F_x G_y\\
+&=\sum_{i \circ(x\oplus y)=0} F_xG_y-\sum_{i \circ(x\oplus y)=1} F_xG_y\\
+&=\sum_{(i \circ x)\oplus(i \circ y)=0} F_xG_y-\sum_{(i \circ x)\oplus(i \circ y)=1} F_xG_y\\
+&=\sum_{(i \circ x=0)\and(i \circ y=0)} F_xG_y+\sum_{(i \circ x=1)\and(i \circ y=1)} F_xG_y-\sum_{(i \circ x=0)\and(i \circ y=1)} F_xG_y-\sum_{(i \circ x=1)\and(i \circ y=0)} F_xG_y\\
+&=\left(\sum_{(i \circ x=0)}F_x\right) \left( \sum_{(i \circ y=0)} G_y \right)+\left(\sum_{(i \circ x=1)}F_x\right) \left( \sum_{(i \circ y=1)} G_y \right) -\left(\sum_{(i \circ x=0)}F_x\right) \left( \sum_{(i \circ y=1)} G_y \right)-\left(\sum_{(i \circ x=1)}F_x\right) \left( \sum_{(i \circ y=0)} G_y \right)\\
+&=\left( \sum_{i\circ{x}=0} F_x-\sum_{i\circ x=1}F_x \right) \times \left( \sum_{i\circ{y}=0} G_y-\sum_{i\circ y=1}G_y \right) \\
+&=\hat{F}_i \times \hat{G}_i
+\end{aligned}
+$$
+
+现在问题就变成了如何快速变换，这里不多说明，应该会在多项式里补。
+
+## FMT and FWT模板代码（含子集卷积）
 
 
 

@@ -138,6 +138,8 @@ for(int i=0;i<n;++i){
 
 即由$G \to F$。考虑上面的代码，显然我们只需要将循环全部反向，并变成减号就行。
 
+特别地，sosdp直接变号即可。
+
 **高维后缀和**
 
 即
@@ -284,7 +286,7 @@ for(int i = cnt; i ; -- i) {
 }
 ```
 
-## 快速莫比乌斯变换（FMT，或卷积，与卷积，gcd卷积，和lcm卷积）
+## 快速莫比乌斯变换（FMT，或卷积，与卷积，gcd卷积，lcm卷积，子集卷积）
 
 > 注意下面如果将集合突然换成了数字，就是用二进制数表示了集合。
 
@@ -329,11 +331,24 @@ $$
 
 > 实际上，gcd就是整除关系里的与，lcm就是整除关系里的或。
 
+### 子集卷积
+
+$$
+H_i=\sum_{j \or k=i ,j\and k=0} F_j G_k
+$$
+
+注意到$j \and k= 0 \iff |j|+|k|=|j\or k|$
+
+如果我们将$F_{j}$根据 $|j|$分开，即这3个函数，每个划分为$n$个函数。从而有
+$$
+H_z=\sum_{x+y=z}F_x or G_{y}
+$$
+将每一个 $H_z$求出来即可。
+
 ## 快速沃尔什变换（FWT，异或卷积）
 
 > 实际上FWT同样可以做或卷积和与卷积，但比较难写。因此一般只会在FMT不能做的地方写，即异或卷积。
 >
-> 更多的性质应该会在多项式里写。
 
 ~~这里是不是跑题跑得太偏了？~~ 所以关于FWT的更多作用就不在这里写了。
 
@@ -369,9 +384,221 @@ $$
 \end{aligned}
 $$
 
-现在问题就变成了如何快速变换，这里不多说明，应该会在多项式里补。
+现在问题就变成了如何快速变换。
 
-## FMT and FWT模板代码（含子集卷积）
+分治构造。
+$$
+FWT(A)=merge(FWT[A_0]+FWT[A_1],FWT[A_0]-FWT[A_1])
+$$
+$A_0,A_1$会去掉当前位。
+
+若当前位为0，则根本不影响答案。
+
+若为1，对后半部分操作时，去掉这一位应该取个负号。
+
+## FMT and FWT模板代码
+
+```cpp
+template<class T>
+struct Convo {
+  // 快速幂
+  long long qpow(long long a, long long b) const {
+    long long res = 1;
+    while (b) {
+      if (b & 1) res = res * a % mod;
+      a = a * a % mod;
+      b >>= 1;
+    }
+    return res;
+  }
+
+  // SOS 前缀和
+  void sos_prefix(vector<T>& f, int n) {
+    int N = 1 << n;
+    for (int i = 0; i < n; ++i) {
+      for (int mask = 0; mask < N; ++mask) {
+        if (mask & (1 << i)) {
+          f[mask] = (f[mask] + f[mask ^ (1 << i)]) % mod;
+        }
+      }
+    }
+  }
+  // SOS 逆
+  void sos_inverse(vector<T>& f, int n) {
+    int N = 1 << n;
+    for (int i = 0; i < n; ++i) {
+      for (int mask = 0; mask < N; ++mask) {
+        if (mask & (1 << i)) {
+          f[mask] = (f[mask] - f[mask ^ (1 << i)] + mod) % mod;
+        }
+      }
+    }
+  }
+  // SOS 后缀和
+  void sos_suffix(vector<T>& f, int n) {
+    int N = 1 << n;
+    for (int i = 0; i < n; ++i) {
+      for (int mask = 0; mask < N; ++mask) {
+        if (!(mask & (1 << i))) {
+          f[mask] = (f[mask] + f[mask | (1 << i)]) % mod;
+        }
+      }
+    }
+  }
+  // SOS 后缀逆
+  void sos_suffix_inverse(vector<T>& f, int n) {
+    int N = 1 << n;
+    for (int i = 0; i < n; ++i) {
+      for (int mask = 0; mask < N; ++mask) {
+        if (!(mask & (1 << i))) {
+          f[mask] = (f[mask] - f[mask | (1 << i)] + mod) % mod;
+        }
+      }
+    }
+  }
+
+  // 线性筛及 Möbius
+  vector<int> primes, mu;
+  vector<bool> is_comp;
+  void init_sieve(int N) {
+    mu.assign(N + 1, 1);
+    is_comp.assign(N + 1, false);
+    for (int i = 2; i <= N; ++i) {
+      if (!is_comp[i]) {
+        primes.push_back(i);
+        mu[i] = -1;
+      }
+      for (int p : primes) {
+        if ((long long)i * p > N) break;
+        is_comp[i * p] = true;
+        mu[i * p] = (i % p == 0 ? 0 : -mu[i]);
+        if (i % p == 0) break;
+      }
+    }
+  }
+  // Dirichlet 前缀和
+  void dirichlet_prefix(vector<T>& F, int n) {
+    for (int p : primes) {
+      if (p > n) break;
+      for (int i = 1; i * p <= n; ++i) {
+        F[i * p] = (F[i * p] + F[i]) % mod;
+      }
+    }
+  }
+  // Dirichlet 前缀逆
+  void dirichlet_prefix_inverse(vector<T>& G, int n) {
+    for (int i = (int)primes.size() - 1; i >= 0; --i) {
+      int p = primes[i];
+      if (p > n) continue;
+      for (int j = 1; j * p <= n; ++j) {
+        G[j * p] = (G[j * p] - G[j] + mod) % mod;
+      }
+    }
+  }
+  // Dirichlet 后缀和
+  void dirichlet_suffix(vector<T>& F, int n) {
+    for (int p : primes) {
+      if (p > n) break;
+      for (int i = n / p; i >= 1; --i) {
+        F[i] = (F[i] + F[i * p]) % mod;
+      }
+    }
+  }
+  // Dirichlet 后缀逆
+  void dirichlet_suffix_inverse(vector<T>& H, int n) {
+    for (int i = (int)primes.size() - 1; i >= 0; --i) {
+      int p = primes[i];
+      if (p > n) continue;
+      for (int j = n / p; j >= 1; --j) {
+        H[j] = (H[j] - H[j * p] + mod) % mod;
+      }
+    }
+  }
+
+  // OR 卷积
+  void OR(vector<T>& F, vector<T>& G, int n) {
+    sos_prefix(F, n);
+    sos_prefix(G, n);
+    int N = 1 << n;
+    for (int i = 0; i < N; ++i) F[i] = (long long)F[i] * G[i] % mod;
+    sos_inverse(F, n);
+  }
+  // AND 卷积
+  void AND(vector<T>& F, vector<T>& G, int n) {
+    sos_suffix(F, n);
+    sos_suffix(G, n);
+    int N = 1 << n;
+    for (int i = 0; i < N; ++i) F[i] = (long long)F[i] * G[i] % mod;
+    sos_suffix_inverse(F, n);
+  }
+  // GCD 卷积
+  void GCD(vector<T>& F, vector<T>& G, int n) {
+    dirichlet_suffix(F, n);
+    dirichlet_suffix(G, n);
+    for (int i = 1; i <= n; ++i) F[i] = (long long)F[i] * G[i] % mod;
+    dirichlet_suffix_inverse(F, n);
+  }
+  // LCM 卷积
+  void LCM(vector<T>& F, vector<T>& G, int n) {
+    dirichlet_prefix(F, n);
+    dirichlet_prefix(G, n);
+    for (int i = 1; i <= n; ++i) F[i] = (long long)F[i] * G[i] % mod;
+    dirichlet_prefix_inverse(F, n);
+  }
+  // 子集卷积
+  void SUBSET(vector<T>& A, vector<T>& B, int n) {
+    int N = 1 << n;
+    vector<vector<T>> f(n + 1, vector<T>(N)), g(n + 1, vector<T>(N));
+    for (int mask = 0; mask < N; ++mask) {
+      int pc = __builtin_popcount(mask);
+      f[pc][mask] = A[mask];
+      g[pc][mask] = B[mask];
+    }
+    for (int i = 0; i <= n; ++i) {
+      sos_prefix(f[i], n);
+      sos_prefix(g[i], n);
+    }
+    vector<vector<T>> h(n + 1, vector<T>(N));
+    for (int mask = 0; mask < N; ++mask) {
+      for (int i = 0; i <= n; ++i) {
+        long long sum = 0;
+        for (int j = 0; j <= i; ++j) {
+          sum += (long long)f[j][mask] * g[i - j][mask] % mod;
+        }
+        h[i][mask] = sum % mod;
+      }
+    }
+    for (int i = 0; i <= n; ++i) sos_inverse(h[i], n);
+    for (int mask = 0; mask < N; ++mask) A[mask] = h[__builtin_popcount(mask)][mask];
+  }
+
+  // FWT 异或卷积
+  void FWT(vector<T>& F, int n, bool inverse = false) {
+    int N = 1 << n;
+    for (int len = 1; len < N; len <<= 1) {
+      for (int i = 0; i < N; i += len << 1) {
+        for (int j = 0; j < len; ++j) {
+          T u = F[i + j], v = F[i + j + len];
+          F[i + j] = (u + v) % mod;
+          F[i + j + len] = (u - v + mod) % mod;
+        }
+      }
+    }
+    if (inverse) {
+      long long inv = qpow(N, mod - 2);
+      for (int i = 0; i < N; ++i) F[i] = (long long)F[i] * inv % mod;
+    }
+  }
+  // 异或卷积接口
+  void XOR(vector<T>& F, vector<T>& G, int n) {
+    FWT(F, n, false);
+    FWT(G, n, false);
+    int N = 1 << n;
+    for (int i = 0; i < N; ++i) F[i] = (long long)F[i] * G[i] % mod;
+    FWT(F, n, true);
+  }
+};
+```
 
 
 
@@ -379,36 +606,32 @@ $$
 
 ### [E. Compatible Numbers](https://codeforces.com/problemset/problem/165/E)
 
-将$a_i$看成集合的二进制表达，如果$a_i\&a_j=0$，相当于其中一个要是另外一个集合的补集。
+将$a_i$看成集合的二进制表达，如果$a_i\&a_j=0$ 。如果我们对$a_i$异或全集，那么满足条件的就会是其子集。希望合并其所有子集的信息，可以利用SOSDP的思想。
 
-```cpp 
-int f[N];
+```cpp
+int f[4200000];
 const int U=4194303;
 void solve() {
   int n;cin>>n;
   vector<int> a(n+1);
   for (int i=0;i<(1ll<<22);++i) f[i]=-1;
-  for (int i=1;i<=n;++i) cin>>a[i],f[U^a[i]]=a[i];
+  for (int i=1;i<=n;++i) cin>>a[i],f[a[i]]=a[i];
   for (int i=0;i<22;++i) {
     for (int j=0;j<(1ll<<22);++j) {
-      if (((j>>i)&1)==0 and f[j^(1ll<<i)]!=-1 and f[j]==-1) {
+      if ((j>>i)&1 and f[j^(1ll<<i)]!=-1 and f[j]==-1) {
         f[j]=f[j^(1ll<<i)];
       }
     }
   }
-  for (int i=1;i<=n;++i) cout<<f[a[i]]<<" \n"[i==n];
+  for (int i=1;i<=n;++i) cout<<f[U^a[i]]<<" \n"[i==n];
 }
 ```
 
+
+
 ### [**E - Or Plus Max**](https://atcoder.jp/contests/arc100/tasks/arc100_c?lang=en) 
 
-求$\max_{i|j\le k}a_i+a_j$$i|j\le k$，并不好处理（可以FWT，或FMT）。
-
-于是考虑转化一下，将$i,j$独立出来，发现，如果是等号的话就简单一点，然后对所有k做一个线性的递推即可。
-
-于是我们来考虑$\max_{i|j= k}a_i+a_j$，此时需要满足$i,j\subseteq k$，能否直接找最大值和次大值呢？是可以的，因为这是最大的解，如果$i|j<k$，也不会影响最后的答案。
-
-就变成了对每个k求$\max_{i,j\subseteq k} a_i+a_j$，然后求一个前缀最大值即可。利用sosdp解即可。
+我们只需要考虑等于$K$的情况，而$i,j$为其子集。那么显然用sosdp维护其最大值，次大值即可。
 
 ````cpp
 pair<int,int> MAX(pair<int,int> x,pair<int,int> y) {
@@ -437,5 +660,121 @@ void solve() {
 }
 ````
 
+### [E. Vowels](https://codeforces.com/problemset/problem/383/E)
+
+用二进制表示。合法单词当且仅当&不为0。不太好算，但可以直接计算不合法的单纯，就和第一题一样了。
+
+### [D. Jzzhu and Numbers](https://codeforces.com/problemset/problem/449/D)
+
+计算and起来等于某个数比较困难，考虑计算其后缀和，即and起来的数是x的超集，然后再差分即可。而这个东西可以通过计算包含x的元素个数简单的计算。
+
+```cpp
+const int U=1048575;
+void solve() {
+  int n;cin>>n;
+  vector<i64> f(1100000,0),p(n+1,0);
+  p[0]=1;
+  for (int i=1;i<=n;++i) p[i]=2ll*p[i-1]%mod;
+  for (int i=1;i<=n;++i) {
+    int x;cin>>x;
+    f[x]++;
+  }
+  Convo<i64> conv;
+  conv.sos_suffix(f,20);
+  for (int i=0;i<(1ll<<20);++i) f[i]=(1ll*p[f[i]]-1ll+mod)%mod;
+  conv.sos_suffix_inverse(f,20);
+  cout<<f[0]<<"\n";
+}
+```
+
+### [E. Boolean Function](https://codeforces.com/problemset/problem/582/E)
+
+对于这种未确定的表达式计数问题，我们一般可以建立表达式树。然后在树上dp。
+
+定义$dp[i][j]$为当前第$i$个节点，n个答案为j的方案数。有
+$$
+dp[i][j]=\sum_{x \odot y=j} dp[a][x]\cdot dp[b][y]
+$$
+再利用FMT计算即可。
+
+```cpp
+const int T=16;
+vector<int> g[300];
+int fa[300];
+char ch[400];
+i64 f[400][1ll<<T];
+
+void solve() {
+  string s;cin>>s;
+  int now=1,tot=1;
+  for (auto c:s) {
+    if (c=='(') {
+      g[now].push_back(++tot),fa[tot]=now,now=tot;
+    }else if (c==')') {
+      now=fa[now];
+    }else {
+      ch[now]=c;
+    }
+  }
+  int n;cin>>n;
+  vector<array<bool,5>> Info(n);
+  int res=0;
+  for (int i=0;i<n;++i) {
+    auto &[a,b,c,d,r]=Info[i];
+    cin >> a >> b >> c >> d >> r;
+    if (r) res|=(1ll<<i);
+  }
+  int maxn=1ll<<n;
+  Convo<i64> conv;
+  function<void(int)> dfs=[&](int x){
+    if (g[x].empty()) {
+      if (ch[x]=='?') {
+        for (int i=0;i<4;++i) {
+          int S=0;
+          for (int j=0;j<n;++j) if (Info[j][i]) S|=(1ll<<j);
+          f[x][S]++,f[x][((1ll<<n)-1)^S]++;
+        }
+      }else {
+        int opt=0,t=ch[x]-'A';
+        if (islower(ch[x])) opt=1,t=ch[x]-'a';
+        int S=0;
+        for (int i=0;i<n;++i) if (Info[i][t]^opt) S|=(1ll<<i);
+        f[x][S]=1;
+      }
+      return ;
+    }
+    int a=g[x][0],b=g[x][1];
+    dfs(a),dfs(b);
+    if (ch[x]=='&' or ch[x]=='?') {
+      vector<i64> F(maxn),G(maxn);
+      for (int i=0;i<maxn;++i) F[i]=f[a][i],G[i]=f[b][i];
+      conv.AND(F,G,n);
+      for (int i=0;i<maxn;++i) f[x][i]=(f[x][i]+F[i])%mod;
+    }
+    if (ch[x]=='|' or ch[x]=='?') {
+      vector<i64> F(maxn),G(maxn);
+      for (int i=0;i<maxn;++i) F[i]=f[a][i],G[i]=f[b][i];
+      conv.OR(F,G,n);
+      for (int i=0;i<maxn;++i) f[x][i]=(f[x][i]+F[i])%mod;
+    }
+  };
+  dfs(1);
+  cout<<f[1][res]<<"\n";
+}
+```
+
+### [P4717 【模板】快速莫比乌斯/沃尔什变换 (FMT/FWT)](https://www.luogu.com.cn/problem/P4717)
+
+直接套板子。
+
+### [P6097 【模板】子集卷积](https://www.luogu.com.cn/problem/P6097)
 
 
+
+
+
+# 参考文献
+
+[Troverld的博客](https://www.cnblogs.com/Troverld/p/14601821.html)
+
+[OIwiki](https://oi.wiki/math/poly/fwt/#%E5%90%8C%E6%88%96%E8%BF%90%E7%AE%97)

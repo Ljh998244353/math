@@ -638,4 +638,82 @@ $$
 Catalan 数列$C_n$可以应用于以下问题：\\
 
 
-\subsection{第二类斯特林数}
+\subsection{斯特林数}
+
+\subsubsection{第二类斯特林数}
+
+$\begin{Bmatrix} n\\ k \end{Bmatrix}$：表示将$n$个不同的球放到$k$个相同的盒子中的方案数，且不能出现空盒。\\
+
+有递推式：\\
+$$
+\begin{Bmatrix} n\\ k \end{Bmatrix}=\begin{Bmatrix} n-1\\ k-1 \end{Bmatrix} +k\begin{Bmatrix} n-1\\ k \end{Bmatrix}
+$$
+通项公式：\\
+$$
+\begin{Bmatrix} n\\ m \end{Bmatrix}=\frac{1}{m!}\sum_{i=0}^{m-1}(-1)^i\binom{n}{i}(m-i)^n
+$$
+
+生成函数：\\
+
+$$
+\sum_{i\ge k} \begin{Bmatrix} i\\ k \end{Bmatrix} x^{i}=\frac{x^k}{\prod_{j=1}^{k}(1-jx)}
+$$
+
+\subsubsection{第一类斯特林数}
+
+$\begin{bmatrix} n\\ k \end{bmatrix}$：表示$n$个不同的人坐$k$张圆桌的方案数。\\
+
+有递推式：\\
+$$
+\begin{bmatrix} n\\ k \end{bmatrix}=(n-1)\begin{bmatrix} n-1\\ k \end{bmatrix}+\begin{bmatrix} n-1\\ k-1 \end{bmatrix}
+$$
+
+\subsection{球盒模型}
+有$n$ 个球，$m$个盒子。\\
+球是否相同，盒子是否相同，是否允许空盒子。\\
+1. 不同，不同，空
+$$
+m^n
+$$
+
+2. 不同，不同，不空
+$$
+m! \begin{Bmatrix}n \\ m\end{Bmatrix}
+$$
+
+3. 不同，同，空
+$$
+\sum_{i=0}^{m} \begin{Bmatrix}n \\ i\end{Bmatrix}
+$$
+
+4. 不同，同，不空
+$$
+\begin{Bmatrix}n \\ m\end{Bmatrix}
+$$
+
+5.同，不同，空
+$$
+\binom{n+m-1}{n}
+$$
+
+6.同，不同，不空，
+$$
+\binom{n-1}{m-1}
+$$
+
+7.同，同，空
+$$
+\frac{1}{(1-x)(1-x^2)\cdots (1-x^m)}
+$$
+的$x^n$的系数。\\
+
+8.同，同，不空
+$$
+\frac{x^m}{(1-x)(1-x^2)\cdots (1-x^m)}
+$$
+的$x^n$的系数。\\
+
+9.把最多$m$个球放入$n$个不同的盒子里，允许空的方案为
+$$
+\binom{n+m}{m}
+$$

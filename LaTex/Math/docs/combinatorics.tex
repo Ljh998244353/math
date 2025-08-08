@@ -65,7 +65,7 @@ $$
 
 6.范德蒙德恒等式
 $$
-\binom{a+b}{n}=\sum_{i=0}^{k}\binom{a}{i}\binom{b}{n-i}
+\binom{a+b}{n}=\sum_{i=0}^{n}\binom{a}{i}\binom{b}{n-i}
 $$
 
 特别地:
@@ -667,6 +667,86 @@ $\begin{bmatrix} n\\ k \end{bmatrix}$：表示$n$个不同的人坐$k$张圆桌�
 $$
 \begin{bmatrix} n\\ k \end{bmatrix}=(n-1)\begin{bmatrix} n-1\\ k \end{bmatrix}+\begin{bmatrix} n-1\\ k-1 \end{bmatrix}
 $$
+
+\subsubsection{基本的斯特林恒等式}
+\begin{definition}
+  上升阶乘幂：
+  $$
+  x^{\overline{n}}=\prod_{k=0}^{n-1} (x+k)
+  $$
+  下降阶乘幂：
+  $$
+  x^{\underline{n}}=\prod_{k=0}^{n-1} (x-k)
+  $$
+\end{definition}
+
+$$
+\begin{bmatrix}
+  n \\ 0
+\end{bmatrix}= 
+\begin{Bmatrix}
+  n \\ 0
+\end{Bmatrix}=[n==0]
+$$
+
+$$
+\begin{bmatrix}
+  n \\ 1
+\end{bmatrix}= (n-1)![n>0]
+\quad 
+\begin{Bmatrix}
+  n \\ 1
+\end{Bmatrix}= [n>0]
+$$
+
+$$
+\begin{bmatrix}
+  n \\ 2
+\end{bmatrix}= (n-1)!H_{n-1}[n>0]
+\quad 
+\begin{Bmatrix}
+  n \\ 2
+\end{Bmatrix}=(2^{n-1}-1) [n>0]
+$$
+
+$$
+\begin{bmatrix}
+  n \\ n-1
+\end{bmatrix}= 
+\begin{Bmatrix}
+  n \\ n-1 
+\end{Bmatrix}= \binom{n}{2}
+$$
+
+$$
+\begin{bmatrix}
+  n \\ n
+\end{bmatrix}= 
+\begin{Bmatrix}
+  n \\ n
+\end{Bmatrix}= \binom{n}{n}
+$$
+
+
+\begin{proposition}
+  $$
+  x^{\overline{n}} =\sum_{k} \begin{bmatrix} n \\ k \end{bmatrix} x^k
+  $$
+\end{proposition}
+
+\begin{proposition}
+    $$
+  x^{n} =\sum_{k} \begin{Bmatrix} n \\ k \end{Bmatrix} (-1)^{n-k} x^{\overline{k}}
+  =\sum_{k}  \begin{Bmatrix} n \\ k \end{Bmatrix} x^{\underline{k}}
+  $$
+\end{proposition}
+
+\begin{proposition}
+  $$
+  x^{\underline{n}}=\sum_{k} \begin{bmatrix} n \\ k \end{bmatrix} (-1)^{n-k}  x^k
+  $$
+\end{proposition}
+
 
 \subsection{球盒模型}
 有$n$ 个球，$m$个盒子。\\

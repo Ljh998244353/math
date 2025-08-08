@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  29 JUL 2025 19:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  8 AUG 2025 20:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -725,27 +725,27 @@ Chapter 2.
 
 ]
 Chapter 3.
-(./_minted-XCPC/A0A383D48F2B39AB30717BF36C1FB19BEACAB40F7668858C4143690DABB9F943.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 73--1
+(./_minted-XCPC/32DCE364C105FF8F7ADF8E8116912225B574C2DC18FE7DF81BCD1600B74178B0.pygtex [7
+
+] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]) (./_minted-XCPC/A0A383D48F2B39AB30717BF36C1FB19BEACAB40F7668858C4143690DABB9F943.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 76--1
 
  []
 
-[7
-
-]) [8]
+[18]) [19]
 Chapter 4.
-(./_minted-XCPC/D4D70342B49E59C9EDA39D56FBFE982C92EA9D29C4F83980E6AC9F50CCC18B4D.pygtex [9
+(./_minted-XCPC/D4D70342B49E59C9EDA39D56FBFE982C92EA9D29C4F83980E6AC9F50CCC18B4D.pygtex [20
 
-] [10] [11] [12]) (./_minted-XCPC/2993B887D2AC7584BA8DAB364168CC816F8BD9E92318E59F12F218A4812F9B44.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 91--1
+] [21] [22] [23]) (./_minted-XCPC/2993B887D2AC7584BA8DAB364168CC816F8BD9E92318E59F12F218A4812F9B44.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 94--1
 
  []
 
-[13] [14] [15]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [16]) (./_minted-XCPC/5705C17B533EAC023EF575B946AE50C7E4EA1D9AE1099185DC6A577AB1E2C569.pygtex [17]) (./_minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex [18] [19]) [20]
+[24] [25] [26]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [27]) (./_minted-XCPC/5705C17B533EAC023EF575B946AE50C7E4EA1D9AE1099185DC6A577AB1E2C569.pygtex [28]) (./_minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex [29] [30]) [31]
 Chapter 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 113.
+(hyperref)                than one, level fixed on input line 116.
 
 \openout3 = `XCPC.pyg'.
 
@@ -753,21 +753,21 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 \openout3 = `XCPC.pyg'.
 
  (./_minted-XCPC/2B1DE751F292DD954108EC7388D662A4063079CEF51D968434C136339BD25CC3.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 123--1
+Underfull \hbox (badness 10000) in paragraph at lines 126--1
 
  []
 
-) [21
+) [32
 
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
@@ -776,14 +776,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--139
 (./_minted-XCPC/470D69E8F462F058BD434D7D724A5AD0063079CEF51D968434C136339BD25CC3.pygtex)
 \openout3 = `XCPC.pyg'.
 
- (./_minted-XCPC/11FF1A9775FCA118026BCC9EA15F4580063079CEF51D968434C136339BD25CC3.pygtex [22
+ (./_minted-XCPC/11FF1A9775FCA118026BCC9EA15F4580063079CEF51D968434C136339BD25CC3.pygtex [33
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-[23] (./XCPC.aux)
+[34] (./XCPC.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -793,17 +793,17 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `XCPC.out' has not changed.
-(rerunfilecheck)             Checksum: DD0EC0A51E21F11A3240C4658D1EDCB4;1754.
+(rerunfilecheck)             Checksum: 63AE4D769F6FCF2A7A8225656173D293;1849.
 runsystem(del XCPC.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17762 strings out of 474773
- 385672 string characters out of 5761289
- 1940842 words of memory out of 5000000
- 39591 multiletter control sequences out of 15000+600000
+ 17769 strings out of 474773
+ 386268 string characters out of 5761289
+ 1941842 words of memory out of 5000000
+ 39595 multiletter control sequences out of 15000+600000
  565747 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 74i,6n,86p,699b,753s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,6n,86p,714b,753s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on XCPC.pdf (24 pages).
+Output written on XCPC.pdf (35 pages).

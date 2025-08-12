@@ -849,3 +849,19 @@ $$
 一个有 *N* 个元素的集合有 $2^{N}$个不同子集（包含空集），现在要在这 $2^{N}$ 个集合中取出若干集合（至少一个），使得它们的交集的元素个数为 *K*，求取法的方案数。\\
 
 这里一个自然的想法是计算选择$K$个元素，其他随便安排的方案数。然后就可以用二项式反演形式二了。如果去掉选择这一过程，直接算最多/最少满足$K$个限制的数量，是不好计算的。\\
+
+\subsection{高维二项式反演}
+
+\begin{theorem}
+  设 $\mathbf{n}=(n_1,\dots,n_d)$ 和 $ \mathbf{i}=(i_1,\dots,i_d)$ 且比较按坐标逐个比较 $\mathbf{i}\succeq\mathbf{n}$ 当且仅当每个 $i_k\ge n_k$。定义多维二项式系数为坐标乘积：
+$$
+\binom{\mathbf{i}}{\mathbf{n}}=\prod_{k=1}^d \binom{i_k}{n_k}.
+$$
+那么高维二项式变换与其逆变换为
+$$
+G(\mathbf{n})=\sum_{\mathbf{i}\succeq\mathbf{n}}\binom{\mathbf{i}}{\mathbf{n}}\,F(\mathbf{i})
+\qquad\Longleftrightarrow\qquad
+F(\mathbf{n})=\sum_{\mathbf{i}\succeq\mathbf{n}}(-1)^{\;|\mathbf{i}-\mathbf{n}|}\binom{\mathbf{i}}{\mathbf{n}}\,G(\mathbf{i}),
+$$
+其中 $|\mathbf{i}-\mathbf{n}|=\sum_{k=1}^d (i_k-n_k)$。
+\end{theorem}

@@ -20,6 +20,7 @@
 \contentsline {subsubsection}{基本的斯特林恒等式}{18}{subsubsection*.7}%
 \contentsline {subsection}{\numberline {1.7.3}球盒模型}{20}{subsection.1.7.3}%
 \contentsline {section}{\numberline {1.8}二项式反演}{21}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}高维二项式反演}{22}{subsection.1.8.1}%
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}数论}{23}{chapter.2}%
 \contentsline {section}{\numberline {2.1}整除}{23}{section.2.1}%
 \contentsline {section}{\numberline {2.2}同余}{26}{section.2.2}%

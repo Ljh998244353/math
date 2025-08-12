@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  11 AUG 2025 12:47
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  12 AUG 2025 11:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -706,12 +706,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 849--850
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 851--36
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
 
  []
 
-[22]
+) [22]
 第二章
 (./docs/number_.tex [23
 
@@ -1006,15 +1006,21 @@ L3 programming layer <2022/07/14>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Math.out' has not changed.
-(rerunfilecheck)             Checksum: 13E81B44BE9A820BA4975A1378AA1472;5056.
+
+Package rerunfilecheck Warning: File `Math.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Math.out':
+(rerunfilecheck)             Before: 13E81B44BE9A820BA4975A1378AA1472;5056
+(rerunfilecheck)             After:  D009C0BEB8CF2CCD56A587BFE536EE31;5174.
  ) 
 Here is how much of TeX's memory you used:
- 16467 strings out of 474773
- 370067 string characters out of 5761289
+ 16474 strings out of 474773
+ 370268 string characters out of 5761289
  1935842 words of memory out of 5000000
- 38342 multiletter control sequences out of 15000+600000
- 574174 words of font info for 135 fonts, out of 8000000 for 9000
+ 38345 multiletter control sequences out of 15000+600000
+ 574198 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,13n,97p,537b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

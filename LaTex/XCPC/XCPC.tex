@@ -180,6 +180,15 @@ struct std::tr1::hash <std::pair <T1, T2> > {
 直接当没有 \texttt{emplace(),cbegin(),cend()}\texttt{unordered\_map} 用就好了。\\
 
 
+\chapter{动态规划}
+\section{树上背包}
+\subsection{dfs序优化}
+\cppcode{树上背包dfs.cpp}
+
+\subsection{多叉转二叉优化}
+具体方法就是不断递归，找到根节点，把它与最左边的子节点之间的边保留，其他全部断掉。然后从这个保留的孩子开始，连一条链到所有断开的点。\\
+\cppcode{树上背包转二叉.cpp}
+
 
 \end{document}
 

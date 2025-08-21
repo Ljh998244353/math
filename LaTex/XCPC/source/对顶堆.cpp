@@ -1,39 +1,40 @@
-struct Heap {
-  int k;
-  int sum = 0;
-  multiset<i64> mxq, miq;
-  map<int, int> mxc, mic;
-  void init(vector<int> _init) {
-    sort(_init.begin() + 1, _init.end(), greater<int>());
-    for (int i = 1; i <= k; ++i) miq.insert(_init[i]), mic[_init[i]]++;
-    for (int i = k + 1; i < _init.size(); ++i)
-      mxq.insert(-_init[i]), mxc[-_init[i]]++;
+#include <bits/stdc++.h>
+using namespace std;
+struct mset {
+  const int kInf = 1e9 + 2077;
+  multiset<int> less, greater;
+  void init() {
+    less.clear(), greater.clear();
+    less.insert(-kInf), greater.insert(kInf);
   }
-  void adj() {
-    while (miq.size() < k) {
-      miq.insert(-*mxq.begin()), mic[-*mxq.begin()]++;
-      mxc[*mxq.begin()]--;
-      mxq.erase(mxq.begin());
+  void adjust() {
+    while (less.size() > greater.size() + 1) {
+      multiset<int>::iterator it = (--less.end());
+      greater.insert(*it);
+      less.erase(it);
     }
-    while (miq.size() > k) {
-      mxq.insert(-*miq.begin());
-      mxc[-*miq.begin()]++;
-      mic[*miq.begin()]--;
-      miq.erase(miq.begin());
+    while (greater.size() > less.size()) {
+      multiset<int>::iterator it = greater.begin();
+      less.insert(*it);
+      greater.erase(it);
     }
   }
-  void insert(i64 x) {
-    if (x >= *miq.begin())
-      miq.insert(x), mic[x]++;
+  void add(int val_) {
+    if (val_ <= *greater.begin())
+      less.insert(val_);
     else
-      mxq.insert(-x), mxc[-x]++;
-    adj();
+      greater.insert(val_);
+    adjust();
   }
-  void erase(i64 x) {
-    if (x >= *miq.begin())
-      miq.erase(miq.find(x)), mic[x]--;
-    else
-      mxq.erase(mxq.find(-x)), mxc[-x]--;
+  void del(int val_) {
+    multiset<int>::iterator it = less.lower_bound(val_);
+    if (it != less.end()) {
+      less.erase(it);
+    } else {
+      it = greater.lower_bound(val_);
+      greater.erase(it);
+    }
+    adjust();
   }
-  i64 queryk() { return *miq.begin(); }
+  int get_middle() { return *less.rbegin(); }
 };

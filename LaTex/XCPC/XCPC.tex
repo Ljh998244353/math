@@ -69,6 +69,24 @@ $$
 
 \chapter{数学}
 
+\section{积和式}
+ 一个 $n\times n$ 矩阵 $A=(a_{i,j})$ 的积和式定义为
+$$
+\operatorname{perm}(A)=\sum_{\sigma\in S_n}\prod_{i=1}^n a_{i,\sigma(i)}
+$$
+也就是说，对所有排列 $\sigma$ 把对应位置的乘积求和。\\
+形式上与行列式相似，但行列式在每项前有置换符号 $\operatorname{sgn}(\sigma)$，而积和式不带符号。\\
+因此两者在代数与计算性质上有明显不同（例如交换两行不改变积和式、但会改变行列式的符号）。
+积和式是多线性的，且对行（或列）置换不变。\\
+对于二分图，把左、右两侧各 $n$ 个顶点的邻接矩阵记为 $A$，则 $\operatorname{perm}(A)$
+ 等于该二分图中\textbf{完美匹配}的数目（每个排列对应一种匹配，非边对应项为 0）。\\
+ 对有向图，邻接矩阵的积和式等于该图的\textbf{圈覆盖}（vertex-disjoint cycle cover）的数目。\\
+$2\times2$ 矩阵 $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ 的积和式为 $ad+bc$。\\
+全 1 的 $n\times n$ 矩阵的积和式就是棋盘上放置 $n$ 个互不攻击的车（rook）的排列数（与置换的计数相关）。\\
+\\
+特别地，对于二分图完美匹配计数问题，模2下其数目同余于积和式的值。\\
+
+
 \section{多项式封装}
 \cppcode{Ploy.cpp}
 

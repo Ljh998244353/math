@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  21 AUG 2025 20:47
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  23 AUG 2025 17:07
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -812,7 +812,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--1
 
  []
 
-[39] [40]) [41] (./XCPC.aux)
+[39] [40]) [41]
+Chapter 8.
+(./_minted-XCPC/13A75DC504F335C38BDAD8FF7ACCFD2CB421715560A091A9085CA00E88156D8F.pygtex [42
+
+]) (./_minted-XCPC/4DF97C4EFDEC93B92591A62CDE1AF8B6F1602EB1ED75DC96D5E2557C1439DBF5.pygtex [43] [44] [45]) [46] (./XCPC.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -822,17 +826,17 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `XCPC.out' has not changed.
-(rerunfilecheck)             Checksum: 462E6A0F143BCBF963268BF7886B4B70;2397.
+(rerunfilecheck)             Checksum: B02CC41116CDDB615B9CF41D670A046B;2679.
 runsystem(del XCPC.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17815 strings out of 474773
- 389639 string characters out of 5761289
+ 17866 strings out of 474773
+ 393344 string characters out of 5761289
  1940842 words of memory out of 5000000
- 39632 multiletter control sequences out of 15000+600000
+ 39677 multiletter control sequences out of 15000+600000
  565747 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  74i,8n,86p,714b,755s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on XCPC.pdf (42 pages).
+Output written on XCPC.pdf (47 pages).

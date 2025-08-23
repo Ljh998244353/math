@@ -26,3 +26,5 @@
 \contentsline {section}{\numberline {7.1}树上背包}{38}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}dfs序优化}{38}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}多叉转二叉优化}{39}{subsection.7.1.2}%
+\contentsline {chapter}{\numberline {8}图论}{42}{chapter.8}%
+\contentsline {section}{\numberline {8.1}dijsktra求有向图最小瓶颈路（AI,未验证）}{42}{section.8.1}%

@@ -58,3 +58,5 @@
 \contentsline {subsection}{\numberline {4.3.4}解题方法}{66}{subsection.4.3.4}%
 \contentsline {chapter}{\numberline {第五章\hspace {.3em}}杂}{67}{chapter.5}%
 \contentsline {section}{\numberline {5.1}最小二乘法}{67}{section.5.1}%
+\contentsline {section}{\numberline {5.2}常用幂级数}{68}{section.5.2}%
+\contentsline {paragraph}{C++}{70}{paragraph*.24}%

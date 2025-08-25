@@ -62,8 +62,6 @@ $$
   \end{cases}
 $$
 
-\end{document}
-
 \section{常用幂级数}
 $$
 \begin{aligned}
@@ -74,3 +72,71 @@ e^x&=\sum_{n=0}^{\infty}\frac{x^n}{n!} \qquad& x\in(-\infty,+\infty)\\
 \ln{(x+1)}&=\sum_{n=0}^{\infty}(-1)^n\frac{x^{n+1}}{n+1}\qquad&x\in(-1,1]
 \end{aligned}
 $$
+
+\section*{复数}
+
+\subsection*{引入}
+从实数拓展复数，为了解决方程如 $x^2+1=0$ 在实数域无解的问题，引入虚数单位 $i$，满足 $i^2 = -1$，所有形如 $a + bi$ 的数的集合称为复数集，记作 $\mathbb{C}$。其中 $a$ 为实部 $\Re(z)$，$b$ 为虚部 $\Im(z)$。纯虚数当 $a=0, b\neq0$。
+
+\subsection*{几何意义}
+两个复数相等当且仅当其实部与虚部分别相等，因此复数可在复平面中视为点 $(a,b)$ 或向量 $(a,b)$。复数模定义为
+\[
+|z| = \sqrt{a^2 + b^2},
+\]
+其几何意义为向量长度。复数的加减运算符合向量运算规则，满足交换律、结合律及分配律。
+
+\subsection*{运算 \& 共轭}
+对复数 $z_1 = a+bi$ 及 $z_2 = c+di$，
+\[
+z_1 z_2 = (ac - bd) + (ad + bc)i
+\]
+满足交换律、结合律及分配律。除法引入共轭复数 $\overline{z} = a - bi$ 来实母：
+\[
+\frac{z_1}{z_2} = \frac{z_1 \cdot \overline{z_2}}{|z_2|^2}.
+\]
+共轭复数有：
+\[
+\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2},\quad
+\overline{z_1 z_2} = \overline{z_1}\;\overline{z_2}.
+\]
+
+\subsection*{辐角与主值}
+复数可表示为极坐标形式 $(r, \theta)$，$r = |z|$，$\theta = \arg(z)$。辐角主值为 $\theta_0 \in (-\pi, \pi]$，且任一辐角为 $\theta = \theta_0 + 2k\pi$。单位圆上的复数为模 1 的点，单位复数为该圆上所有点。
+
+\subsection*{欧拉公式 \& 指数 / 三角函数}
+欧拉公式：
+\[
+e^{i\theta} = \cos\theta + i\sin\theta.
+\]
+复指数函数定义为 $e^z = e^{x+iy} = e^x(\cos y + i\sin y)$，具有：
+\[
+|e^z| = e^x,\quad \arg(e^z) = y,\quad e^{z_1+z_2}=e^{z_1}e^{z_2},\quad \text{周期性：以 }2\pi i\text{ 为基本周期}.
+\]
+复三角函数定义为：
+\[
+\cos z = \frac{e^{iz} + e^{-iz}}{2},\quad \sin z = \frac{e^{iz} - e^{-iz}}{2i},
+\]
+其性质包括奇偶性、和差公式、周期性，并且在复平面上无最大模界。
+
+\subsection*{复数的三种形式}
+复数表示形式包括：
+- \textbf{代数形式}：$a + bi$，
+- \textbf{三角形式}：$r(\cos\theta + i\sin\theta)$，
+- \textbf{指数形式}：$re^{i\theta}$，
+其中后三者适用于非零复数，有利于乘除与幂运算。
+
+\subsection*{单位根}
+$n$ 次单位根为满足 $z^n = 1$ 的复数，等分单位圆，共 $n$ 个，通常取 $e^{2\pi i k/n}$，$k=0,\dots,n-1$。本原单位根是那些其较低幂都不为 1 的单位根，共 $\varphi(n)$ 个。
+
+\subsection*{编程语言中的复数}
+
+\paragraph{C++}
+\begin{itemize}
+  \item 提供 \texttt{<complex>}，类型为 \texttt{std::complex<float/double/long double>}；
+  \item 成员函数：\texttt{real()}, \texttt{imag()}；非成员函数：\texttt{real(z)}, \texttt{imag(z)}, \texttt{abs(z)}, \texttt{arg(z)}, \texttt{norm(z)}, \texttt{conj(z)}, \texttt{exp(z)}, \texttt{log(z)}, \texttt{pow(z,w)}, \texttt{sqrt(z)}, \texttt{sin(z)}, \texttt{cos(z)}, \texttt{tan(z)}；
+  \item C++14 字面量运算符支持 \texttt{100if}, \texttt{100i}, \texttt{100il} 表示不同类型的纯虚数。
+\end{itemize}
+
+
+
+\end{document}

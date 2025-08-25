@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 旋转复数（2D 向量） by angle theta:}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{v}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mf}{1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{\PYGZcb{};}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{rotated}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{v}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{polar}\PYG{p}{(}\PYG{l+m+mf}{1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{theta}\PYG{p}{);}
+\end{Verbatim}

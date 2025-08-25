@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n+nf}{z1}\PYG{p}{(}\PYG{l+m+mf}{1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{2.0}\PYG{p}{);}\PYG{+w}{      }\PYG{c+c1}{// 实部 1, 虚部 2}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{z2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mf}{3.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{\PYGZhy{}1.5}\PYG{p}{\PYGZcb{};}\PYG{+w}{  }\PYG{c+c1}{// 列表初始化}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{z3}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{cd}\PYG{p}{(}\PYG{l+m+mf}{4.0}\PYG{p}{);}\PYG{+w}{      }\PYG{c+c1}{// 虚部为 0}
+\end{Verbatim}

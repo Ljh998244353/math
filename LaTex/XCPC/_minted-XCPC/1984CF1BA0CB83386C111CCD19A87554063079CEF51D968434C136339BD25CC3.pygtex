@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{z}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// 输出格式依实现（常见形式 \PYGZdq{}(real,imag)\PYGZdq{}）}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{cin}\PYG{+w}{  }\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{z}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// 读取，格式由实现决定}
+\end{Verbatim}

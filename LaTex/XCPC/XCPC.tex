@@ -223,6 +223,117 @@ $O(n(m+K))$
 \section{tarjan有重边找桥}
 \cppcode{tarjan有重边找桥.cpp}
 
+
+\chapter{语法}
+\section{复数}
+
+\subsection*{引入与类型}
+\begin{minted}{cpp}
+// 头文件与常用别名
+#include <complex>
+using std::complex;
+using cd = complex<double>;
+using cf = complex<float>;
+using cld = complex<long double>;
+\end{minted}
+
+\subsection*{构造与访问}
+\begin{itemize}
+  \item 构造：
+\begin{minted}{cpp}
+cd z1(1.0, 2.0);      // 实部 1, 虚部 2
+cd z2 = {3.0, -1.5};  // 列表初始化
+cd z3 = cd(4.0);      // 虚部为 0
+\end{minted}
+  \item 访问／修改实部与虚部：
+\begin{minted}{cpp}
+double a = z1.real();        // 成员函数读取实部
+double b = z1.imag();        // 成员函数读取虚部
+std::real(z1);               // free function，等价 z1.real()
+std::imag(z1);               // free function，等价 z1.imag()
+z1.real() = 5.0;             // 可写（修改实部）
+\end{minted}
+\end{itemize}
+
+\subsection*{四则运算与标量混合}
+\begin{itemize}
+  \item 支持 + - * /，既有 complex op complex 也有 complex op scalar。
+\begin{minted}{cpp}
+cd s = z1 + z2;
+cd p = z1 * cd(0,1);   // 乘以 i
+cd d = z1 / 2.0;       // 除以标量
+\end{minted}
+\end{itemize}
+
+\subsection*{常用数学函数（<complex>）}
+\begin{itemize}
+  \item 模长、模平方、相位：
+  \begin{minted}{cpp}
+double r    = std::abs(z);   // |z|
+double r2   = std::norm(z);  // |z|^2，避免开根号的高效计算
+double theta = std::arg(z);  // 相位（弧度）
+  \end{minted}
+  \item 共轭、极坐标、投影：
+  \begin{minted}{cpp}
+cd conjz = std::conj(z);          // 复共轭
+cd fromPolar = std::polar(r,theta); // 从极坐标构造 r*e^{i theta}
+cd projz = std::proj(z);          // 投影到黎曼球面（处理无穷）
+  \end{minted}
+  \item 复数版本的初等/超越函数：
+  \begin{minted}{cpp}
+std::exp(z); std::log(z); std::sqrt(z); std::pow(z, w);
+std::sin(z); std::cos(z); std::tan(z);
+std::sinh(z); std::cosh(z); std::asin(z); std::acos(z); std::atan(z);
+  \end{minted}
+\end{itemize}
+
+\subsection*{I/O 与比较}
+\begin{itemize}
+  \item 流支持：
+\begin{minted}{cpp}
+std::cout << z; // 输出格式依实现（常见形式 "(real,imag)"）
+std::cin  >> z; // 读取，格式由实现决定
+\end{minted}
+  \item 比较：不要用 == 做严格相等判断（浮点误差）。
+\begin{minted}{cpp}
+bool approx_equal = (std::abs(z1 - z2) < 1e-9);
+\end{minted}
+\end{itemize}
+
+\subsection*{性能与数值注意事项}
+\begin{itemize}
+  \item 若只需模的平方，优先使用 \verb|std::norm(z)|，比 \verb|std::abs(z)*std::abs(z)| 更快且更稳定。
+  \item 判断是否为 0 时应使用容差 \verb|eps|：
+\begin{minted}{cpp}
+if (std::abs(z) < eps) { /* 视为 0 */ }
+\end{minted}
+  \item \verb|std::complex<T>| 使用模板参数 \verb|T|（float/double/long double），根据精度与性能需求选择合适类型。
+  \item 对于列主元或比较大小时，通常用 \verb|std::abs|（模）比较大小。
+\end{itemize}
+
+\subsection*{常见小例子}
+\subsubsection*{用复数表示二维向量并旋转}
+\begin{minted}{cpp}
+// 旋转复数（2D 向量） by angle theta:
+cd v = {1.0, 0.0};
+cd rotated = v * std::polar(1.0, theta);
+\end{minted}
+
+\subsubsection*{在高斯消元中使用 std::complex<double>}
+\begin{minted}{cpp}
+// 假设增广矩阵 ar 为 complex<double>：
+cd ar[MAXN][MAXN+1]; // 每行长度为 n+1
+// 判主元、交换、消元时可直接使用 std::abs, std::conj 等
+\end{minted}
+
+\subsection*{额外提示}
+\begin{itemize}
+  \item \texttt{std::abs} 返回的是模（非平方），内部对极端情况有一定数值稳定性的处理，但仍需注意大/小量级混合的问题。
+  \item 在数值线性代数中，若频繁调用共轭、模等，注意避免不必要的临时对象以减少开销（视编译器做内联优化情况）。
+  \item 如果需要可移植的输出格式，自己实现格式化（例如 \verb|printf("%.12g + %.12gi", z.real(), z.imag())|）会更稳定一致。
+\end{itemize}
+
+
 \end{document}
 
 

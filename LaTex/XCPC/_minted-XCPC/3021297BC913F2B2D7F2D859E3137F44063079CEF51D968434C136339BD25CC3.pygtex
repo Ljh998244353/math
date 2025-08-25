@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 假设增广矩阵 ar 为 complex\PYGZlt{}double\PYGZgt{}：}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{ar}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{][}\PYG{n}{MAXN}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{];}\PYG{+w}{ }\PYG{c+c1}{// 每行长度为 n+1}
+\PYG{c+c1}{// 判主元、交换、消元时可直接使用 std::abs, std::conj 等}
+\end{Verbatim}

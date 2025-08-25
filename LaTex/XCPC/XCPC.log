@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  25 AUG 2025 16:10
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  25 AUG 2025 21:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -816,7 +816,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--1
 Chapter 8.
 (./_minted-XCPC/13A75DC504F335C38BDAD8FF7ACCFD2CB421715560A091A9085CA00E88156D8F.pygtex [42
 
-]) (./_minted-XCPC/4DF97C4EFDEC93B92591A62CDE1AF8B6F1602EB1ED75DC96D5E2557C1439DBF5.pygtex [43] [44] [45]) (./_minted-XCPC/246892F0AC6DA339D340941E6F438BC5953F664259D9E9CF41911DFF080864BD.pygtex [46]) [47] (./XCPC.aux)
+]) (./_minted-XCPC/4DF97C4EFDEC93B92591A62CDE1AF8B6F1602EB1ED75DC96D5E2557C1439DBF5.pygtex [43] [44] [45]) (./_minted-XCPC/246892F0AC6DA339D340941E6F438BC5953F664259D9E9CF41911DFF080864BD.pygtex [46]) [47]
+Chapter 9.
+\openout3 = `XCPC.pyg'.
+
+(./_minted-XCPC/DFCDBD64F818999CBF1FD1540CC8E370063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/36EF50C6491E87A9625AFA117BEDF182063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/76525BFF0DFC60894DA9E87702C90DC8063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/6742CD71603EE3E87BF1D997601BCB63063079CEF51D968434C136339BD25CC3.pygtex [48
+
+])
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/4BD847E1A651897665AB86128D8F0998063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/F7AFE29493006AF8F559C78C9ECC8742063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/B4D918387BC647D92713F5A55819B246063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/1984CF1BA0CB83386C111CCD19A87554063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/F38C96A6212DD9C736846AEE8F1BC65B063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/A957C9495B7AAECF23EE2C5BB280524B063079CEF51D968434C136339BD25CC3.pygtex)
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/546B5D15823E9D18D5DF2B1C09E01495063079CEF51D968434C136339BD25CC3.pygtex [49])
+\openout3 = `XCPC.pyg'.
+
+ (./_minted-XCPC/3021297BC913F2B2D7F2D859E3137F44063079CEF51D968434C136339BD25CC3.pygtex)
+Overfull \hbox (25.35878pt too wide) in paragraph at lines 333--334
+[]\TU/SourceHanSerifCN(0)/m/n/10 如 果 需 要 可 移 植 的 输 出 格 式，|  自 己 实 现 格 式 化  |（例 如 [][]\TU/lmtt/m/n/10 printf("%.12g + %.12gi", z.real(), z.imag())[]\TU/SourceHanSerifCN(0)/m/n/10 ）|
+ []
+
+[50] (./XCPC.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -825,18 +869,24 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `XCPC.out' has not changed.
-(rerunfilecheck)             Checksum: F44B5C62E9C81A5FA621E7CDA2D1EFAC;2804.
+
+Package rerunfilecheck Warning: File `XCPC.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `XCPC.out':
+(rerunfilecheck)             Before: FD53790B943E06FAC5F96C7B249C7ABD;2864
+(rerunfilecheck)             After:  D4BE7A2E861D939B033B689C73828D41;2935.
 runsystem(del XCPC.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17873 strings out of 474773
- 393940 string characters out of 5761289
+ 17996 strings out of 474773
+ 403632 string characters out of 5761289
  1940842 words of memory out of 5000000
- 39681 multiletter control sequences out of 15000+600000
+ 39768 multiletter control sequences out of 15000+600000
  565747 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 74i,8n,86p,714b,755s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,8n,86p,714b,808s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on XCPC.pdf (48 pages).
+Output written on XCPC.pdf (51 pages).

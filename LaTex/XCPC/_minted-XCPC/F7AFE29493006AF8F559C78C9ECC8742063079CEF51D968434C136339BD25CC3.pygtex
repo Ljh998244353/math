@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{conjz}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{conj}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{          }\PYG{c+c1}{// 复共轭}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{fromPolar}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{polar}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,}\PYG{n}{theta}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// 从极坐标构造 r*e\PYGZca{}\PYGZob{}i theta\PYGZcb{}}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{projz}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{proj}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{          }\PYG{c+c1}{// 投影到黎曼球面（处理无穷）}
+\end{Verbatim}

@@ -449,6 +449,8 @@ $$
 
 ### 应用:计算有禁止位置的非攻击型车的方法数
 
+
+
 $n\times n$ 棋盘
 $$
 F(X_n)=\sum_{S\subseteq X_n} (-1)^{n-|S|}\prod_{i=1}^{n}\left(\sum_{j\in S} a_{ij}\right)

@@ -5,55 +5,56 @@
 \contentsline {section}{\numberline {1.4}抽屉原理}{4}{section.1.4}%
 \contentsline {section}{\numberline {1.5}容斥原理}{6}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}容斥原理}{6}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}莫比乌斯反演I}{7}{subsection.1.5.2}%
-\contentsline {subsubsection}{偏序集里的莫比乌斯反演}{9}{subsubsection*.2}%
-\contentsline {subsection}{\numberline {1.5.3}莫比乌斯反演II}{12}{subsection.1.5.3}%
-\contentsline {section}{\numberline {1.6}递推关系和生成函数}{12}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}生成函数}{13}{subsection.1.6.1}%
-\contentsline {subsubsection}{一般生成函数}{14}{subsubsection*.3}%
-\contentsline {subsubsection}{指数生成函数}{15}{subsubsection*.4}%
-\contentsline {section}{\numberline {1.7}卡特兰数和第二类斯特林数}{16}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}卡特兰数}{16}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}斯特林数}{17}{subsection.1.7.2}%
-\contentsline {subsubsection}{第二类斯特林数}{17}{subsubsection*.5}%
-\contentsline {subsubsection}{第一类斯特林数}{18}{subsubsection*.6}%
-\contentsline {subsubsection}{基本的斯特林恒等式}{18}{subsubsection*.7}%
-\contentsline {subsection}{\numberline {1.7.3}球盒模型}{20}{subsection.1.7.3}%
-\contentsline {section}{\numberline {1.8}二项式反演}{21}{section.1.8}%
-\contentsline {subsection}{\numberline {1.8.1}高维二项式反演}{22}{subsection.1.8.1}%
-\contentsline {chapter}{\numberline {第二章\hspace {.3em}}数论}{23}{chapter.2}%
-\contentsline {section}{\numberline {2.1}整除}{23}{section.2.1}%
-\contentsline {section}{\numberline {2.2}同余}{26}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}同余}{26}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}线性同余方程}{28}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}乘性函数}{32}{section.2.3}%
-\contentsline {chapter}{\numberline {第三章\hspace {.3em}}求和}{36}{chapter.3}%
-\contentsline {section}{\numberline {3.1}递归问题　RECURRENT PROBLEMS}{36}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}repertoire method}{36}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}约瑟夫问题}{37}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}和式 SUMS}{37}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}和式和递归式 SUMS AND RECURRENCES}{37}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}和式的处理 MANIPULATION OF SUMS}{39}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}扰动法 （perturbation method）}{39}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}多重和式 MULTIPLE SUMS }{40}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}一般性的方法 GENERAL METHODS }{42}{subsection.3.2.5}%
-\contentsline {subsubsection}{归纳法}{42}{subsubsection*.8}%
-\contentsline {subsubsection}{扰动法}{42}{subsubsection*.9}%
-\contentsline {subsubsection}{成套方法}{43}{subsubsection*.10}%
-\contentsline {subsubsection}{微积分法}{44}{subsubsection*.11}%
-\contentsline {subsubsection}{展开和收缩}{44}{subsubsection*.12}%
-\contentsline {subsubsection}{有限微积分}{44}{subsubsection*.13}%
-\contentsline {subsection}{\numberline {3.2.6}有限微积分}{45}{subsection.3.2.6}%
-\contentsline {subsubsection}{分部求和 （summation by parts)}{47}{subsubsection*.14}%
-\contentsline {subsection}{\numberline {3.2.7}无限和式 INFINITE SUMS}{48}{subsection.3.2.7}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}概率论}{50}{chapter.4}%
-\contentsline {section}{\numberline {4.1}基本概念和公式}{50}{section.4.1}%
-\contentsline {section}{\numberline {4.2}重要公式与结论}{54}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}数学期望（均值）与方差}{56}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}期望经典问题入门}{58}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}普通}{58}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}拿球}{61}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}游走}{61}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}解题方法}{63}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}杂}{64}{chapter.5}%
-\contentsline {section}{\numberline {5.1}最小二乘法}{64}{section.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}计算有禁止位置的非攻击型车的方法数，有禁止位置的排列数}{7}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}莫比乌斯反演I}{11}{subsection.1.5.3}%
+\contentsline {subsubsection}{偏序集里的莫比乌斯反演}{12}{subsubsection*.2}%
+\contentsline {subsection}{\numberline {1.5.4}莫比乌斯反演II}{15}{subsection.1.5.4}%
+\contentsline {section}{\numberline {1.6}递推关系和生成函数}{16}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}生成函数}{16}{subsection.1.6.1}%
+\contentsline {subsubsection}{一般生成函数}{17}{subsubsection*.3}%
+\contentsline {subsubsection}{指数生成函数}{18}{subsubsection*.4}%
+\contentsline {section}{\numberline {1.7}卡特兰数和第二类斯特林数}{20}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}卡特兰数}{20}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}斯特林数}{20}{subsection.1.7.2}%
+\contentsline {subsubsection}{第二类斯特林数}{20}{subsubsection*.5}%
+\contentsline {subsubsection}{第一类斯特林数}{21}{subsubsection*.6}%
+\contentsline {subsubsection}{基本的斯特林恒等式}{21}{subsubsection*.7}%
+\contentsline {subsection}{\numberline {1.7.3}球盒模型}{23}{subsection.1.7.3}%
+\contentsline {section}{\numberline {1.8}二项式反演}{24}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}高维二项式反演}{25}{subsection.1.8.1}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}数论}{26}{chapter.2}%
+\contentsline {section}{\numberline {2.1}整除}{26}{section.2.1}%
+\contentsline {section}{\numberline {2.2}同余}{29}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}同余}{29}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}线性同余方程}{31}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}乘性函数}{35}{section.2.3}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}求和}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}递归问题　RECURRENT PROBLEMS}{39}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}repertoire method}{39}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}约瑟夫问题}{40}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}和式 SUMS}{40}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}和式和递归式 SUMS AND RECURRENCES}{40}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}和式的处理 MANIPULATION OF SUMS}{42}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}扰动法 （perturbation method）}{42}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}多重和式 MULTIPLE SUMS }{43}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}一般性的方法 GENERAL METHODS }{45}{subsection.3.2.5}%
+\contentsline {subsubsection}{归纳法}{45}{subsubsection*.8}%
+\contentsline {subsubsection}{扰动法}{45}{subsubsection*.9}%
+\contentsline {subsubsection}{成套方法}{46}{subsubsection*.10}%
+\contentsline {subsubsection}{微积分法}{47}{subsubsection*.11}%
+\contentsline {subsubsection}{展开和收缩}{47}{subsubsection*.12}%
+\contentsline {subsubsection}{有限微积分}{47}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {3.2.6}有限微积分}{48}{subsection.3.2.6}%
+\contentsline {subsubsection}{分部求和 （summation by parts)}{50}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {3.2.7}无限和式 INFINITE SUMS}{51}{subsection.3.2.7}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}概率论}{53}{chapter.4}%
+\contentsline {section}{\numberline {4.1}基本概念和公式}{53}{section.4.1}%
+\contentsline {section}{\numberline {4.2}重要公式与结论}{57}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}数学期望（均值）与方差}{59}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}期望经典问题入门}{61}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}普通}{61}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}拿球}{64}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}游走}{64}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}解题方法}{66}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}杂}{67}{chapter.5}%
+\contentsline {section}{\numberline {5.1}最小二乘法}{67}{section.5.1}%

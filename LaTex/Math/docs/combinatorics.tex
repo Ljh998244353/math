@@ -253,6 +253,100 @@ $$
 $$
 Q_n=D_n+D_{n-1}
 $$
+
+\subsection{计算有禁止位置的非攻击型车的方法数，有禁止位置的排列数}
+在一个 \(n\times n\) 的棋盘上，某些格子是\emph{禁止位置}（不得放车）。将车理解为国际象棋中的 rook（只能沿行或列移动），所谓“非攻击型车”即任意两车不在同一行也不在同一列。研究以下两类计数问题：
+\begin{enumerate}
+  \item 在允许的位置上放满 \(n\) 个车（即一个合法的排列），并且所有车均不落在禁止位置上——计数所有这样的排列数。
+  \item 更一般地：在允许的位置上恰好放 \(k\) 个互不攻击的车的计数（任意 \(k\)）。
+\end{enumerate}
+
+\begin{theorem}
+  设 \(B\) 为禁止位置集合。令 \(r_t\) 表示：\emph{仅在禁止位置上}放置恰好 \(t\) 个互不攻击的车的方法数（即在禁止格子中选择 \(t\) 个格子，且两两不同行不列）。则通过包含-排除有下面的公式：
+
+\[
+\boxed{\;P = \sum_{t=0}^{n} (-1)^t\, r_t \, (n-t)!\;}
+\]
+
+这里 \(P\) 表示不在禁止位置上放置 \(n\) 个互不攻击车（即“允许格上满排”的数量）。
+\end{theorem}
+
+计算 \(r_t\) 是核心。一个常用、易实现的方法是按行进行状态压缩 DP（适合 \(n\lesssim 20\)）。设第 \(i\) 行的禁止列掩码为 \(f_i\)（长度为 \(n\) 的位掩码，若 \(j\)-位为1表示位置 \((i,j)\) 被禁止）。我们枚举每行是否在该行的某个禁止列放一个车（并保证列不冲突）。
+
+具体 DP 设：
+\[
+\text{dp}_{i}[\text{mask}] = \text{在处理了前 }i\text{ 行后，已被禁止位置上的车占用的列集合为 mask 的方法数.}
+\]
+转移（对第 \(i\) 行）：
+\begin{itemize}
+  \item 不在本行的禁止位置放车：\(\text{dp}_{i+1}[\text{mask}] += \text{dp}_i[\text{mask}]\)；
+  \item 在本行放一个车：枚举本行的某个位 \(j\in f_i\) 且在 mask 中未被占用，则
+  \(\text{dp}_{i+1}[\text{mask}\cup\{j\}] += \text{dp}_i[\text{mask}]\)。
+\end{itemize}
+最终，处理完 \(n\) 行后，对所有 \(\text{mask}\) 统计其位数 \(t=\operatorname{popcount}(\text{mask})\)，累加得到 \(r_t\)。\\
+或者用积和式的表达式计算\\
+将禁止的位置记作0，其他为1，得到矩阵$a_{i,j}$，那么方法数为
+\begin{theorem}
+$$
+F(X_n)=\sum_{S\subseteq X_n} (-1)^{n-|S|}\prod_{i=1}^{n}\left(\sum_{j\in S} a_{ij}\right)
+$$
+\end{theorem}
+
+\begin{lstlisting}[language=C++,caption={优化的 Ryser 实现：先预处理每行的子集和，时间复杂度$O(n 2^n)$}]
+// ai生成未验证
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+const ll MOD = 998244353;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<vector<ll>> a(n, vector<ll>(n));
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < n; ++j) {
+            ll x; cin >> x;
+            a[i][j] = (x % MOD + MOD) % MOD;
+        }
+
+    int N = 1 << n;
+    vector<vector<ll>> rowSum(n, vector<ll>(N, 0));
+    for (int i = 0; i < n; ++i) {
+        for (int mask = 1; mask < N; ++mask) {
+            int low = mask & -mask;
+            int bit = __builtin_ctz(low);
+            rowSum[i][mask] = rowSum[i][mask ^ low] + a[i][bit];
+            if (rowSum[i][mask] >= MOD) rowSum[i][mask] -= MOD;
+        }
+    }
+
+    ll ans = 0;
+    for (int mask = 0; mask < N; ++mask) {
+        ll prod = 1;
+        for (int i = 0; i < n; ++i) {
+            prod = prod * rowSum[i][mask] % MOD;
+            if (prod == 0) break; // 剪枝：积为0则无需继续
+        }
+        int bits = __builtin_popcount((unsigned)mask);
+        if (((n - bits) & 1)) {
+            ans -= prod;
+            if (ans < 0) ans += MOD;
+        } else {
+            ans += prod;
+            if (ans >= MOD) ans -= MOD;
+        }
+    }
+
+    cout << ans << '\n';
+    return 0;
+}
+
+\end{lstlisting}
+
+
+
 \subsection{莫比乌斯反演I}
 容斥原理是莫比乌斯反演在有限偏序集上的一个实例.\\
 偏序集形式的容斥原理\\

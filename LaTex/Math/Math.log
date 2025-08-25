@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  12 AUG 2025 11:23
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  25 AUG 2025 16:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -424,8 +424,36 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (c:/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup9
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count318
+\lst@gtempboxa=\box58
+\lst@token=\toks29
+\lst@length=\count319
+\lst@currlwidth=\dimen190
+\lst@column=\count320
+\lst@pos=\count321
+\lst@lostspace=\dimen191
+\lst@width=\dimen192
+\lst@newlines=\count322
+\lst@lineno=\count323
+\lst@maxwidth=\dimen193
+ (c:/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
+\c@lstnumber=\count324
+\lst@skipnumbers=\count325
+\lst@framebox=\box59
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/02/21 1.10 listings configuration
+))
+Package: listings 2024/02/21 1.10 (Carsten Heinz)
+ (c:/texlive/2024/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
+\l__xeCJK_listings_max_char_int=\count326
+\l__xeCJK_listings_flag_int=\count327
 )
-\c@theorem=\count318
+\c@theorem=\count328
  (./Math.aux)
 \openout1 = `Math.aux'.
 
@@ -510,6 +538,7 @@ Package hyperref Info: Link coloring OFF on input line 19.
 \@outlinefile=\write3
 \openout3 = `Math.out'.
 
+\c@lstlisting=\count329
 LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -526,13 +555,14 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ] (./Math.toc [1
 
-])
+]
+LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
+(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 59.
+ [2])
 \tf@toc=\write4
 \openout4 = `Math.toc'.
 
-LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 30.
- [2]
+ [3]
 第一章
 (./docs/combinatorics.tex [1
 
@@ -546,180 +576,208 @@ Overfull \hbox (45.8969pt too wide) detected at line 249
 \OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 n\OT1/cmr/m/n/12 ! \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1)! + [](\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2)! \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 3)! + [] + (\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1)[][]1!
  []
 
-[7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+[7]
+Overfull \hbox (56.80743pt too wide) detected at line 279
+[][]\OT1/cmr/m/n/12 [[]] = []\OML/cmm/m/it/12 i[]
+ []
 
+[8] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/02/21 1.10 listings language file
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/02/21 1.10 listings language file
+) (c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 295.
+ [9]
+Overfull \hbox (70.80469pt too wide) in paragraph at lines 319--320
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
-
+Overfull \hbox (63.60461pt too wide) in paragraph at lines 320--321
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 436--439
 
+Overfull \hbox (27.60425pt too wide) in paragraph at lines 329--330
+[][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 533--535
+[10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 561--563
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 573--577
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--581
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--595
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 609--611
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 619--621
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 630--631
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 633--635
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 637--639
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 645--646
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 647--648
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 650--652
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 626--628
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 656--657
+Underfull \hbox (badness 10000) in paragraph at lines 654--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
+Underfull \hbox (badness 10000) in paragraph at lines 666--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--667
-
- []
-
-[18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 804--806
+Underfull \hbox (badness 10000) in paragraph at lines 672--674
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 810--812
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 686--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--700
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--704
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 712--714
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 723--724
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--728
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 730--732
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 823--824
+Underfull \hbox (badness 10000) in paragraph at lines 743--745
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--828
+Underfull \hbox (badness 10000) in paragraph at lines 749--750
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--834
+Underfull \hbox (badness 10000) in paragraph at lines 757--758
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--836
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
+
+ []
+
+[21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 897--899
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 903--905
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 916--917
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
+Underfull \hbox (badness 10000) in paragraph at lines 919--921
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--846
+Underfull \hbox (badness 10000) in paragraph at lines 926--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--848
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 849--850
+Underfull \hbox (badness 10000) in paragraph at lines 928--929
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--852
+Underfull \hbox (badness 10000) in paragraph at lines 934--935
 
  []
 
-) [22]
+
+Underfull \hbox (badness 10000) in paragraph at lines 936--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 938--939
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 940--941
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 942--943
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 944--945
+
+ []
+
+) [25]
 第二章
-(./docs/number_.tex [23
+(./docs/number_.tex [26
 
-] [24]
+] [27]
 Missing character: There is no 、 (U+3001) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 、 (U+3001) in font [lmroman12-regular]:mapping=tex-text;!
-[25]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
@@ -729,7 +787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--163
 
  []
 
-[26]
+[29]
 Overfull \hbox (0.23694pt too wide) in paragraph at lines 190--194
 \TU/SimSun(0)/m/n/12 若 不 然 则 对 于 $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a; b\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 a[]; b[]\OT1/cmr/m/n/12 )$ $\OML/cmm/m/it/12 na \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 mb \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 na[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 mb[]\OT1/cmr/m/n/12 ([]  \OML/cmm/m/it/12 mn\OT1/cmr/m/n/12 )  \OMS/cmsy/m/n/12 ([])  \OML/cmm/m/it/12 mn\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 n\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a \OMS/cmsy/m/n/12 ^^@
  []
@@ -739,11 +797,11 @@ Overfull \hbox (8.91698pt too wide) in paragraph at lines 203--204
 []\TU/SimSun(0)/b/n/12 结 论 \TU/lmr/bx/n/12 2.2.7. \TU/SimSun(0)/m/it/12 若 $\OML/cmm/m/it/12 r[]; r[]; [] ; r[]$ \TU/SimSun(0)/m/it/12 是 模 $\OML/cmm/m/it/12 m$ \TU/SimSun(0)/m/it/12 的 一 个 缩 系\TU/lmr/m/it/12 , \TU/SimSun(0)/m/it/12 且 正 整 数 $\OML/cmm/m/it/12 a$ \TU/SimSun(0)/m/it/12 满 足 $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a; m\OT1/cmr/m/n/12 ) =
  []
 
-[27] [28]
+[30] [31]
 Missing character: There is no 或 (U+6216) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 那 (U+90A3) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 么 (U+4E48) in font [lmroman12-regular]:mapping=tex-text;!
-[29] [30]
+[32] [33]
 Overfull \hbox (51.0889pt too wide) in paragraph at lines 384--385
 []\TU/SimSun(0)/b/n/12 推 论 \TU/lmr/bx/n/12 2.2.22. \TU/SimSun(0)/m/it/12 若 超 过 $\OML/cmm/m/it/12 n$ \TU/SimSun(0)/m/it/12 个 解\TU/lmr/m/it/12 , \TU/SimSun(0)/m/it/12 则 $\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 i \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; [] n\OT1/cmr/m/n/12 )$\TU/lmr/m/it/12 , \TU/SimSun(0)/m/it/12 即 $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[]$ 
  []
@@ -753,12 +811,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
-[31] [32]
+[34] [35]
 Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
-[33]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 497--501
 
  []
@@ -778,26 +836,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
-[34]) [35]
+[37]) [38]
 第三章
 (./docs/sum.tex
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
-[36
+[39
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
-[37]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
-[38]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
@@ -807,7 +865,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-[39] [40]
+[42] [43]
 Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
@@ -817,22 +875,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-[41] [42] [43]
+[44] [45] [46]
 Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-[44]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 370--372
 
  []
 
-[45]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 384--386
 
  []
 
-[46] [47]
+[49] [50]
 Underfull \hbox (badness 10000) in paragraph at lines 476--478
 
  []
@@ -852,7 +910,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 485--44
 
  []
 
-[48] [49]
+[51] [52]
 第四章
 (./docs/Probability.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--10
@@ -863,7 +921,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 LaTeX Font Warning: Font shape `TU/SimSun(0)/b/it' undefined
 (Font)              using `TU/SimSun(0)/b/n' instead on input line 12.
 
-[50
+[53
 
 ]
 Missing character: There is no 若 (U+82E5) in font [lmroman12-regular]:mapping=tex-text;!
@@ -877,12 +935,12 @@ Overfull \hbox (43.60956pt too wide) detected at line 59
 [][]
  []
 
-[51]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 61--67
 
  []
 
-[52]
+[55]
 Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
@@ -892,7 +950,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--100
 
  []
 
-[53]
+[56]
 Underfull \hbox (badness 10000) in paragraph at lines 109--111
 
  []
@@ -902,7 +960,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--115
 
  []
 
-[54]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
@@ -917,7 +975,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[55]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 184--187
 
  []
@@ -927,12 +985,12 @@ Overfull \hbox (20.83366pt too wide) in paragraph at lines 190--196
 \TU/lmr/m/it/12 1. \TU/SimSun(0)/m/it/12 离 散 型 变 量 的 数 学 期 望：| $\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 a[]p[]:$ |\TU/SimSun(0)/m/it/12 （当 级 数 绝 对 收 敛，|  即 $[][] \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 a[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 p[] <
  []
 
-[56]
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
-[57]
+[60]
 Underfull \hbox (badness 10000) in paragraph at lines 230--236
 
  []
@@ -966,62 +1024,56 @@ Overfull \hbox (18.37952pt too wide) in paragraph at lines 2--6
 [][]$[][][][][] [] [] [] [][][][][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [][][][] [] [][] [] [][] [] [][] [] [][] []
  []
 
-[58] [59]
+[61] [62]
 Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 Missing character: There is no ⋯ (U+22EF) in font [lmroman12-regular]:mapping=tex-text;!
-[60]
+[63]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 Missing character: There is no ⋯ (U+22EF) in font [lmroman12-regular]:mapping=tex-text;!
-[61]
+[64]
 Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 184--48
+Underfull \hbox (badness 10000) in paragraph at lines 184--50
 
  []
 
-[62] [63]
+[65] [66]
 第五章
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[64
+[67
 
 ] (./Math.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2022/07/14>
+L3 programming layer <2022/08/05>
  ***********
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `Math.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Math.out':
-(rerunfilecheck)             Before: 13E81B44BE9A820BA4975A1378AA1472;5056
-(rerunfilecheck)             After:  D009C0BEB8CF2CCD56A587BFE536EE31;5174.
+Package rerunfilecheck Info: File `Math.out' has not changed.
+(rerunfilecheck)             Checksum: 0FF3145AD774F87ADF647B3B78083403;5452.
  ) 
 Here is how much of TeX's memory you used:
- 16474 strings out of 474773
- 370268 string characters out of 5761289
- 1935842 words of memory out of 5000000
- 38345 multiletter control sequences out of 15000+600000
+ 18075 strings out of 474773
+ 400443 string characters out of 5761289
+ 1958842 words of memory out of 5000000
+ 39924 multiletter control sequences out of 15000+600000
  574198 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,13n,97p,537b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,13n,97p,537b,1838s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Math.pdf (67 pages).
+Output written on Math.pdf (71 pages).

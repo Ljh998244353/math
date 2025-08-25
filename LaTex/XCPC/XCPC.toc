@@ -28,3 +28,4 @@
 \contentsline {subsection}{\numberline {7.1.2}多叉转二叉优化}{39}{subsection.7.1.2}%
 \contentsline {chapter}{\numberline {8}图论}{42}{chapter.8}%
 \contentsline {section}{\numberline {8.1}dijsktra求有向图最小瓶颈路（AI,未验证）}{42}{section.8.1}%
+\contentsline {section}{\numberline {8.2}tarjan有重边找桥}{46}{section.8.2}%

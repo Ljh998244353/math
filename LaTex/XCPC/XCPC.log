@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  25 AUG 2025 21:12
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  25 AUG 2025 21:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -725,47 +725,47 @@ Chapter 2.
 
 ]
 Chapter 3.
+(./_minted-XCPC/FEAB1A5416385E14AC5E175077E32DED91E4341C4DEFF7170FBF82E227FF6601.pygtex [8
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--89
+])
+Underfull \hbox (badness 10000) in paragraph at lines 80--92
 
  []
 
-(./_minted-XCPC/32DCE364C105FF8F7ADF8E8116912225B574C2DC18FE7DF81BCD1600B74178B0.pygtex [8
 
-] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]) (./_minted-XCPC/A0A383D48F2B39AB30717BF36C1FB19BEACAB40F7668858C4143690DABB9F943.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 95--1
+Underfull \hbox (badness 10000) in paragraph at lines 80--92
 
  []
 
-[19] [20]) [21]
+(./_minted-XCPC/32DCE364C105FF8F7ADF8E8116912225B574C2DC18FE7DF81BCD1600B74178B0.pygtex [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]) (./_minted-XCPC/A0A383D48F2B39AB30717BF36C1FB19BEACAB40F7668858C4143690DABB9F943.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 98--1
+
+ []
+
+[20] [21]) [22]
 Chapter 4.
-(./_minted-XCPC/D4D70342B49E59C9EDA39D56FBFE982C92EA9D29C4F83980E6AC9F50CCC18B4D.pygtex [22
+(./_minted-XCPC/D4D70342B49E59C9EDA39D56FBFE982C92EA9D29C4F83980E6AC9F50CCC18B4D.pygtex [23
 
-] [23] [24] [25]) (./_minted-XCPC/2993B887D2AC7584BA8DAB364168CC816F8BD9E92318E59F12F218A4812F9B44.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 113--1
-
- []
-
-[26] [27] [28]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [29]) (./_minted-XCPC/C2C9A0AF917D48F57197AEC000C5BE7EE4EA1D9AE1099185DC6A577AB1E2C569.pygtex [30]) (./_minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex [31] [32]) (./_minted-XCPC/F4D3FB254315E7F2F28B08DCF660F1BC923D0267CC474E8C3059490A757D44E6.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 134--1
+] [24] [25] [26]) (./_minted-XCPC/2993B887D2AC7584BA8DAB364168CC816F8BD9E92318E59F12F218A4812F9B44.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 116--1
 
  []
 
-[33])
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
+[27] [28] [29]) (./_minted-XCPC/5932C3E1D09401A9538884E6323C79889527CFB0BB2C72D428C3E4BD254CCC0D.pygtex [30]) (./_minted-XCPC/C2C9A0AF917D48F57197AEC000C5BE7EE4EA1D9AE1099185DC6A577AB1E2C569.pygtex [31]) (./_minted-XCPC/F5C5F0E4AE25B112BBBF0B28D44A2E60AC04A77324C3277B50234658238A6B4B.pygtex [32] [33]) (./_minted-XCPC/F4D3FB254315E7F2F28B08DCF660F1BC923D0267CC474E8C3059490A757D44E6.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 137--1
 
  []
 
-[34]
+[34])
+Underfull \hbox (badness 10000) in paragraph at lines 142--146
+
+ []
+
+[35]
 Chapter 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 146.
+(hyperref)                than one, level fixed on input line 149.
 
 \openout3 = `XCPC.pyg'.
 
@@ -773,21 +773,21 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 \openout3 = `XCPC.pyg'.
 
  (./_minted-XCPC/2B1DE751F292DD954108EC7388D662A4063079CEF51D968434C136339BD25CC3.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 156--1
+Underfull \hbox (badness 10000) in paragraph at lines 159--1
 
  []
 
-) [35
+) [36
 
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--172
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
@@ -796,27 +796,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 170--172
 (./_minted-XCPC/470D69E8F462F058BD434D7D724A5AD0063079CEF51D968434C136339BD25CC3.pygtex)
 \openout3 = `XCPC.pyg'.
 
- (./_minted-XCPC/11FF1A9775FCA118026BCC9EA15F4580063079CEF51D968434C136339BD25CC3.pygtex [36
+ (./_minted-XCPC/11FF1A9775FCA118026BCC9EA15F4580063079CEF51D968434C136339BD25CC3.pygtex [37
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
-[37]
+[38]
 Chapter 7.
-(./_minted-XCPC/8DD448CF16547DE0C4962C69C360E3EBD05268C2715FC8ED135E995CBFB55472.pygtex [38
+(./_minted-XCPC/8DD448CF16547DE0C4962C69C360E3EBD05268C2715FC8ED135E995CBFB55472.pygtex [39
 
 ]) (./_minted-XCPC/305BC56743F4DB7CEB7D4BA9721C226F8D5BF9420BA12FF1D03AE74181D63400.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 208--1
+Underfull \hbox (badness 10000) in paragraph at lines 211--1
 
  []
 
-[39] [40]) [41]
+[40] [41]) [42]
 Chapter 8.
-(./_minted-XCPC/13A75DC504F335C38BDAD8FF7ACCFD2CB421715560A091A9085CA00E88156D8F.pygtex [42
+(./_minted-XCPC/13A75DC504F335C38BDAD8FF7ACCFD2CB421715560A091A9085CA00E88156D8F.pygtex [43
 
-]) (./_minted-XCPC/4DF97C4EFDEC93B92591A62CDE1AF8B6F1602EB1ED75DC96D5E2557C1439DBF5.pygtex [43] [44] [45]) (./_minted-XCPC/246892F0AC6DA339D340941E6F438BC5953F664259D9E9CF41911DFF080864BD.pygtex [46]) [47]
+]) (./_minted-XCPC/4DF97C4EFDEC93B92591A62CDE1AF8B6F1602EB1ED75DC96D5E2557C1439DBF5.pygtex [44] [45] [46]) (./_minted-XCPC/246892F0AC6DA339D340941E6F438BC5953F664259D9E9CF41911DFF080864BD.pygtex [47]) [48]
 Chapter 9.
 \openout3 = `XCPC.pyg'.
 
@@ -829,7 +829,7 @@ Chapter 9.
  (./_minted-XCPC/76525BFF0DFC60894DA9E87702C90DC8063079CEF51D968434C136339BD25CC3.pygtex)
 \openout3 = `XCPC.pyg'.
 
- (./_minted-XCPC/6742CD71603EE3E87BF1D997601BCB63063079CEF51D968434C136339BD25CC3.pygtex [48
+ (./_minted-XCPC/6742CD71603EE3E87BF1D997601BCB63063079CEF51D968434C136339BD25CC3.pygtex [49
 
 ])
 \openout3 = `XCPC.pyg'.
@@ -852,15 +852,15 @@ Chapter 9.
  (./_minted-XCPC/A957C9495B7AAECF23EE2C5BB280524B063079CEF51D968434C136339BD25CC3.pygtex)
 \openout3 = `XCPC.pyg'.
 
- (./_minted-XCPC/546B5D15823E9D18D5DF2B1C09E01495063079CEF51D968434C136339BD25CC3.pygtex [49])
+ (./_minted-XCPC/546B5D15823E9D18D5DF2B1C09E01495063079CEF51D968434C136339BD25CC3.pygtex [50])
 \openout3 = `XCPC.pyg'.
 
  (./_minted-XCPC/3021297BC913F2B2D7F2D859E3137F44063079CEF51D968434C136339BD25CC3.pygtex)
-Overfull \hbox (25.35878pt too wide) in paragraph at lines 333--334
+Overfull \hbox (25.35878pt too wide) in paragraph at lines 336--337
 []\TU/SourceHanSerifCN(0)/m/n/10 如 果 需 要 可 移 植 的 输 出 格 式，|  自 己 实 现 格 式 化  |（例 如 [][]\TU/lmtt/m/n/10 printf("%.12g + %.12gi", z.real(), z.imag())[]\TU/SourceHanSerifCN(0)/m/n/10 ）|
  []
 
-[50] (./XCPC.aux)
+[51] (./XCPC.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -869,24 +869,18 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `XCPC.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `XCPC.out':
-(rerunfilecheck)             Before: FD53790B943E06FAC5F96C7B249C7ABD;2864
-(rerunfilecheck)             After:  D4BE7A2E861D939B033B689C73828D41;2935.
+Package rerunfilecheck Info: File `XCPC.out' has not changed.
+(rerunfilecheck)             Checksum: 2C283CD20C14319414CC147F82582129;3046.
 runsystem(del XCPC.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17996 strings out of 474773
- 403632 string characters out of 5761289
+ 18004 strings out of 474773
+ 404239 string characters out of 5761289
  1940842 words of memory out of 5000000
- 39768 multiletter control sequences out of 15000+600000
+ 39773 multiletter control sequences out of 15000+600000
  565747 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  74i,8n,86p,714b,808s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on XCPC.pdf (51 pages).
+Output written on XCPC.pdf (52 pages).

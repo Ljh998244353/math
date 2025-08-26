@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  25 AUG 2025 20:21
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  26 AUG 2025 11:59
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1065,7 +1065,17 @@ Overfull \hbox (13.73369pt too wide) in paragraph at lines 136--137
 \TU/lmtt/m/n/12 arg(z)\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 norm(z)\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 conj(z)\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 exp(z)\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 log(z)\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 pow(z,w)\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 sqrt(z)\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 sin(z)\TU/lmr/m/n/12 ,
  []
 
-[70] (./Math.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+[71] (./Math.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1074,16 +1084,22 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Math.out' has not changed.
-(rerunfilecheck)             Checksum: 8247B26A64EB0BD12C0CD913D7060581;5547.
+
+Package rerunfilecheck Warning: File `Math.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Math.out':
+(rerunfilecheck)             Before: B7F6F260FF48A6C8E1D29ADCCB75C4ED;5657
+(rerunfilecheck)             After:  8FF113138DC733B8E892A665FB830978;5728.
  ) 
 Here is how much of TeX's memory you used:
- 18075 strings out of 474773
- 400443 string characters out of 5761289
+ 18076 strings out of 474773
+ 400456 string characters out of 5761289
  1959842 words of memory out of 5000000
- 39924 multiletter control sequences out of 15000+600000
+ 39925 multiletter control sequences out of 15000+600000
  574198 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,13n,97p,537b,1838s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Math.pdf (74 pages).
+Output written on Math.pdf (75 pages).

@@ -73,7 +73,7 @@ e^x&=\sum_{n=0}^{\infty}\frac{x^n}{n!} \qquad& x\in(-\infty,+\infty)\\
 \end{aligned}
 $$
 
-\section*{复数}
+\section{复数}
 
 \subsection*{引入}
 从实数拓展复数，为了解决方程如 $x^2+1=0$ 在实数域无解的问题，引入虚数单位 $i$，满足 $i^2 = -1$，所有形如 $a + bi$ 的数的集合称为复数集，记作 $\mathbb{C}$。其中 $a$ 为实部 $\Re(z)$，$b$ 为虚部 $\Im(z)$。纯虚数当 $a=0, b\neq0$。
@@ -137,6 +137,29 @@ $n$ 次单位根为满足 $z^n = 1$ 的复数，等分单位圆，共 $n$ 个，
   \item C++14 字面量运算符支持 \texttt{100if}, \texttt{100i}, \texttt{100il} 表示不同类型的纯虚数。
 \end{itemize}
 
+
+\subsection{分式线性变换}
+\begin{definition}
+  分式线性变换\\
+$$
+f(z)=\frac{az+b}{cz+d}  (ad-bc \neq 0)
+$$
+\end{definition}
+
+\begin{definition}
+  交比\\
+  交比是四个复数 `z, z1, z2, z3` 的一种组合，定义为：
+$$
+(z,z_1,z_2,z_3)=\frac{(z-z_1)(z_2-z_3)}{(z-z_3)(z_2-z_1)}
+$$
+\end{definition}
+
+\begin{theorem}
+  分式线性变换的保交比性\\
+  \[
+  (z,z_1,z_2,z_3)=(f(z),f(z_1),f(z_2),f(z_3))
+  \]
+\end{theorem}
 
 
 \end{document}

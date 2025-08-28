@@ -336,6 +336,38 @@ cd ar[MAXN][MAXN+1]; // 每行长度为 n+1
   \item 如果需要可移植的输出格式，自己实现格式化（例如 \verb|printf("%.12g + %.12gi", z.real(), z.imag())|）会更稳定一致。
 \end{itemize}
 
+\chapter{网络流}
+\section{SPFA费用流}
+\cppcode{费用流.cpp}
+spfa初始化。
+\begin{minted}{cpp}
+void spfa_init_potentials(int s) {
+        const T INF = numeric_limits<T>::max() / 4;
+        h.assign(n, INF);
+        vector<char> inq(n, 0);
+        queue<int> q;
+        h[s] = 0;
+        q.push(s);
+        inq[s] = 1;
+        while (!q.empty()) {
+            int u = q.front(); q.pop();
+            inq[u] = 0;
+            for (int idx : g[u]) {
+                const _Edge &ed = e[idx];
+                int v = ed.to;
+                if (ed.cap > 0 && h[v] > h[u] + ed.cost) {
+                    h[v] = h[u] + ed.cost;
+                    if (!inq[v]) {
+                        q.push(v);
+                        inq[v] = 1;
+                    }
+                }
+            }
+        }
+        // 把不可达的点势设为 0，避免后续计算中出现 INF
+        for (int i = 0; i < n; ++i) if (h[i] == INF) h[i] = 0;
+    }
+\end{minted}
 
 \end{document}
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  25 AUG 2025 21:19
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  28 AUG 2025 10:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -860,7 +860,16 @@ Overfull \hbox (25.35878pt too wide) in paragraph at lines 336--337
 []\TU/SourceHanSerifCN(0)/m/n/10 如 果 需 要 可 移 植 的 输 出 格 式，|  自 己 实 现 格 式 化  |（例 如 [][]\TU/lmtt/m/n/10 printf("%.12g + %.12gi", z.real(), z.imag())[]\TU/SourceHanSerifCN(0)/m/n/10 ）|
  []
 
-[51] (./XCPC.aux)
+[51]
+Chapter 10.
+(./_minted-XCPC/D41D8CD98F00B204E9800998ECF8427EA8493F6D560B42D1107569AFF72D4F18.pygtex)
+\openout3 = `XCPC.pyg'.
+
+runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -o _minted-XCPC/96E2E0CDB6839B696B7FABAD4E92654B063079CEF51D968434C136339BD25CC3.pygtex XCPC.pyg)...executed.
+
+ (./_minted-XCPC/96E2E0CDB6839B696B7FABAD4E92654B063079CEF51D968434C136339BD25CC3.pygtex [52
+
+]) [53] (./XCPC.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -870,17 +879,17 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `XCPC.out' has not changed.
-(rerunfilecheck)             Checksum: 2C283CD20C14319414CC147F82582129;3046.
+(rerunfilecheck)             Checksum: F72E7E9FCDE371A939982B3415C2A604;3216.
 runsystem(del XCPC.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 18004 strings out of 474773
- 404239 string characters out of 5761289
+ 18019 strings out of 474773
+ 405443 string characters out of 5761289
  1940842 words of memory out of 5000000
- 39773 multiletter control sequences out of 15000+600000
+ 39782 multiletter control sequences out of 15000+600000
  565747 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  74i,8n,86p,714b,808s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on XCPC.pdf (52 pages).
+Output written on XCPC.pdf (54 pages).

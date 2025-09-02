@@ -1,0 +1,536 @@
+\documentclass[titlepage, a4paper]{report}
+%\usepackage{euler}
+\usepackage{graphicx, amssymb, amsmath, textcomp, booktabs}
+\usepackage[libertine,vvarbb]{newtxmath}
+\usepackage[scr=rsfso]{mathalfa}
+% \usepackage[lining,semibold,type1]{libertine} % a bit lighter than Times--no osf in math
+\usepackage[T1]{fontenc} % best for Western European languages
+\usepackage{minted}
+\usepackage{listings, color, setspace, titlesec, fancyhdr, mdframed, multicol}
+\usepackage{ucharclasses}
+\usepackage{xunicode, xltxtra}
+\usepackage[inner=1.25cm, outer=0.8cm, top=1.7cm, bottom=0.0cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{tocloft}
+\usepackage{nameref}
+\usepackage{verbatim}
+\usepackage{relsize}
+\usepackage{fontspec}
+\usepackage[colorlinks, linkcolor = black]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+% configure fonts
+% if not using CJK
+% \newfontfamily\substitutefont{SimSun}[Scale=0.8,BoldFont=SimHei]
+% \setTransitionsForChinese{\begingroup\substitutefont}{\endgroup}
+\usepackage{xeCJK}
+\setCJKmainfont{Source Han Serif CN}[Scale=0.8]
+\setCJKmonofont{SimHei}[Scale=0.8]
+\setCJKsansfont{KaiTi}[Scale=0.8]
+
+\setmainfont{Linux Libertine O}[Scale=0.925]
+\setmonofont{Consolas}[Scale=0.775]
+%\setsansfont{Gill Sans Medium}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\setlength{\parindent}{0em}\setlength{\parskip}{1pt}
+\setlength\itemsep{1pt}
+
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{1pt \@plus 1pt \@minus 1pt}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
+\newcommand{\cppcode}[1]{  
+    \inputminted[mathescape]{cpp}{source/#1}  
+}  
+
+%configure the top corners
+\pagestyle{fancy}
+\setlength{\headsep}{0.1cm}
+
+\lhead{算法模板}
+ 
+%configure space between the two columns
+\setlength{\columnsep}{13pt}
+
+%configure minted to display codes
+%\definecolor{Gray}{rgb}{0.9,0.9,0.9}
+
+%remove leading numbers in table of contents
+%\setcounter{secnumdepth}{0}	
+
+%configure section style of table of content
+\renewcommand\cftsecfont{\Large}
+
+%configure section style
+\titleformat{\section}
+{\huge}			% The style of the section title
+{\thesection.}				% a prefix
+{4pt}						% How much space exists between the prefix and the title
+{}					% How the section is represented
+% \titleformat{\section}{\huge}{}{0pt}{}
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+
+%enable section to start new page automatically
+%\let\stdsection\section
+%\renewcommand\section{\penalty-100\vfilneg\stdsection}
+
+%\renewcommand\theFancyVerbLine{\arabic{FancyVerbLine}}
+\renewcommand{\theFancyVerbLine}{\sffamily \textcolor[rgb]{0.5,0.5,0.5}{\scriptsize {\arabic{FancyVerbLine}}}}
+
+\setminted[cpp]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=3,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+	showtabs=true,
+	tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
+}
+\setminted[java]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=3,
+	fontsize=\small,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+	showtabs=true,
+	tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
+}
+\setminted[python]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=3,
+	fontsize=\small,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+	showtabs=true,
+	tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
+}
+
+\setminted[vim]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=2,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+}
+
+\setminted[sh]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=2,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+}
+
+\begin{document}
+
+\chapter{几何}
+\section{极角排序}
+\cppcode{psort.cpp}
+
+\section{旋转卡壳}
+\cppcode{旋转卡壳.cpp}
+
+\section{切比雪夫距离}
+$$
+  d(A,B)=\max(|x_a-x_b|,|y_a-y_b|)
+$$
+1.曼哈顿坐标系是通过切比雪夫坐标系旋转45度后，再缩小到原来的一半得到的。\\
+2.将一个点 $(x ,y)$ 的坐标变为 $(x + y, x -y)$ 后，原坐标系中的曼哈顿距离等于新坐标系中的切比雪夫距离。\\
+3. 将一个点 $(x, y)$ 的坐标变为 $(\frac{x+y}{2},\frac{x-y}{2})$ 后，原坐标系中的切比雪夫距离等于新坐标系中的曼哈顿距离。\\
+
+
+
+
+\chapter{树}
+\section{树的重心}
+计算以无根树每个点为根节点时的最大子树大小，这个值最小的点称为无根树的重心。\\
+一些性质:\\
+1.某个点是树的重心等价于它最大子树大小不大于整棵树大小的一半。\\
+2.树至多有两个重心。如果树有两个重心，那么它们相邻。此时树一定有偶数个节点，且可以被划分为两个大小相等的分支，每个分支各自包含一个重心。\\
+3.树中所有点到某个点的距离和中，到重心的距离和是最小的；如果有两个重心，那么到它们的距离和一样。反过来，距离和最小的点一定是重心。\\
+4.往树上增加或减少一个叶子，如果原节点数是奇数，那么重心可能增加一个，原重心仍是重心；如果原节点数是偶数，重心可能减少一个，另一个重心仍是重心。\\
+5.把两棵树通过一条边相连得到一棵新的树，则新的重心在较大的一棵树一侧的连接点与原重心之间的简单路径上。如果两棵树大小一样，则重心就是两个连接点。\\
+利用性质1,可以很快的找到重心.
+
+\section{树的直径}
+若树上所有边边权均为正，则树的所有直径中点重合\\
+由此可以知道找出(端点)字典序最大的直径的方法：
+从任意顶点出发：找到离它最远其字典序最大的点。
+然后从这个点出发找离他最远且字典序最大的点。\\
+这条直径就是答案。
+
+\chapter{数学}
+
+\section{复数域高斯消元}
+\cppcode{guass.cpp}
+
+\section{积和式}
+ 一个 $n\times n$ 矩阵 $A=(a_{i,j})$ 的积和式定义为
+$$
+\operatorname{perm}(A)=\sum_{\sigma\in S_n}\prod_{i=1}^n a_{i,\sigma(i)}
+$$
+也就是说，对所有排列 $\sigma$ 把对应位置的乘积求和。\\
+形式上与行列式相似，但行列式在每项前有置换符号 $\operatorname{sgn}(\sigma)$，而积和式不带符号。\\
+因此两者在代数与计算性质上有明显不同（例如交换两行不改变积和式、但会改变行列式的符号）。
+积和式是多线性的，且对行（或列）置换不变。\\
+对于二分图，把左、右两侧各 $n$ 个顶点的邻接矩阵记为 $A$，则 $\operatorname{perm}(A)$
+ 等于该二分图中\textbf{完美匹配}的数目（每个排列对应一种匹配，非边对应项为 0）。\\
+ 对有向图，邻接矩阵的积和式等于该图的\textbf{圈覆盖}（vertex-disjoint cycle cover）的数目。\\
+$2\times2$ 矩阵 $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ 的积和式为 $ad+bc$。\\
+全 1 的 $n\times n$ 矩阵的积和式就是棋盘上放置 $n$ 个互不攻击的车（rook）的排列数（与置换的计数相关）。\\
+\\
+特别地，对于二分图完美匹配计数问题，模2下其数目同余于行列式的值。\\
+
+
+\section{多项式封装}
+\cppcode{Ploy.cpp}
+
+\section{异或线性基}
+时间复杂度$O(n\log{\max{a}})$
+异或问题,同时又可以找到“子集”“子序列”等字眼，或者是图论中的某条路径的异或和时，就可以往线性基方向想了。\\
+我们可以利用异或线性基实现：\\
+1.判断一个数能否表示成某数集子集的异或和；\\
+2.求一个数表示成某数集子集异或和的方案数；\\
+3.求某数集子集的最大/最小/第 k 大/第 k 小异或和；(注意01Tire是求点对区间的第k大异或对) \\
+4.求一个数在某数集子集异或和中的排名。\\
+\cppcode{basis.cpp}
+模板题:
+最大异或和:https://www.luogu.com.cn/record/204660302
+
+
+\chapter{数据结构}
+\section{线段树二分}
+\cppcode{segment_tree.cpp}
+\section{线段树维护区间gcd}
+$$
+\gcd_{i=l}^{r}=\gcd(a_l,\gcd_{i=l+1}^{r}(a[i]-a[i-1]))
+$$
+这意味着我们无须维护区间加，只要做差分数组并维护单点加就可以了。\\
+\cppcode{segtgcd.cpp}
+
+\section{对顶堆}
+\cppcode{Maxheap.cpp}
+对顶堆可以动态维护一个序列上的中位数,或者第k大的数,(k的值可能变化).\\
+对顶堆由一个大根堆与一个小根堆组成，小根堆维护大值即前 k 大的值（包含第 k 个），大根堆维护小值即比第 k 大数小的其他数。\\
+维护:当小根堆的大小小于 k 时，不断将大根堆堆顶元素取出并插入小根堆，直到小根堆的大小等于 k;当小根堆的大小大于 k 时，
+不断将小根堆堆顶元素取出并插入大根堆，直到小根堆的大小等于 k;\\
+插入元素：若插入的元素大于等于小根堆堆顶元素，则将其插入小根堆，否则将其插入大根堆，然后维护对顶堆；\\
+查询第 k 大元素：小根堆堆顶元素即为所求；\\
+删除第 k 大元素：删除小根堆堆顶元素，然后维护对顶堆；\\
+变化k：根据新的 k 值直接维护对顶堆。\\
+时间复杂度$O(\log{n})$
+\cppcode{对顶堆.cpp}
+
+\section{手写Bitset}
+\cppcode{Bitset.cpp}
+
+\section{笛卡尔树}
+常用于数数题。
+笛卡尔树是一种二叉树，每一个节点由一个键值二元组 $(k,w)$构成。要求 $k$ 满足二叉搜索树的性质，而 $w$ 满足堆的性质。\\
+如果笛卡尔树的 $k,w$ 键值确定，且 $k$ 互不相同，$w$ 也互不相同，那么这棵笛卡尔树的结构是唯一的。\\
+$k$有序的话,可以线性建树。\\
+\cppcode{dkrTree.cpp}
+性质\\
+1.  以u为根的子树是一段连续的区间 （由BST性质），且u是这段区间的最小值，且不能再向两端延伸使得最小值不变（即，这一段区间是极长的）\\
+2. 在 u 左右子树里任选两个点，两点间的区间最小值必定是 $w_u$\\
+3.  a,b间的区间最小值为：$w_{LCA(a,b)}$\\
+
+\chapter{trick}
+
+\subsection{枚举子集}
+
+用于循环枚举子集，\textbf{注意枚举不了空集}
+\begin{minted}{cpp}  
+for(int j=st;j;j=(j-1)&st) 
+\end{minted}
+st，为要枚举子集的集合，j为子集\\
+本质是将每一位设为0，1后枚举后面的。\\
+时间复杂度$O(3^n)$
+\subsection{求所有因数}
+利用类似筛法的原理\\
+\begin{minted}{cpp}  
+   for (int i = 1; i <= MX; ++i) {
+    for (int j = i; j <= MX; j += i) {
+      d[j].push_back(i);
+    }
+  }
+\end{minted}
+时间复杂度$O(n\log{n})$
+\chapter{杂项}
+\section{格雷码}
+构造格雷码\\
+$$
+G(n)=n\oplus \left\lfloor\frac{n}{2}\right\rfloor
+$$
+格雷码构造原数\\
+$$
+n_{k-i}=\oplus_{0\le j \le i} g_{k-j}
+$$
+
+\section{pbds}
+\begin{minted}{cpp}  
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>//用tree
+#include<ext/pb_ds/hash_policy.hpp>//用hash
+#include<ext/pb_ds/trie_policy.hpp>//用trie
+#include<ext/pb_ds/priority_queue.hpp>//用priority_queue    
+\end{minted}  
+
+\subsection{哈希表}
+\begin{minted}{cpp}
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/hash_policy.hpp>
+const int RANDOM = time(NULL);
+struct MyHash {int operator() (int x) const {return x ^ RANDOM;}};
+template <class T1, class T2>
+struct std::tr1::hash <std::pair <T1, T2> > {
+  size_t operator() (std::pair <T1, T2> x) const {
+    std::tr1::hash <T1> H1; std::tr1::hash <T2> H2;
+    return H1(x.first) ^ H2(x.second); // 你自定义的 hash 函数。
+  }
+};
+\end{minted}
+直接当没有 \texttt{emplace(),cbegin(),cend()}\texttt{unordered\_map} 用就好了。\\
+
+
+\chapter{动态规划}
+\section{树上背包}
+\subsection{dfs序优化}
+\cppcode{树上背包dfs.cpp}
+
+\subsection{多叉转二叉优化}
+具体方法就是不断递归，找到根节点，把它与最左边的子节点之间的边保留，其他全部断掉。然后从这个保留的孩子开始，连一条链到所有断开的点。\\
+\cppcode{树上背包转二叉.cpp}
+
+
+
+
+\chapter{图论}
+\section{dijsktra求有向图最小瓶颈路（AI,未验证）}
+$O(nm\log n)$
+\cppcode{mindij.cpp}
+如果边比较少，图比较稀疏，可用堆优化掉log。\\
+$O(n(m+K))$
+\cppcode{heapminmaxdij.cpp}
+在稠密图，$n\le 2000$，可以用bitset优化传递闭包。
+
+\section{tarjan有重边找桥}
+\cppcode{tarjan有重边找桥.cpp}
+
+
+\chapter{语法}
+\section{复数}
+
+\subsection*{引入与类型}
+\begin{minted}{cpp}
+// 头文件与常用别名
+#include <complex>
+using std::complex;
+using cd = complex<double>;
+using cf = complex<float>;
+using cld = complex<long double>;
+\end{minted}
+
+\subsection*{构造与访问}
+\begin{itemize}
+  \item 构造：
+\begin{minted}{cpp}
+cd z1(1.0, 2.0);      // 实部 1, 虚部 2
+cd z2 = {3.0, -1.5};  // 列表初始化
+cd z3 = cd(4.0);      // 虚部为 0
+\end{minted}
+  \item 访问／修改实部与虚部：
+\begin{minted}{cpp}
+double a = z1.real();        // 成员函数读取实部
+double b = z1.imag();        // 成员函数读取虚部
+std::real(z1);               // free function，等价 z1.real()
+std::imag(z1);               // free function，等价 z1.imag()
+z1.real() = 5.0;             // 可写（修改实部）
+\end{minted}
+\end{itemize}
+
+\subsection*{四则运算与标量混合}
+\begin{itemize}
+  \item 支持 + - * /，既有 complex op complex 也有 complex op scalar。
+\begin{minted}{cpp}
+cd s = z1 + z2;
+cd p = z1 * cd(0,1);   // 乘以 i
+cd d = z1 / 2.0;       // 除以标量
+\end{minted}
+\end{itemize}
+
+\subsection*{常用数学函数（<complex>）}
+\begin{itemize}
+  \item 模长、模平方、相位：
+  \begin{minted}{cpp}
+double r    = std::abs(z);   // |z|
+double r2   = std::norm(z);  // |z|^2，避免开根号的高效计算
+double theta = std::arg(z);  // 相位（弧度）
+  \end{minted}
+  \item 共轭、极坐标、投影：
+  \begin{minted}{cpp}
+cd conjz = std::conj(z);          // 复共轭
+cd fromPolar = std::polar(r,theta); // 从极坐标构造 r*e^{i theta}
+cd projz = std::proj(z);          // 投影到黎曼球面（处理无穷）
+  \end{minted}
+  \item 复数版本的初等/超越函数：
+  \begin{minted}{cpp}
+std::exp(z); std::log(z); std::sqrt(z); std::pow(z, w);
+std::sin(z); std::cos(z); std::tan(z);
+std::sinh(z); std::cosh(z); std::asin(z); std::acos(z); std::atan(z);
+  \end{minted}
+\end{itemize}
+
+\subsection*{I/O 与比较}
+\begin{itemize}
+  \item 流支持：
+\begin{minted}{cpp}
+std::cout << z; // 输出格式依实现（常见形式 "(real,imag)"）
+std::cin  >> z; // 读取，格式由实现决定
+\end{minted}
+  \item 比较：不要用 == 做严格相等判断（浮点误差）。
+\begin{minted}{cpp}
+bool approx_equal = (std::abs(z1 - z2) < 1e-9);
+\end{minted}
+\end{itemize}
+
+\subsection*{性能与数值注意事项}
+\begin{itemize}
+  \item 若只需模的平方，优先使用 \verb|std::norm(z)|，比 \verb|std::abs(z)*std::abs(z)| 更快且更稳定。
+  \item 判断是否为 0 时应使用容差 \verb|eps|：
+\begin{minted}{cpp}
+if (std::abs(z) < eps) { /* 视为 0 */ }
+\end{minted}
+  \item \verb|std::complex<T>| 使用模板参数 \verb|T|（float/double/long double），根据精度与性能需求选择合适类型。
+  \item 对于列主元或比较大小时，通常用 \verb|std::abs|（模）比较大小。
+\end{itemize}
+
+\subsection*{常见小例子}
+\subsubsection*{用复数表示二维向量并旋转}
+\begin{minted}{cpp}
+// 旋转复数（2D 向量） by angle theta:
+cd v = {1.0, 0.0};
+cd rotated = v * std::polar(1.0, theta);
+\end{minted}
+
+\subsubsection*{在高斯消元中使用 std::complex<double>}
+\begin{minted}{cpp}
+// 假设增广矩阵 ar 为 complex<double>：
+cd ar[MAXN][MAXN+1]; // 每行长度为 n+1
+// 判主元、交换、消元时可直接使用 std::abs, std::conj 等
+\end{minted}
+
+\subsection*{额外提示}
+\begin{itemize}
+  \item \texttt{std::abs} 返回的是模（非平方），内部对极端情况有一定数值稳定性的处理，但仍需注意大/小量级混合的问题。
+  \item 在数值线性代数中，若频繁调用共轭、模等，注意避免不必要的临时对象以减少开销（视编译器做内联优化情况）。
+  \item 如果需要可移植的输出格式，自己实现格式化（例如 \verb|printf("%.12g + %.12gi", z.real(), z.imag())|）会更稳定一致。
+\end{itemize}
+
+\chapter{网络流}
+\section{SPFA费用流}
+\cppcode{费用流.cpp}
+spfa初始化。
+\begin{minted}{cpp}
+void spfa_init_potentials(int s) {
+        const T INF = numeric_limits<T>::max() / 4;
+        h.assign(n, INF);
+        vector<char> inq(n, 0);
+        queue<int> q;
+        h[s] = 0;
+        q.push(s);
+        inq[s] = 1;
+        while (!q.empty()) {
+            int u = q.front(); q.pop();
+            inq[u] = 0;
+            for (int idx : g[u]) {
+                const _Edge &ed = e[idx];
+                int v = ed.to;
+                if (ed.cap > 0 && h[v] > h[u] + ed.cost) {
+                    h[v] = h[u] + ed.cost;
+                    if (!inq[v]) {
+                        q.push(v);
+                        inq[v] = 1;
+                    }
+                }
+            }
+        }
+        // 把不可达的点势设为 0，避免后续计算中出现 INF
+        for (int i = 0; i < n; ++i) if (h[i] == INF) h[i] = 0;
+    }
+\end{minted}
+
+\section{网络流封装(已验证)}
+由GPT，Gemini，Grok生成，已通过模板题。
+\cppcode{网络流封装.cpp}
+
+\end{document}

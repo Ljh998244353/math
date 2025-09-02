@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{z1}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{z2}\PYG{p}{;}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{z1}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{cd}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{);}\PYG{+w}{   }\PYG{c+c1}{// 乘以 i}
+\PYG{n}{cd}\PYG{+w}{ }\PYG{n}{d}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{z1}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{2.0}\PYG{p}{;}\PYG{+w}{       }\PYG{c+c1}{// 除以标量}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{o}{=}\PYG{n}{st}\PYG{p}{;}\PYG{n}{j}\PYG{p}{;}\PYG{n}{j}\PYG{o}{=}\PYG{p}{(}\PYG{n}{j}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{o}{\PYGZam{}}\PYG{n}{st}\PYG{p}{)}
+\end{Verbatim}

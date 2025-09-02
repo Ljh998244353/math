@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{exp}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{log}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{pow}\PYG{p}{(}\PYG{n}{z}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{w}\PYG{p}{);}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{tan}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{sinh}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{cosh}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{asin}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{acos}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{atan}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{z1}\PYG{p}{.}\PYG{n}{real}\PYG{p}{();}\PYG{+w}{        }\PYG{c+c1}{// 成员函数读取实部}
+\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{b}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{z1}\PYG{p}{.}\PYG{n}{imag}\PYG{p}{();}\PYG{+w}{        }\PYG{c+c1}{// 成员函数读取虚部}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{real}\PYG{p}{(}\PYG{n}{z1}\PYG{p}{);}\PYG{+w}{               }\PYG{c+c1}{// free function，等价 z1.real()}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{imag}\PYG{p}{(}\PYG{n}{z1}\PYG{p}{);}\PYG{+w}{               }\PYG{c+c1}{// free function，等价 z1.imag()}
+\PYG{n}{z1}\PYG{p}{.}\PYG{n}{real}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{5.0}\PYG{p}{;}\PYG{+w}{             }\PYG{c+c1}{// 可写（修改实部）}
+\end{Verbatim}

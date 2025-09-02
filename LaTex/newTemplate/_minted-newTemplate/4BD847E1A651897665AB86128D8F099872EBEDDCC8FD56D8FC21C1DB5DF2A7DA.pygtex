@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{r}\PYG{+w}{    }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{   }\PYG{c+c1}{// |z|}
+\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{r2}\PYG{+w}{   }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{norm}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{  }\PYG{c+c1}{// |z|\PYGZca{}2，避免开根号的高效计算}
+\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{theta}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{arg}\PYG{p}{(}\PYG{n}{z}\PYG{p}{);}\PYG{+w}{  }\PYG{c+c1}{// 相位（弧度）}
+\end{Verbatim}

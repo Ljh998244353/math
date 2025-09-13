@@ -238,6 +238,28 @@ $$
 \chapter{数学}
 
 \section{卷积}
+SOSDP\\
+$$
+G(K)=\sum_{L\subseteq K }F(L)\qquad (K\subseteq U)
+$$
+求所有的$G(K)$
+狄利克雷前缀和\\
+$$
+G(n)=\sum_{d|n} F(d)
+$$
+狄利克雷后缀和\\
+$$
+G(d)=\sum_{d|n} F(n)
+$$
+卷积\\
+$$
+H(\mathcal{S})=\sum_{\mathcal{I} \bigcup \mathcal{J}=\mathcal{S}} F(\mathcal{I}) G(\mathcal{J})
+$$
+子集卷积\\
+$$
+H_i=\sum_{j or k=i ,j and k=0} F_j G_k
+$$
+
 \cppcode{conv.cpp}
 
 \section{复数域高斯消元}

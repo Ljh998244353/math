@@ -413,7 +413,7 @@ struct Convo {
   }
 
   // SOS 前缀和
-  void sos_prefix(vector<T>& f, int n) {
+  void sos_prefix(vector<T>& f, int nx) {
     int N = 1 << n;
     for (int i = 0; i < n; ++i) {
       for (int mask = 0; mask < N; ++mask) {

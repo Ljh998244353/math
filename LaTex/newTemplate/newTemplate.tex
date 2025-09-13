@@ -190,7 +190,14 @@
 	breakbytoken=false,
 }
 
+
+\title{XCPC 算法模板和结论(补充)}
+\date{\today}
+
 \begin{document}
+\maketitle
+\tableofcontents
+\clearpage
 
 \chapter{几何}
 \section{极角排序}
@@ -229,6 +236,9 @@ $$
 这条直径就是答案。
 
 \chapter{数学}
+
+\section{卷积}
+\cppcode{conv.cpp}
 
 \section{复数域高斯消元}
 \cppcode{guass.cpp}
@@ -532,5 +542,10 @@ void spfa_init_potentials(int s) {
 \section{网络流封装(已验证)}
 由GPT，Gemini，Grok生成，已通过模板题。
 \cppcode{网络流封装.cpp}
+1.**二分图的最大匹配**就是在二分图上跑出来的**最大流**。\\
+2.我们有**最小覆盖数=最大匹配数**，**最大独立集=总点数-最小覆盖集**两个性质。\\
+3.在一个二分图中，如果删去一条边能够使这个图的最大匹配减小1的话，那么这条边一定在残量网络中满流，并且它所连接的两个点一定不在同一个强连通分量当中。\\
+4.有一个DAG，要求用尽量少的不相交的简单路径覆盖所有的节点 。有**最小路径覆盖=原图节点数-新图最大匹配**新图指的是，将原来的点拆成两个点，如果$u \to v$，那么连接$u_x \to v_y$，这样得到的二分图的最大匹配。\\
+
 
 \end{document}

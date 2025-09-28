@@ -959,3 +959,56 @@ F(\mathbf{n})=\sum_{\mathbf{i}\succeq\mathbf{n}}(-1)^{\;|\mathbf{i}-\mathbf{n}|}
 $$
 其中 $|\mathbf{i}-\mathbf{n}|=\sum_{k=1}^d (i_k-n_k)$。
 \end{theorem}
+
+\section{拆分}
+
+\begin{definition}
+  一个正整数的拆分是指将其表示为一些正整数的和。不计次序，一般用非递增表示。\\
+  $p(n)$表示其拆分的数目，称为拆分函数。
+\end{definition}
+
+\begin{definition}
+  定义拆分$n=\lambda_1 +\cdots + \lambda_r$。定义$\lambda$的共轭为$n=\lambda_1' +\cdots + \lambda_s'$\\
+  $\lambda'_i$为$\lambda$中大于$i$的数。如$(4,4,3,2,1) \to (5,4,3,2)$。\\
+  一个拆分称为自共轭的，当且仅当他和它的共轭相同。
+\end{definition}
+结合费勒斯图（Ferrers Diagram）显然。
+
+\begin{theorem}
+  将$n$拆分为最大部分为$r$的数目等于拆分成$r$部分的数目。
+\end{theorem}
+
+\begin{theorem}
+  无限制拆分的拆分函数的生成函数是
+  $$
+  \sum_{n=0}^{\infty} p(n) x^n =\prod_{j=1} ^{\infty} \frac{1}{1-x^j}
+  $$
+\end{theorem}
+
+\begin{theorem}
+  拆分成不同部分的拆分函数的生成函数是
+  $$
+  \sum_{n=0}^{\infty} p(n) x^n =\prod_{j=1} ^{\infty} (1+x^j)
+  $$
+\end{theorem}
+
+\begin{theorem}
+  拆分成不同部分的拆分函数的生成函数是
+  $$
+  \sum_{n=0}^{\infty} p(n) x^n =\prod_{j=1} ^{\infty} (1+x^j)
+  $$
+\end{theorem}
+
+\begin{theorem}
+  欧拉等分定理\\
+  将$n$拆分为奇数部分和的拆分数目等于将$n$拆分成不同部分和的拆分数目。
+  
+\end{theorem}
+
+\begin{theorem}
+  欧拉五边形数定理\\
+  $$
+  \prod_{i=1}^{\infty} (1-x^i) =\sum_{n=1}^{\infty} a_n x^n
+  $$
+  其中$a_n$为将n拆分成偶数个不同部分之和的数目-拆分拆分成奇数个不同部分之和的数目
+\end{theorem}

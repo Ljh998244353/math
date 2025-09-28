@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  13 SEP 2025 21:06
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  13 SEP 2025 21:08
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1481,13 +1481,12 @@ File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many o
 *** Reloading Xunicode for encoding 'TU' ***
 ) (c:/texlive/2024/texmf-dist/tex/xelatex/xecjk/xunicode-extra.def
 File: xunicode-extra.def 2022/08/05 v3.9.1 extra definition for xunicode
-)
-No file newTemplate.aux.
+) (./newTemplate.aux)
 \openout1 = `newTemplate.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 197.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line 197.
-(c:/texlive/2024/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+ (c:/texlive/2024/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 197.
@@ -1583,12 +1582,9 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ))
 Package hyperref Info: Link coloring ON on input line 197.
+ (./newTemplate.out) (./newTemplate.out)
 \@outlinefile=\write5
 \openout5 = `newTemplate.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 (Font)              scaled to size 15.98404pt on input line 199.
@@ -1597,7 +1593,7 @@ LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 (Font)              scaled to size 11.10004pt on input line 199.
 LaTeX Font Info:    Trying to load font information for OT1+minlibertine on input line 199.
-(c:/texlive/2024/texmf-dist/tex/latex/newtx/ot1minlibertine.fd
+ (c:/texlive/2024/texmf-dist/tex/latex/newtx/ot1minlibertine.fd
 File: ot1minlibertine.fd 2013/10/12 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 199.
@@ -1630,12 +1626,22 @@ LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 (Font)              scaled to size 23.01407pt on input line 199.
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/b/n' will be
 (Font)              scaled to size 23.01407pt on input line 199.
-
-No file newTemplate.toc.
+ (./newTemplate.toc
+LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/b/n' will be
+(Font)              scaled to size 9.25003pt on input line 1.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/b/n' will be
+(Font)              scaled to size 8.00003pt on input line 1.
+LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
+(Font)              scaled to size 13.32004pt on input line 2.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
+(Font)              scaled to size 11.52003pt on input line 2.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
+(Font)              scaled to size 8.00003pt on input line 21.
+)
 \tf@toc=\write6
 \openout6 = `newTemplate.toc'.
 
-[1]
+ [1]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 (Font)              scaled to size 19.18456pt on input line 202.
@@ -1712,9 +1718,6 @@ LaTeX Font Info:    Font shape `TU/SimHei(0)/m/n' will be
 
 
 ])
-LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
-(Font)              scaled to size 8.00003pt on input line 213.
-
 Underfull \hbox (badness 10000) in paragraph at lines 212--216
 
  []
@@ -1761,11 +1764,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--259
 (./_minted-newTemplate/2D7EA558567A3788F949A92B00B69C8118DB182E877CBA82AA16A5B6A6DC63F6.pygtex [5
 
 ] [6] [7]) (./_minted-newTemplate/FEAB1A5416385E14AC5E175077E32DED18DB182E877CBA82AA16A5B6A6DC63F6.pygtex)
-LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/b/n' will be
-(Font)              scaled to size 9.25003pt on input line 278.
-LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/b/n' will be
-(Font)              scaled to size 8.00003pt on input line 278.
-
 Underfull \hbox (badness 10000) in paragraph at lines 272--284
 
  []
@@ -1918,23 +1916,17 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `newTemplate.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `newTemplate.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  86F572200963F3B5FC4ADF80C3A3EE63;3424.
+Package rerunfilecheck Info: File `newTemplate.out' has not changed.
+(rerunfilecheck)             Checksum: 86F572200963F3B5FC4ADF80C3A3EE63;3424.
 runsystem(del newTemplate.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 33800 strings out of 474773
- 655985 string characters out of 5761289
+ 33854 strings out of 474773
+ 658300 string characters out of 5761289
  2016842 words of memory out of 5000000
- 55336 multiletter control sequences out of 15000+600000
- 603206 words of font info for 159 fonts, out of 8000000 for 9000
+ 55380 multiletter control sequences out of 15000+600000
+ 603279 words of font info for 161 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,11n,108p,721b,836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

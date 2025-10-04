@@ -346,7 +346,7 @@ $k$有序的话,可以线性建树。\\
 
 \chapter{trick}
 
-\subsection{枚举子集}
+\section{枚举子集}
 
 用于循环枚举子集，\textbf{注意枚举不了空集}
 \begin{minted}{cpp}  
@@ -355,7 +355,7 @@ for(int j=st;j;j=(j-1)&st)
 st，为要枚举子集的集合，j为子集\\
 本质是将每一位设为0，1后枚举后面的。\\
 时间复杂度$O(3^n)$
-\subsection{求所有因数}
+\section{求所有因数}
 利用类似筛法的原理\\
 \begin{minted}{cpp}  
    for (int i = 1; i <= MX; ++i) {
@@ -385,7 +385,7 @@ $$
 #include<ext/pb_ds/priority_queue.hpp>//用priority_queue    
 \end{minted}  
 
-\subsection{哈希表}
+\section{哈希表}
 \begin{minted}{cpp}
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/hash_policy.hpp>
@@ -410,6 +410,10 @@ struct std::tr1::hash <std::pair <T1, T2> > {
 \subsection{多叉转二叉优化}
 具体方法就是不断递归，找到根节点，把它与最左边的子节点之间的边保留，其他全部断掉。然后从这个保留的孩子开始，连一条链到所有断开的点。\\
 \cppcode{树上背包转二叉.cpp}
+
+\section{最长单调子序列}
+\cppcode{LIS.cpp}
+
 
 
 

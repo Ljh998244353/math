@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  28 SEP 2025 15:09
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  4 OCT 2025 13:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1636,7 +1636,7 @@ LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
 (Font)              scaled to size 11.52003pt on input line 2.
 LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
-(Font)              scaled to size 8.00003pt on input line 22.
+(Font)              scaled to size 8.00003pt on input line 30.
 )
 \tf@toc=\write6
 \openout6 = `newTemplate.toc'.
@@ -1799,14 +1799,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 342--346
 
 [21] [22]
 Chapter 5.
-LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/b/n' will be
-(Font)              scaled to size 11.10004pt on input line 349.
-LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/b/n' will be
-(Font)              scaled to size 9.60004pt on input line 349.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 349.
-
 \openout3 = `newTemplate.pyg'.
 
 (./_minted-newTemplate/CBB194403954DA22945E93A8E80FA51772EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
@@ -1845,6 +1837,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
 ]
 Chapter 7.
+LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/b/n' will be
+(Font)              scaled to size 11.10004pt on input line 407.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/b/n' will be
+(Font)              scaled to size 9.60004pt on input line 407.
 (./_minted-newTemplate/8DD448CF16547DE0C4962C69C360E3EB18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/305BC56743F4DB7CEB7D4BA9721C226F18DB182E877CBA82AA16A5B6A6DC63F6.pygtex
 Underfull \hbox (badness 10000) in paragraph at lines 411--1
 
@@ -1852,7 +1848,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--1
 
 [25
 
-]) [26]
+]) (./_minted-newTemplate/8992ED0AC554B1E6A4ACEEC9416D3D9218DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [26]
 Chapter 8.
 (./_minted-newTemplate/13A75DC504F335C38BDAD8FF7ACCFD2C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/4DF97C4EFDEC93B92591A62CDE1AF8B618DB182E877CBA82AA16A5B6A6DC63F6.pygtex [27
 
@@ -1903,7 +1899,7 @@ Chapter 10.
 \openout3 = `newTemplate.pyg'.
 
  (./_minted-newTemplate/96E2E0CDB6839B696B7FABAD4E92654B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [33]) (./_minted-newTemplate/ECD7CCF80155324D0AF68C9F14F9103718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [34] [35] [36] [37] [38] [39])
-Underfull \hbox (badness 10000) in paragraph at lines 575--579
+Underfull \hbox (badness 10000) in paragraph at lines 579--583
 
  []
 
@@ -1917,15 +1913,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `newTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 30F0F236D0CE79478769AAF50318A93F;3520.
+(rerunfilecheck)             Checksum: 9940EB815759ACE34B6C43ED4A66DE50;3607.
 runsystem(del newTemplate.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 33861 strings out of 474773
- 658931 string characters out of 5761289
+ 33866 strings out of 474773
+ 659531 string characters out of 5761289
  2016842 words of memory out of 5000000
- 55384 multiletter control sequences out of 15000+600000
+ 55386 multiletter control sequences out of 15000+600000
  603279 words of font info for 161 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,11n,108p,721b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s

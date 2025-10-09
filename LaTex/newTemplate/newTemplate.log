@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  9 OCT 2025 09:13
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  9 OCT 2025 21:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1880,9 +1880,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--1
 
 ]) (./_minted-newTemplate/5CB4CE854E7FF21DFEDC39064B9E468718DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [27]
 Chapter 8.
-(./_minted-newTemplate/13A75DC504F335C38BDAD8FF7ACCFD2C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/4DF97C4EFDEC93B92591A62CDE1AF8B618DB182E877CBA82AA16A5B6A6DC63F6.pygtex [28
+Missing character: There is no … ("2026) in font MinLibReg-ot1!
+Missing character: There is no … ("2026) in font MinLibReg-ot1!
+Missing character: There is no − ("2212) in font MinLibReg-ot1!
 
-] [29]) (./_minted-newTemplate/246892F0AC6DA339D340941E6F438BC518DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [30]
+Underfull \hbox (badness 10000) in paragraph at lines 459--464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--467
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
+
+ []
+
+(./_minted-newTemplate/13A75DC504F335C38BDAD8FF7ACCFD2C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [28
+
+]) (./_minted-newTemplate/4DF97C4EFDEC93B92591A62CDE1AF8B618DB182E877CBA82AA16A5B6A6DC63F6.pygtex [29]) (./_minted-newTemplate/246892F0AC6DA339D340941E6F438BC518DB182E877CBA82AA16A5B6A6DC63F6.pygtex [30]) [31]
 Chapter 9.
 \openout3 = `newTemplate.pyg'.
 
@@ -1910,7 +1933,7 @@ Chapter 9.
  (./_minted-newTemplate/1984CF1BA0CB83386C111CCD19A8755472EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
 \openout3 = `newTemplate.pyg'.
 
- (./_minted-newTemplate/F38C96A6212DD9C736846AEE8F1BC65B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [31
+ (./_minted-newTemplate/F38C96A6212DD9C736846AEE8F1BC65B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [32
 
 ])
 \openout3 = `newTemplate.pyg'.
@@ -1921,19 +1944,19 @@ Chapter 9.
  (./_minted-newTemplate/546B5D15823E9D18D5DF2B1C09E0149572EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
 \openout3 = `newTemplate.pyg'.
 
- (./_minted-newTemplate/3021297BC913F2B2D7F2D859E3137F4472EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex) [32]
+ (./_minted-newTemplate/3021297BC913F2B2D7F2D859E3137F4472EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex) [33]
 Chapter 10.
-(./_minted-newTemplate/8F86A63790E2F5CA0527DDDFBA686C9D18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [33
+(./_minted-newTemplate/8F86A63790E2F5CA0527DDDFBA686C9D18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [34
 
 ])
 \openout3 = `newTemplate.pyg'.
 
- (./_minted-newTemplate/96E2E0CDB6839B696B7FABAD4E92654B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [34]) (./_minted-newTemplate/ECD7CCF80155324D0AF68C9F14F9103718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [35] [36] [37] [38] [39] [40])
-Underfull \hbox (badness 10000) in paragraph at lines 594--598
+ (./_minted-newTemplate/96E2E0CDB6839B696B7FABAD4E92654B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [35]) (./_minted-newTemplate/ECD7CCF80155324D0AF68C9F14F9103718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [36] [37] [38] [39] [40] [41])
+Underfull \hbox (badness 10000) in paragraph at lines 630--634
 
  []
 
-[41] (./newTemplate.aux)
+[42] (./newTemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1943,17 +1966,17 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `newTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 9940EB815759ACE34B6C43ED4A66DE50;3607.
+(rerunfilecheck)             Checksum: CAEB7B1326BC8617BA074FE4D91061D2;3686.
 runsystem(del newTemplate.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 33866 strings out of 474773
- 659531 string characters out of 5761289
+ 33876 strings out of 474773
+ 660213 string characters out of 5761289
  2017842 words of memory out of 5000000
- 55386 multiletter control sequences out of 15000+600000
+ 55396 multiletter control sequences out of 15000+600000
  603279 words of font info for 161 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,11n,108p,721b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on newTemplate.pdf (42 pages).
+Output written on newTemplate.pdf (43 pages).

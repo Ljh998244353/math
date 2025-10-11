@@ -550,3 +550,31 @@ $$
 \begin{theorem}
   $f=F*\mu$
 \end{theorem}
+
+\section{补充}
+\subsection{勒让德公式}
+\begin{definition}
+  对于所有正整数 \(x \ge 1\) 和 \(k \ge 2\)，定义 \(v_k(x!)\) 为 **在以 (k) 为底时，\(x!\) 的末尾零的个数**。
+  形式化地说，\(v_k(x!)\) 是满足 \(k^i \mid x!\) 的最大整数 \(i\)。
+\end{definition}
+
+\begin{theorem}勒让德公式\\
+  对于质数 \(p\)，可以通过以下公式计算：
+ \[
+ v_p(x!) = \sum_{j=1}^\infty \left\lfloor \frac{x}{p^j} \right\rfloor
+ \]
+ 其中 \(\lfloor y \rfloor\) 表示不超过 \(y\) 的最大整数（即**向下取整**）。\\
+ 当 \(k\) 不是质数时：
+
+设其质因数分解为
+$$
+ k = \prod p_i^{e_i}
+$$
+ 其中 \(p_i\) 是 \(k\) 的不同质因子，\(e_i\) 是相应的指数。
+
+此时：
+$$
+ v_k(x!) = \min_i \left\lfloor \frac{v_{p_i}(x!)}{e_i} \right\rfloor
+$$
+
+\end{theorem}

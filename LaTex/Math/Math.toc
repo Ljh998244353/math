@@ -29,6 +29,8 @@
 \contentsline {subsection}{\numberline {2.2.1}同余}{30}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}线性同余方程}{32}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}乘性函数}{36}{section.2.3}%
+\contentsline {section}{\numberline {2.4}补充}{39}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}勒让德公式}{39}{subsection.2.4.1}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}求和}{40}{chapter.3}%
 \contentsline {section}{\numberline {3.1}递归问题　RECURRENT PROBLEMS}{40}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}repertoire method}{40}{subsection.3.1.1}%

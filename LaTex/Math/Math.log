@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  11 OCT 2025 19:49
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  13 OCT 2025 19:22
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -769,20 +769,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 945--946
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1010
+
+Underfull \hbox (badness 10000) in paragraph at lines 964--966
 
  []
 
-) [26]
-第二章
-(./docs/number_.tex [27
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 989--992
 
-] [28]
+ []
+
+[26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1055
+
+ []
+
+) [28]
+第二章
+(./docs/number_.tex [29
+
+] [30]
 Missing character: There is no 、 (U+3001) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 、 (U+3001) in font [lmroman12-regular]:mapping=tex-text;!
-[29]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
@@ -792,7 +802,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--163
 
  []
 
-[30]
+[32]
 Overfull \hbox (0.23694pt too wide) in paragraph at lines 190--194
 \TU/SimSun(0)/m/n/12 若 不 然 则 对 于 $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a; b\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 a[]; b[]\OT1/cmr/m/n/12 )$ $\OML/cmm/m/it/12 na \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 mb \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 na[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 mb[]\OT1/cmr/m/n/12 ([]  \OML/cmm/m/it/12 mn\OT1/cmr/m/n/12 )  \OMS/cmsy/m/n/12 ([])  \OML/cmm/m/it/12 mn\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 n\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a \OMS/cmsy/m/n/12 ^^@
  []
@@ -802,11 +812,11 @@ Overfull \hbox (8.91698pt too wide) in paragraph at lines 203--204
 []\TU/SimSun(0)/b/n/12 结 论 \TU/lmr/bx/n/12 2.2.7. \TU/SimSun(0)/m/it/12 若 $\OML/cmm/m/it/12 r[]; r[]; [] ; r[]$ \TU/SimSun(0)/m/it/12 是 模 $\OML/cmm/m/it/12 m$ \TU/SimSun(0)/m/it/12 的 一 个 缩 系\TU/lmr/m/it/12 , \TU/SimSun(0)/m/it/12 且 正 整 数 $\OML/cmm/m/it/12 a$ \TU/SimSun(0)/m/it/12 满 足 $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a; m\OT1/cmr/m/n/12 ) =
  []
 
-[31] [32]
+[33] [34]
 Missing character: There is no 或 (U+6216) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 那 (U+90A3) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 么 (U+4E48) in font [lmroman12-regular]:mapping=tex-text;!
-[33] [34]
+[35] [36]
 Overfull \hbox (51.0889pt too wide) in paragraph at lines 384--385
 []\TU/SimSun(0)/b/n/12 推 论 \TU/lmr/bx/n/12 2.2.22. \TU/SimSun(0)/m/it/12 若 超 过 $\OML/cmm/m/it/12 n$ \TU/SimSun(0)/m/it/12 个 解\TU/lmr/m/it/12 , \TU/SimSun(0)/m/it/12 则 $\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 i \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; [] n\OT1/cmr/m/n/12 )$\TU/lmr/m/it/12 , \TU/SimSun(0)/m/it/12 即 $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[]$ 
  []
@@ -816,12 +826,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
-[35] [36]
+[37] [38]
 Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
-[37]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 497--501
 
  []
@@ -841,26 +851,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
-[38]) [39]
+[40]) [41]
 第三章
 (./docs/sum.tex
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
-[40
+[42
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
-[41]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
-[42]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
@@ -870,7 +880,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-[43] [44]
+[45] [46]
 Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
@@ -880,22 +890,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-[45] [46] [47]
+[47] [48] [49]
 Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-[48]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 370--372
 
  []
 
-[49]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 384--386
 
  []
 
-[50] [51]
+[52] [53]
 Underfull \hbox (badness 10000) in paragraph at lines 476--478
 
  []
@@ -915,7 +925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 485--44
 
  []
 
-[52] [53]
+[54] [55]
 第四章
 (./docs/Probability.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--10
@@ -926,7 +936,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 LaTeX Font Warning: Font shape `TU/SimSun(0)/b/it' undefined
 (Font)              using `TU/SimSun(0)/b/n' instead on input line 12.
 
-[54
+[56
 
 ]
 Missing character: There is no 若 (U+82E5) in font [lmroman12-regular]:mapping=tex-text;!
@@ -940,12 +950,12 @@ Overfull \hbox (43.60956pt too wide) detected at line 59
 [][]
  []
 
-[55]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 61--67
 
  []
 
-[56]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
@@ -955,7 +965,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--100
 
  []
 
-[57]
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 109--111
 
  []
@@ -965,7 +975,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--115
 
  []
 
-[58]
+[60]
 Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
@@ -980,7 +990,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[59]
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 184--187
 
  []
@@ -990,12 +1000,12 @@ Overfull \hbox (20.83366pt too wide) in paragraph at lines 190--196
 \TU/lmr/m/it/12 1. \TU/SimSun(0)/m/it/12 离 散 型 变 量 的 数 学 期 望：| $\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 a[]p[]:$ |\TU/SimSun(0)/m/it/12 （当 级 数 绝 对 收 敛，|  即 $[][] \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 a[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 p[] <
  []
 
-[60]
+[62]
 Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
-[61]
+[63]
 Underfull \hbox (badness 10000) in paragraph at lines 230--236
 
  []
@@ -1029,19 +1039,19 @@ Overfull \hbox (18.37952pt too wide) in paragraph at lines 2--6
 [][]$[][][][][] [] [] [] [][][][][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [][][][] [] [][] [] [][] [] [][] [] [][] []
  []
 
-[62] [63]
+[64] [65]
 Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 Missing character: There is no ⋯ (U+22EF) in font [lmroman12-regular]:mapping=tex-text;!
-[64]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 Missing character: There is no ⋯ (U+22EF) in font [lmroman12-regular]:mapping=tex-text;!
-[65]
+[67]
 Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
@@ -1051,16 +1061,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--50
 
  []
 
-[66] [67]
+[68] [69]
 第五章
 
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[68
+[70
 
-] [69] [70]
+] [71] [72]
 Overfull \hbox (3.64473pt too wide) in paragraph at lines 135--136
 []\TU/SimSun(0)/m/n/12 提 供 \TU/lmtt/m/n/12 <complex>\TU/SimSun(0)/m/n/12 ，|  类 型 为 \TU/lmtt/m/n/12 std::complex<float/double/long double>\TU/SimSun(0)/m/n/12 ；| 
  []
@@ -1075,12 +1085,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
-[71]
+[73]
 Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-[72] (./Math.aux)
+[74] (./Math.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1090,15 +1100,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Math.out' has not changed.
-(rerunfilecheck)             Checksum: 658AD9C2886CB9356F8D03C1F3B45C1C;5972.
+(rerunfilecheck)             Checksum: 977AC35208B0480311CEB9CC00CA645B;6157.
  ) 
 Here is how much of TeX's memory you used:
- 18077 strings out of 474773
- 400469 string characters out of 5761289
+ 18078 strings out of 474773
+ 400482 string characters out of 5761289
  1959842 words of memory out of 5000000
- 39926 multiletter control sequences out of 15000+600000
+ 39927 multiletter control sequences out of 15000+600000
  574198 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,13n,97p,537b,1838s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Math.pdf (76 pages).
+Output written on Math.pdf (78 pages).

@@ -960,6 +960,51 @@ $$
 其中 $|\mathbf{i}-\mathbf{n}|=\sum_{k=1}^d (i_k-n_k)$。
 \end{theorem}
 
+\section{min-max容斥}
+记 $\max(S)$表示集合 $S$ 中的最大值，$\min(S)$表示集合 $S$ 中的最小值。\\
+定义$\max(\phi)=\min (\phi)=0$\\
+\begin{theorem}
+  \[
+\max(S)=\sum_{T \subseteq S }(-1)^{|T|-1} \min(T)
+\]
+
+$$
+\min(S)=\sum_{T\subseteq S} (-1)^{|T|-1} \max(T)
+$$
+\end{theorem}
+
+记 $k \max(S)$表示集合 $S$ 中的第$k$大值，$\min(S)$表示集合 $S$ 中的第$k$小值。
+
+\begin{theorem}
+  $$
+k\max(S)=\sum_{T\subseteq S,|T|\ge k} (-1)^{|T|-k}\binom{|T|-1}{k-1}\min(T)
+$$
+
+$$
+k \min(S)=\sum_{T\subseteq S,|T| \ge k} (-1)^{|T|-k} \binom{|T|-1}{k-1} \max(T)
+$$
+\end{theorem}
+
+\subsection{应用}
+Min-Max容斥及其推广常用于解决“都出现的期望时间”问题，记$t_i$表示第 $i$个元素的出现时间\\
+Max(S) 表示 S 中 t 的最大值，即所有元素出现时间的最大值，即所有元素都出现的时间；\\
+Min(S) 表示 S 中 t 的最小值，即所有元素出现时间的最小值，即至少有一个出现的时间。\\
+\begin{proposition}
+  $$
+E(\max(S))=\sum_{T\subseteq S,T\neq \phi} (-1)^{|T|-1}E(\min(T))
+$$
+
+$$
+E(k\max(S))=\sum_{T\subseteq S,|T|\ge k}(-1)^{|T|-k}\binom{|T|-1}{k-1} E(\min(T))
+$$
+\end{proposition}
+
+\begin{proposition}
+  $$
+\text{lcm}(S)=\prod_{T\subseteq S ,T\neq \phi} \gcd(T)^{(-1)^{|T|-1}}
+$$
+\end{proposition}
+
 \section{拆分}
 
 \begin{definition}

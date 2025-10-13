@@ -22,46 +22,48 @@
 \contentsline {subsection}{\numberline {1.7.3}球盒模型}{23}{subsection.1.7.3}%
 \contentsline {section}{\numberline {1.8}二项式反演}{24}{section.1.8}%
 \contentsline {subsection}{\numberline {1.8.1}高维二项式反演}{25}{subsection.1.8.1}%
-\contentsline {section}{\numberline {1.9}拆分}{26}{section.1.9}%
-\contentsline {chapter}{\numberline {第二章\hspace {.3em}}数论}{27}{chapter.2}%
-\contentsline {section}{\numberline {2.1}整除}{27}{section.2.1}%
-\contentsline {section}{\numberline {2.2}同余}{30}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}同余}{30}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}线性同余方程}{32}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}乘性函数}{36}{section.2.3}%
-\contentsline {section}{\numberline {2.4}补充}{39}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}勒让德公式}{39}{subsection.2.4.1}%
-\contentsline {chapter}{\numberline {第三章\hspace {.3em}}求和}{40}{chapter.3}%
-\contentsline {section}{\numberline {3.1}递归问题　RECURRENT PROBLEMS}{40}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}repertoire method}{40}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}约瑟夫问题}{41}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}和式 SUMS}{41}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}和式和递归式 SUMS AND RECURRENCES}{41}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}和式的处理 MANIPULATION OF SUMS}{43}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}扰动法 （perturbation method）}{43}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}多重和式 MULTIPLE SUMS }{44}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}一般性的方法 GENERAL METHODS }{46}{subsection.3.2.5}%
-\contentsline {subsubsection}{归纳法}{46}{subsubsection*.8}%
-\contentsline {subsubsection}{扰动法}{46}{subsubsection*.9}%
-\contentsline {subsubsection}{成套方法}{47}{subsubsection*.10}%
-\contentsline {subsubsection}{微积分法}{48}{subsubsection*.11}%
-\contentsline {subsubsection}{展开和收缩}{48}{subsubsection*.12}%
-\contentsline {subsubsection}{有限微积分}{48}{subsubsection*.13}%
-\contentsline {subsection}{\numberline {3.2.6}有限微积分}{49}{subsection.3.2.6}%
-\contentsline {subsubsection}{分部求和 （summation by parts)}{51}{subsubsection*.14}%
-\contentsline {subsection}{\numberline {3.2.7}无限和式 INFINITE SUMS}{52}{subsection.3.2.7}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}概率论}{54}{chapter.4}%
-\contentsline {section}{\numberline {4.1}基本概念和公式}{54}{section.4.1}%
-\contentsline {section}{\numberline {4.2}重要公式与结论}{58}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}数学期望（均值）与方差}{60}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}期望经典问题入门}{62}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}普通}{62}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}拿球}{65}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}游走}{65}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}解题方法}{67}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}杂}{68}{chapter.5}%
-\contentsline {section}{\numberline {5.1}最小二乘法}{68}{section.5.1}%
-\contentsline {section}{\numberline {5.2}常用幂级数}{69}{section.5.2}%
-\contentsline {section}{\numberline {5.3}复数}{69}{section.5.3}%
-\contentsline {paragraph}{C++}{71}{paragraph*.23}%
-\contentsline {subsection}{\numberline {5.3.1}分式线性变换}{71}{subsection.5.3.1}%
+\contentsline {section}{\numberline {1.9}min-max容斥}{26}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}应用}{26}{subsection.1.9.1}%
+\contentsline {section}{\numberline {1.10}拆分}{27}{section.1.10}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}数论}{29}{chapter.2}%
+\contentsline {section}{\numberline {2.1}整除}{29}{section.2.1}%
+\contentsline {section}{\numberline {2.2}同余}{32}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}同余}{32}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}线性同余方程}{34}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}乘性函数}{38}{section.2.3}%
+\contentsline {section}{\numberline {2.4}补充}{41}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}勒让德公式}{41}{subsection.2.4.1}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}求和}{42}{chapter.3}%
+\contentsline {section}{\numberline {3.1}递归问题　RECURRENT PROBLEMS}{42}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}repertoire method}{42}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}约瑟夫问题}{43}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}和式 SUMS}{43}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}和式和递归式 SUMS AND RECURRENCES}{43}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}和式的处理 MANIPULATION OF SUMS}{45}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}扰动法 （perturbation method）}{45}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}多重和式 MULTIPLE SUMS }{46}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}一般性的方法 GENERAL METHODS }{48}{subsection.3.2.5}%
+\contentsline {subsubsection}{归纳法}{48}{subsubsection*.8}%
+\contentsline {subsubsection}{扰动法}{48}{subsubsection*.9}%
+\contentsline {subsubsection}{成套方法}{49}{subsubsection*.10}%
+\contentsline {subsubsection}{微积分法}{50}{subsubsection*.11}%
+\contentsline {subsubsection}{展开和收缩}{50}{subsubsection*.12}%
+\contentsline {subsubsection}{有限微积分}{50}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {3.2.6}有限微积分}{51}{subsection.3.2.6}%
+\contentsline {subsubsection}{分部求和 （summation by parts)}{53}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {3.2.7}无限和式 INFINITE SUMS}{54}{subsection.3.2.7}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}概率论}{56}{chapter.4}%
+\contentsline {section}{\numberline {4.1}基本概念和公式}{56}{section.4.1}%
+\contentsline {section}{\numberline {4.2}重要公式与结论}{60}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}数学期望（均值）与方差}{62}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}期望经典问题入门}{64}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}普通}{64}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}拿球}{67}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}游走}{67}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}解题方法}{69}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}杂}{70}{chapter.5}%
+\contentsline {section}{\numberline {5.1}最小二乘法}{70}{section.5.1}%
+\contentsline {section}{\numberline {5.2}常用幂级数}{71}{section.5.2}%
+\contentsline {section}{\numberline {5.3}复数}{71}{section.5.3}%
+\contentsline {paragraph}{C++}{73}{paragraph*.23}%
+\contentsline {subsection}{\numberline {5.3.1}分式线性变换}{73}{subsection.5.3.1}%

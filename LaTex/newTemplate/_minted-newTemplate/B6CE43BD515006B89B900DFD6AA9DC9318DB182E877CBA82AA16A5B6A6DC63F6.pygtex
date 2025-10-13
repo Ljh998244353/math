@@ -129,7 +129,7 @@
 \PYG{+w}{  }\PYG{n}{resize}\PYG{p}{(}\PYG{n}{lim}\PYG{p}{);}
 \PYG{+w}{  }\PYG{k}{return}\PYG{+w}{ }\PYG{o}{*}\PYG{k}{this}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
-
+\PYG{c+c1}{// 传入\PYGZhy{}1，逆变换。}
 \PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{poly}\PYG{o}{::}\PYG{n}{ntt}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{op}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{  }\PYG{k}{static}\PYG{+w}{ }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{wns\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{;}
 \PYG{+w}{  }\PYG{k}{static}\PYG{+w}{ }\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{mint}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{wns}\PYG{p}{;}

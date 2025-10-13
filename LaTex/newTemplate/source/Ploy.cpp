@@ -128,7 +128,7 @@ poly& poly::cut(int lim) {
   resize(lim);
   return *this;
 }
-
+// 传入-1，逆变换。
 void poly::ntt(int op) {
   static bool wns_flag = false;
   static vector<mint> wns;

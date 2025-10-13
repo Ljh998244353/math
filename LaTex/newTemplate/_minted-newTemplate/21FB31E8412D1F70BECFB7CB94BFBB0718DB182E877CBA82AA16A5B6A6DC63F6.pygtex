@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+
+\PYG{k}{using}\PYG{+w}{ }\PYG{n}{ld}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{k+kt}{double}\PYG{p}{;}
+\PYG{c+cm}{/**}
+\PYG{c+cm}{ * @brief 计算两个不跨越 (\PYGZhy{}PI, PI] 边界的区间 [a1, b1] 和 [a2, b2] 的交集长度。}
+\PYG{c+cm}{ */}
+\PYG{n}{ld}\PYG{+w}{ }\PYG{n+nf}{intersect\PYGZus{}non\PYGZus{}crossing}\PYG{p}{(}\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{a1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{b1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{a2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{b2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{c+c1}{// 交集的左端点是 max(a1, a2)}
+\PYG{+w}{  }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{start}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{max}\PYG{p}{(}\PYG{n}{a1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a2}\PYG{p}{);}
+\PYG{+w}{  }\PYG{c+c1}{// 交集的右端点是 min(b1, b2)}
+\PYG{+w}{  }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{end}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{min}\PYG{p}{(}\PYG{n}{b1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b2}\PYG{p}{);}
+
+\PYG{+w}{  }\PYG{c+c1}{// 只有当 start \PYGZlt{} end 时，交集才存在}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{start}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{end}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{end}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{ld}\PYG{+w}{ }\PYG{n+nf}{ints}\PYG{p}{(}\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{l1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{r1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{l2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{r2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{total\PYGZus{}intersection}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{n}{ld}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{segs1}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{l1}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{r1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{segs1}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{n}{l1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r1}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{segs1}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{n}{l1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{PI}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{    }\PYG{n}{segs1}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{n}{PI}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r1}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{n}{ld}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ld}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{segs2}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{l2}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{r2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{segs2}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{n}{l2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r2}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{segs2}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{n}{l2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{PI}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{    }\PYG{n}{segs2}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{n}{PI}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r2}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{const}\PYG{+w}{ }\PYG{k}{auto}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{seg1}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{segs1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{a1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{seg1}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{b1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{seg1}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{const}\PYG{+w}{ }\PYG{k}{auto}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{seg2}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{segs2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{a2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{seg2}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n}{ld}\PYG{+w}{ }\PYG{n}{b2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{seg2}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n}{total\PYGZus{}intersection}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{n}{intersect\PYGZus{}non\PYGZus{}crossing}\PYG{p}{(}\PYG{n}{a1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b2}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{min}\PYG{p}{(}\PYG{n}{total\PYGZus{}intersection}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{PI}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

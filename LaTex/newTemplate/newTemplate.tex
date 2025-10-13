@@ -273,6 +273,11 @@ $$
 $$
 H_i=\sum_{j or k=i ,j and k=0} F_j G_k
 $$
+差卷积\\
+$$
+c_k=\sum_{i=0} a_i b_{i+k}
+$$
+考虑翻转整个$a$数组,有$aa_{n-i}=a_i$,就变成了和卷积，NTT/FTT即可。
 
 \cppcode{conv.cpp}
 

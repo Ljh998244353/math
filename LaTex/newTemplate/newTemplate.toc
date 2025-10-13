@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {3.1}卷积}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}复数域高斯消元}{10}{section.3.2}%
 \contentsline {section}{\numberline {3.3}积和式}{10}{section.3.3}%
-\contentsline {section}{\numberline {3.4}多项式封装}{10}{section.3.4}%
+\contentsline {section}{\numberline {3.4}多项式封装}{11}{section.3.4}%
 \contentsline {section}{\numberline {3.5}异或线性基}{16}{section.3.5}%
 \contentsline {chapter}{\numberline {4}数据结构}{18}{chapter.4}%
 \contentsline {section}{\numberline {4.1}线段树二分}{18}{section.4.1}%

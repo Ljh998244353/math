@@ -10,4 +10,5 @@
 \PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{H1}\PYG{p}{(}\PYG{n}{x}\PYG{p}{.}\PYG{n}{first}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZca{}}\PYG{+w}{ }\PYG{n}{H2}\PYG{p}{(}\PYG{n}{x}\PYG{p}{.}\PYG{n}{second}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// 你自定义的 hash 函数。}
 \PYG{+w}{  }\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{};}
+\PYG{n}{\PYGZus{}\PYGZus{}gnu\PYGZus{}pbds}\PYG{o}{::}\PYG{n}{gp\PYGZus{}hash\PYGZus{}table}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{::}\PYG{n}{pair}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Table}\PYG{p}{;}
 \end{Verbatim}

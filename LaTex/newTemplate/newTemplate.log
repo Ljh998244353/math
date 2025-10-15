@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  14 OCT 2025 16:19
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  15 OCT 2025 19:33
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1865,16 +1865,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--403
 (./_minted-newTemplate/470D69E8F462F058BD434D7D724A5AD072EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
 \openout3 = `newTemplate.pyg'.
 
-runsystem(del newTemplate.aex)...executed.
-
-runsystem(for ^%i in (python.exe python.bat python.cmd) do set > newTemplate.aex <nul: /p x=^%~$PATH:i>> newTemplate.aex)...executed.
-
-runsystem(del newTemplate.aex)...executed.
-
-runsystem(python -c "import sys; import os; import textwrap; from io import open; fname = os.path.expanduser(os.path.expandvars(\"newTemplate.pyg\")); f = open(fname, \"r\", encoding=\"UTF8\") if os.path.isfile(fname) else None; t = f.readlines() if f is not None else None; t_opt = t if t is not None else []; f.close() if f is not None else None; tmpfname = os.path.expanduser(os.path.expandvars(\"newTemplate.pyg\")); f = open(tmpfname, \"w\", encoding=\"UTF8\") if t is not None else None; fvstartnum = 0; fvstopnum = -1; s = max(0, fvstartnum-1); e = max(s, fvstopnum) if fvstopnum > 0 else len(t_opt); [f.write(textwrap.dedent(\"\".join(x))) for x in (t_opt[0:s], t_opt[s:e], t_opt[e:]) if x and t is not None]; f.close() if t is not None else os.remove(tmpfname);")...executed.
-
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -o _minted-newTemplate/4E0312F3271E840939ACBCE95F7070AF72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex newTemplate.pyg)...executed.
-
  (./_minted-newTemplate/4E0312F3271E840939ACBCE95F7070AF72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
 Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
@@ -1897,37 +1887,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 440--1
 
 ]) (./_minted-newTemplate/5CB4CE854E7FF21DFEDC39064B9E468718DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [28]
 Chapter 8.
+Missing character: There is no ≈ ("2248) in font MinLibReg-ot1!
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--469
+
+ []
+
 Missing character: There is no … ("2026) in font MinLibReg-ot1!
 Missing character: There is no … ("2026) in font MinLibReg-ot1!
 Missing character: There is no − ("2212) in font MinLibReg-ot1!
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--478
+Underfull \hbox (badness 10000) in paragraph at lines 491--496
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--481
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+[29
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 502--503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
-
- []
-
-(./_minted-newTemplate/13A75DC504F335C38BDAD8FF7ACCFD2C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [29
-
-]) (./_minted-newTemplate/4DF97C4EFDEC93B92591A62CDE1AF8B618DB182E877CBA82AA16A5B6A6DC63F6.pygtex [30]) (./_minted-newTemplate/246892F0AC6DA339D340941E6F438BC518DB182E877CBA82AA16A5B6A6DC63F6.pygtex [31]) [32]
+(./_minted-newTemplate/13A75DC504F335C38BDAD8FF7ACCFD2C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/4DF97C4EFDEC93B92591A62CDE1AF8B618DB182E877CBA82AA16A5B6A6DC63F6.pygtex [30] [31]) (./_minted-newTemplate/246892F0AC6DA339D340941E6F438BC518DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [32]
 Chapter 9.
 \openout3 = `newTemplate.pyg'.
 
@@ -1974,11 +1975,9 @@ Chapter 10.
 \openout3 = `newTemplate.pyg'.
 
  (./_minted-newTemplate/96E2E0CDB6839B696B7FABAD4E92654B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [36]) (./_minted-newTemplate/ECD7CCF80155324D0AF68C9F14F9103718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [37] [38] [39] [40] [41] [42])
-Underfull \hbox (badness 10000) in paragraph at lines 645--649
+Underfull \hbox (badness 10000) in paragraph at lines 663--667
 
  []
-
-runsystem(del _minted-newTemplate\11FF1A9775FCA118026BCC9EA15F458072EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)...executed.
 
 [43] (./newTemplate.aux)
  ***********
@@ -1990,15 +1989,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `newTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: C2D30866625B54DADAC070E15A4A881F;3821.
+(rerunfilecheck)             Checksum: F6592EB905ADDB5807F417BCCCE17F97;4192.
 runsystem(del newTemplate.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 33887 strings out of 474773
- 661168 string characters out of 5761289
+ 33884 strings out of 474773
+ 660857 string characters out of 5761289
  2020842 words of memory out of 5000000
- 55404 multiletter control sequences out of 15000+600000
+ 55401 multiletter control sequences out of 15000+600000
  603279 words of font info for 161 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,12n,108p,721b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s

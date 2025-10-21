@@ -4,6 +4,7 @@
     "vector": "cpp",
     "deque": "cpp",
     "format": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "iostream": "cpp"
   }
 }

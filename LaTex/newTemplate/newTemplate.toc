@@ -15,11 +15,12 @@
 \contentsline {section}{\numberline {3.5}多项式封装}{12}{section.3.5}%
 \contentsline {section}{\numberline {3.6}异或线性基}{17}{section.3.6}%
 \contentsline {chapter}{\numberline {4}数据结构}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}线段树二分}{19}{section.4.1}%
-\contentsline {section}{\numberline {4.2}线段树维护区间gcd}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}对顶堆}{22}{section.4.3}%
-\contentsline {section}{\numberline {4.4}手写Bitset}{23}{section.4.4}%
-\contentsline {section}{\numberline {4.5}笛卡尔树}{24}{section.4.5}%
+\contentsline {section}{\numberline {4.1}区间不同数个数}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}线段树二分}{20}{section.4.2}%
+\contentsline {section}{\numberline {4.3}线段树维护区间gcd}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}对顶堆}{23}{section.4.4}%
+\contentsline {section}{\numberline {4.5}手写Bitset}{24}{section.4.5}%
+\contentsline {section}{\numberline {4.6}笛卡尔树}{25}{section.4.6}%
 \contentsline {chapter}{\numberline {5}trick}{26}{chapter.5}%
 \contentsline {section}{\numberline {5.1}枚举子集}{26}{section.5.1}%
 \contentsline {section}{\numberline {5.2}求所有因数}{26}{section.5.2}%

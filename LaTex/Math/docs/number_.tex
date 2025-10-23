@@ -552,6 +552,117 @@ $$
 \end{theorem}
 
 \section{补充}
+\subsection{升幂引理}
+
+\subsubsection{引言与直观}
+升幂引理（Lifting The Exponent, LTE）是解数论幂次问题的常用工具，用来计算质数对整式幂差或幂和的$p$-adic 阶数（即 $v_p(\cdot)$）。它将复杂的高次幂问题归约为低次差/和与指数的阶数之和，从而在不直接展开大幂的情况下得到精确的整除性信息。
+
+\subsubsection{常用版本与条件}
+下面列出 LTE 的常见、且在竞赛中经常使用的形式（均为整数 $a,b$，正整数 $n$；$v_p(x)$ 表示素数 $p$ 在 $x$ 中的 $p$-阶数；若 $p\nmid x$ 则 $v_p(x)=0$；$p$ 为素数）。
+
+\begin{theorem}[LTE：减法主式（常用形式）]
+设 $p$ 为奇素数，$a,b$ 为整数且 $p\mid (a-b)$。则对于任意正整数 $n$，有
+\[
+v_p\bigl(a^n-b^n\bigr)=v_p(a-b)+v_p(n).
+\]
+\end{theorem}
+
+\begin{theorem}[LTE：加法主式（常用形式）]
+设 $p$ 为奇素数，$a,b$ 为整数且 $p\mid (a+b)$，且 $n$ 为奇整数，则
+\[
+v_p\bigl(a^n+b^n\bigr)=v_p(a+b)+v_p(n).
+\]
+\end{theorem}
+
+\begin{theorem}[LTE：对 $p=2$ 的特殊情况]
+若 $a,b$ 同为奇整数，则
+\begin{itemize}
+  \item 当 $n$ 为奇数时，$v_2(a^n-b^n)=v_2(a-b)$；
+  \item 当 $n$ 为偶数时，$v_2(a^n-b^n)=v_2(a-b)+v_2(a+b)+v_2(n)-1$。
+\end{itemize}
+\end{theorem}
+
+\paragraph{补充说明}
+\begin{itemize}
+  \item 上述第一个定理不需额外要求 $p\nmid ab$（但在处理 $a^n+b^n$ 时通常要求 $p$ 为奇素数且 $n$ 为奇数）。
+  \item 当 $p\mid a$ 且 $p\mid b$ 时，$a-b$ 也被 $p$ 整除，问题通常退化到直接计算 $v_p(a^n-b^n)$ 的容易情况（例如因 $a=pb_1$、$b=pb_2$ 可以提取幂次因子）。
+\end{itemize}
+
+\subsubsection{证明要点（证明思路概述）}
+LTE 的证明基于以下几条观念：
+\begin{enumerate}
+  \item 因式分解：$a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+\cdots+b^{n-1})$。若 $p\mid a-b$，第二因子在模 $p$ 意义下一般不为 $0$（除非 $p\mid a$ 且 $p\mid b$ 的特殊情形）。
+  \item 采用归纳或$p$-进数分析：若 $p^t\parallel (a-b)$（记作 $v_p(a-b)=t$），利用同余与提升阶数的性质证明 $p^{t+v_p(n)}\parallel (a^n-b^n)$。
+  \item 对于 $a^n+b^n$ 的情形，将其化为 $(-b)^n - a^n$ 或利用 $n$ 的奇偶性与因式分解来导出结果。
+  \item 对于 $p=2$ 的特殊情形，需要额外利用 $a+b$ 的阶数信息，因为 $2$ 是唯一使 $a\equiv -b\pmod 2$ 的素数，导致加法项与减法项之间出现额外的 2 阶提升（因而出现 $v_2(a+b)$ 项）。
+\end{enumerate}
+
+（此处省略完整的技术细节证明；竞赛使用中通常接受上述定理作为已知工具，或可在教科书中找到标准证明）
+
+\subsubsection{常见推论与技巧}
+\begin{itemize}
+  \item 若已知 $p\mid a-b$ 且要比较 $v_p(a^n-b^n)$ 与某常数，常先用 LTE 把问题归约为 $v_p(a-b)+v_p(n)$ 的比较。
+  \item 用 LTE 求解最大 $k$ 使 $p^k\mid (a^n-b^n)$，常见用法是把 $v_p(n)$ 转换为 $v_p(\text{某数})$（例如 $n$ 的质因子表示）。
+  \item 处理 $a^n+b^n$ 时，首先判断 $n$ 的奇偶性：若 $n$ 偶，则 $a^n+b^n$ 无简单 LTE 公式（需用别的技巧）；若 $n$ 奇并且 $p\mid a+b$，可直接用 LTE。
+  \item 在多素数同时出现的题目里，对每个素数分别用 LTE 计算其阶数，然后取最小者或组合使用。
+\end{itemize}
+
+\subsubsection{例题与解答}
+\begin{example}
+计算 $v_3\bigl(7^{100}-4^{100}\bigr)$。
+\end{example}
+\begin{proof}
+注意 $7-4=3$，且 $3$ 为奇素数，所以可用 LTE：
+\[
+v_3(7^{100}-4^{100})=v_3(7-4)+v_3(100)=1+v_3(100)=1+0=1.
+\]
+因此 $3^1\parallel (7^{100}-4^{100})$。
+\end{proof}
+
+\begin{example}
+计算 $v_2\bigl(5^6-3^6\bigr)$。
+\end{example}
+\begin{proof}
+这里 $a=5,b=3$ 都为奇数，且 $n=6$ 为偶数。先计算：
+\[
+v_2(5-3)=v_2(2)=1,\quad v_2(5+3)=v_2(8)=3,\quad v_2(6)=1.
+\]
+由 $p=2$ 的特殊版本，
+\[
+v_2(5^6-3^6)=v_2(5-3)+v_2(5+3)+v_2(6)-1=1+3+1-1=4.
+\]
+故 $2^4\parallel (5^6-3^6)$。
+\end{proof}
+
+\begin{example}
+设 $p$ 为奇素数，$p\mid (a+b)$ 且 $n$ 为奇数，求 $v_p\bigl(a^n+b^n\bigr)$。
+\end{example}
+\begin{proof}
+直接应用 LTE 的加法形式：
+\[
+v_p(a^n+b^n)=v_p(a+b)+v_p(n).
+\]
+\end{proof}
+
+\subsubsection{常见误区与提示}
+\begin{itemize}
+  \item 切忌把所有情形一概而论：$p=2$ 与 $p$ 为奇素数情况不同，$a^n+b^n$ 与 $a^n-b^n$ 的条件亦不同（是否需要 $n$ 为奇数）。
+  \item 当 $p\mid a$ 或 $p\mid b$ 时要先做约去或单独讨论，不可直接套用不适用的版本。
+  \item LTE 常与因式分解、模运算（同余）和指数阶（$v_p(n)$）结合使用，解题时先把能化简的消掉再用 LTE 能更稳妥。
+\end{itemize}
+
+\subsubsection{小结（便捷公式）}
+便于速查的 LTE 常用条目：
+\[
+\begin{aligned}
+&\text{若 } p \text{ 为奇素数},\ p\mid (a-b),\quad v_p(a^n-b^n)=v_p(a-b)+v_p(n).\\
+&\text{若 } p \text{ 为奇素数},\ p\mid (a+b),\ n\text{ 为奇},\quad v_p(a^n+b^n)=v_p(a+b)+v_p(n).\\
+&\text{若 } a,b\text{ 同为奇数},\ n\text{ 为奇},\quad v_2(a^n-b^n)=v_2(a-b).\\
+&\text{若 } a,b\text{ 同为奇数},\ n\text{ 为偶},\quad v_2(a^n-b^n)=v_2(a-b)+v_2(a+b)+v_2(n)-1.
+\end{aligned}
+\]
+
+
 \subsection{勒让德公式}
 \begin{definition}
   对于所有正整数 \(x \ge 1\) 和 \(k \ge 2\)，定义 \(v_k(x!)\) 为 **在以 (k) 为底时，\(x!\) 的末尾零的个数**。

@@ -47,3 +47,5 @@
 \contentsline {chapter}{\numberline {10}网络流}{37}{chapter.10}%
 \contentsline {section}{\numberline {10.1}SPFA费用流}{37}{section.10.1}%
 \contentsline {section}{\numberline {10.2}网络流封装(已验证)}{39}{section.10.2}%
+\contentsline {chapter}{\numberline {11}字符串}{46}{chapter.11}%
+\contentsline {section}{\numberline {11.1}SAM}{46}{section.11.1}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  23 OCT 2025 17:20
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  12 NOV 2025 22:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1816,16 +1816,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--1
 
 [17]) [18]
 Chapter 4.
-runsystem(del newTemplate.aex)...executed.
-
-runsystem(for ^%i in (python.exe python.bat python.cmd) do set > newTemplate.aex <nul: /p x=^%~$PATH:i>> newTemplate.aex)...executed.
-
-runsystem(del newTemplate.aex)...executed.
-
-runsystem(python -c "import sys; import os; import textwrap; from io import open; fname = os.path.expanduser(os.path.expandvars(\"source/cntDifInt.cpp\")); f = open(fname, \"r\", encoding=\"UTF8\") if os.path.isfile(fname) else None; t = f.readlines() if f is not None else None; t_opt = t if t is not None else []; f.close() if f is not None else None; tmpfname = os.path.expanduser(os.path.expandvars(\"newTemplate.pyg\")); f = open(tmpfname, \"w\", encoding=\"UTF8\") if t is not None else None; fvstartnum = 0; fvstopnum = -1; s = max(0, fvstartnum-1); e = max(s, fvstopnum) if fvstopnum > 0 else len(t_opt); [f.write(textwrap.dedent(\"\".join(x))) for x in (t_opt[0:s], t_opt[s:e], t_opt[e:]) if x and t is not None]; f.close() if t is not None else os.remove(tmpfname);")...executed.
-
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -P mathescape="True" -o _minted-newTemplate/4E43BA19C344579518F0FD5D97B7F2FD18DB182E877CBA82AA16A5B6A6DC63F6.pygtex newTemplate.pyg)...executed.
-
 (./_minted-newTemplate/4E43BA19C344579518F0FD5D97B7F2FD18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/D4D70342B49E59C9EDA39D56FBFE982C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [19
 
 ] [20] [21]) (./_minted-newTemplate/2993B887D2AC7584BA8DAB364168CC8118DB182E877CBA82AA16A5B6A6DC63F6.pygtex
@@ -1989,9 +1979,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 674--678
 
  []
 
-runsystem(del _minted-newTemplate\AC0974E527C0D2AE3A1FFB3B323AEC8C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex)...executed.
+[45]
+Chapter 11.
+(./_minted-newTemplate/609CDD62BFC129D70D3A25709EB76F5718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [46
 
-[45] (./newTemplate.aux)
+])
+LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
+(Font)              scaled to size 6.75252pt on input line 695.
+LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
+(Font)              scaled to size 5.08751pt on input line 695.
+ [47] (./newTemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -2001,17 +1998,17 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `newTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: F5E628F32E6DEE2F33FBF16FFEBEC416;4459.
+(rerunfilecheck)             Checksum: 3C12D6E32BEC771B7541853CCEC569A8;4600.
 runsystem(del newTemplate.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 33909 strings out of 474773
- 663074 string characters out of 5761289
+ 33942 strings out of 474773
+ 665188 string characters out of 5761289
  2020842 words of memory out of 5000000
- 55417 multiletter control sequences out of 15000+600000
- 603279 words of font info for 161 fonts, out of 8000000 for 9000
+ 55445 multiletter control sequences out of 15000+600000
+ 603409 words of font info for 163 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,11n,108p,721b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on newTemplate.pdf (46 pages).
+Output written on newTemplate.pdf (48 pages).

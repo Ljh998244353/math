@@ -677,4 +677,75 @@ void spfa_init_potentials(int s) {
 4.有一个DAG，要求用尽量少的不相交的简单路径覆盖所有的节点 。有**最小路径覆盖=原图节点数-新图最大匹配**新图指的是，将原来的点拆成两个点，如果$u \to v$，那么连接$u_x \to v_y$，这样得到的二分图的最大匹配。\\
 
 
+\chapter{字符串}
+\section{SAM}
+\cppcode{SAM.cpp}
+
+\begin{itemize}
+    \item \textbf{检查子串 (Substring Check)}
+    \begin{itemize}
+        \item \textbf{问题：} 检查字符串 $P$ 是否是 $S$ 的一个子串。
+        \item \textbf{方法：} 从 SAM 的初始状态（根节点 $t_0$）开始，沿着 $P$ 的字符进行转移。如果可以成功转移完 $P$ 中的所有字符，则 $P$ 是 $S$ 的子串。
+        \item \textbf{复杂度：} $O(|P|)$。
+    \end{itemize}
+    
+    \item \textbf{不同子串计数 (Number of Distinct Substrings)}
+    \begin{itemize}
+        \item \textbf{问题：} 计算字符串 $S$ 有多少个不同的子串。
+        \item \textbf{方法：} SAM 的每个状态 $v$ 代表一个或多个子串。一个状态 $v$ 所代表的子串长度在 $( \text{len}(\text{link}(v)), \text{len}(v) ]$ 区间内。因此，该状态 $v$ 贡献的不同子串数量为 $\text{len}(v) - \text{len}(\text{link}(v))$。
+        \item \textbf{复杂度：} 对所有状态求和 $\sum_{v \in \text{States}} (\text{len}(v) - \text{len}(\text{link}(v)))$。总复杂度为 $O(|S|)$。
+    \end{itemize}
+    
+    \item \textbf{不同子串的总长度 (Total Length of Distinct Substrings)}
+    \begin{itemize}
+        \item \textbf{问题：} 计算 $S$ 的所有不同子串的长度之和。
+        \item \textbf{方法：} 状态 $v$ 贡献了 $\text{len}(v) - \text{len}(\text{link}(v))$ 个子串。这些子串的长度是从 $\text{len}(\text{link}(v)) + 1$ 到 $\text{len}(v)$ 的连续整数（构成等差数列）。
+        \item \textbf{复杂度：} 累加所有状态的贡献。总复杂度为 $O(|S|)$。
+    \end{itemize}
+
+    \item \textbf{字典序第 $k$ 小子串 (The $k$-th Lexicographically Smallest Substring)}
+    \begin{itemize}
+        \item \textbf{问题：} 找到 $S$ 的所有不同子串中，按字典序排序后的第 $k$ 个。
+        \item \textbf{方法：} SAM 本身是一个 DAG (有向无环图)。
+        \begin{enumerate}
+            \item 通过 DP 或 DFS 预处理从每个状态出发能到达多少个不同的子串（即从该状态出发的路径数）。
+            \item 从根节点 $t_0$ 开始，按字典序（即按 'a' 到 'z' 的顺序）遍历其 `next` 转移。
+            \item 根据每个转移后续能产生的子串数量，来决定向哪个子节点前进，并相应地减少 $k$ 的值。
+        \end{enumerate}
+        \item \textbf{复杂度：} 预处理 $O(|S| \cdot |\Sigma|)$，查询 $O(|P| \cdot |\Sigma|)$，其中 $|P|$ 是第 $k$ 小子串的长度。
+    \end{itemize}
+    
+    \item \textbf{子串出现次数 (Substring Occurrence Count)}
+    \begin{itemize}
+        \item \textbf{问题：} 计算子串 $P$ 在 $S$ 中出现了多少次。
+        \item \textbf{方法：}
+        \begin{enumerate}
+            \item 构建 SAM 时，将 $S[0..i]$ 对应的状态标记为终止状态（通常是在 `extend` 函数中对 `last` 状态进行标记）。
+            \item 构建由后缀链接 $\text{link}$ 组成的“Parent Tree”。一个状态 $v$ 的 $\text{end-pos}$ 集合的大小（即其出现次数），等于其在 Parent Tree 上的子树中包含的所有终止状态的标记之和。
+            \item 在 Parent Tree 上进行一次 DFS 即可求出所有状态的 $\text{end-pos}$ 集合大小。
+            \item 在 SAM 上匹配 $P$，到达状态 $v$。$v$ 的 $\text{end-pos}$ 集合大小即为 $P$ 的出现次数。
+        \end{enumerate}
+        \item \textbf{复杂度：} 预处理 $O(|S|)$，查询 $O(|P|)$。
+    \end{itemize}
+
+    \item \textbf{最长公共子串 (Longest Common Substring - LCS)}
+    \begin{itemize}
+        \item \textbf{问题：} 找到两个字符串 $S$ 和 $T$ 的最长公共子串。
+        \item \textbf{方法：}
+        \begin{enumerate}
+            \item 为字符串 $S$ 构建 SAM。
+            \item 让 $T$ 在 $S$ 的 SAM 上匹配。对于 $T$ 的每个字符 $T[i]$，我们在 SAM 上转移，并维护当前匹配的长度 $L$ 和当前状态 $p$。
+            \item 如果在状态 $p$ 匹配了长度 $L$，遇到字符 $c$：
+                \begin{itemize}
+                    \item 如果 $p$ 有 $c$ 转移 ($p \to q$)：$L$ 变为 $L+1$， $p$ 变为 $q$。
+                    \item 如果 $p$ 没有 $c$ 转移：沿着 $\text{link}$ 链向上跳 ($p = \text{link}(p)$)，$L$ 变为 $\text{len}(p)$，直到找到一个有 $c$ 转移的 $p$（或到达根）。
+                \end{itemize}
+            \item 在 $T$ 匹配的每一步中，都更新 $\text{LCS}$ 的最大长度（即 $\max(L)$）。
+        \end{enumerate}
+        \item \textbf{复杂度：} 构建 $S$ 的 SAM 复杂度为 $O(|S|)$。在 SAM 上匹配 $T$ 的复杂度为 $O(|T|)$。总复杂度 $O(|S| + |T|)$。
+    \end{itemize}
+    
+\end{itemize}
+
+
 \end{document}

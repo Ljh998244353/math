@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  12 NOV 2025 22:58
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  14 NOV 2025 13:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1981,14 +1981,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 674--678
 
 [45]
 Chapter 11.
-(./_minted-newTemplate/609CDD62BFC129D70D3A25709EB76F5718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [46
+(./_minted-newTemplate/8F49CC88B07EAE298842D86FB504090118DB182E877CBA82AA16A5B6A6DC63F6.pygtex [46
 
-])
+] [47])
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 (Font)              scaled to size 6.75252pt on input line 695.
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 (Font)              scaled to size 5.08751pt on input line 695.
- [47] (./newTemplate.aux)
+ [48] [49] (./newTemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -2011,4 +2011,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  79i,11n,108p,721b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on newTemplate.pdf (48 pages).
+Output written on newTemplate.pdf (50 pages).

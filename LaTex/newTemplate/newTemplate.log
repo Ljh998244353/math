@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  28 NOV 2025 11:21
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.24)  3 DEC 2025 17:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1636,7 +1636,7 @@ LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
 (Font)              scaled to size 11.52003pt on input line 2.
 LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/m/n' will be
-(Font)              scaled to size 8.00003pt on input line 33.
+(Font)              scaled to size 8.00003pt on input line 34.
  [1])
 \tf@toc=\write6
 \openout6 = `newTemplate.toc'.
@@ -1737,103 +1737,103 @@ Chapter 2.
 
 ]) [7]
 Chapter 3.
-(./_minted-newTemplate/A3427D04037F252A1F486233A664F14518DB182E877CBA82AA16A5B6A6DC63F6.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+(./_minted-newTemplate/CE8070BA2C8F1553A80CCC664D4B239B18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [8
+
+]) (./_minted-newTemplate/A3427D04037F252A1F486233A664F14518DB182E877CBA82AA16A5B6A6DC63F6.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--264
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--268
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--276
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 281--283
 
  []
 
-[8
-
-] (./_minted-newTemplate/2D7EA558567A3788F949A92B00B69C8118DB182E877CBA82AA16A5B6A6DC63F6.pygtex [9] [10]) (./_minted-newTemplate/FEAB1A5416385E14AC5E175077E32DED18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [11])
-Underfull \hbox (badness 10000) in paragraph at lines 294--306
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--306
+[9] (./_minted-newTemplate/2D7EA558567A3788F949A92B00B69C8118DB182E877CBA82AA16A5B6A6DC63F6.pygtex [10] [11]) (./_minted-newTemplate/FEAB1A5416385E14AC5E175077E32DED18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [12])
+Underfull \hbox (badness 10000) in paragraph at lines 297--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 297--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--317
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 318--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
-(./_minted-newTemplate/B6CE43BD515006B89B900DFD6AA9DC9318DB182E877CBA82AA16A5B6A6DC63F6.pygtex [12] [13] [14] [15] [16]) (./_minted-newTemplate/A0A383D48F2B39AB30717BF36C1FB19B18DB182E877CBA82AA16A5B6A6DC63F6.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 329--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
-[17]) [18]
+(./_minted-newTemplate/B6CE43BD515006B89B900DFD6AA9DC9318DB182E877CBA82AA16A5B6A6DC63F6.pygtex [13] [14] [15] [16] [17]) (./_minted-newTemplate/A0A383D48F2B39AB30717BF36C1FB19B18DB182E877CBA82AA16A5B6A6DC63F6.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 332--1
+
+ []
+
+[18]) [19]
 Chapter 4.
-(./_minted-newTemplate/4E43BA19C344579518F0FD5D97B7F2FD18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/D4D70342B49E59C9EDA39D56FBFE982C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [19
+(./_minted-newTemplate/4E43BA19C344579518F0FD5D97B7F2FD18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/D4D70342B49E59C9EDA39D56FBFE982C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [20
 
-] [20] [21]) (./_minted-newTemplate/2993B887D2AC7584BA8DAB364168CC8118DB182E877CBA82AA16A5B6A6DC63F6.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 352--1
+] [21] [22]) (./_minted-newTemplate/2993B887D2AC7584BA8DAB364168CC8118DB182E877CBA82AA16A5B6A6DC63F6.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 355--1
 
  []
 
-[22]) (./_minted-newTemplate/5932C3E1D09401A9538884E6323C798818DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/C2C9A0AF917D48F57197AEC000C5BE7E18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [23]) (./_minted-newTemplate/F5C5F0E4AE25B112BBBF0B28D44A2E6018DB182E877CBA82AA16A5B6A6DC63F6.pygtex [24]) (./_minted-newTemplate/F4D3FB254315E7F2F28B08DCF660F1BC18DB182E877CBA82AA16A5B6A6DC63F6.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 373--1
+[23]) (./_minted-newTemplate/5932C3E1D09401A9538884E6323C798818DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/C2C9A0AF917D48F57197AEC000C5BE7E18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [24]) (./_minted-newTemplate/F5C5F0E4AE25B112BBBF0B28D44A2E6018DB182E877CBA82AA16A5B6A6DC63F6.pygtex [25]) (./_minted-newTemplate/F4D3FB254315E7F2F28B08DCF660F1BC18DB182E877CBA82AA16A5B6A6DC63F6.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 376--1
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 378--382
+Underfull \hbox (badness 10000) in paragraph at lines 381--385
 
  []
 
-[25]
+[26]
 Chapter 5.
 \openout3 = `newTemplate.pyg'.
 
@@ -1841,21 +1841,21 @@ Chapter 5.
 \openout3 = `newTemplate.pyg'.
 
  (./_minted-newTemplate/2B1DE751F292DD954108EC7388D662A472EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 395--1
+Underfull \hbox (badness 10000) in paragraph at lines 398--1
 
  []
 
-) [26
+) [27
 
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
 
  []
 
@@ -1865,35 +1865,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--411
 \openout3 = `newTemplate.pyg'.
 
  (./_minted-newTemplate/4E0312F3271E840939ACBCE95F7070AF72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
-
- []
-
-[27
-
-]
-Chapter 7.
-LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/b/n' will be
-(Font)              scaled to size 11.10004pt on input line 444.
-LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/b/n' will be
-(Font)              scaled to size 9.60004pt on input line 444.
-(./_minted-newTemplate/8DD448CF16547DE0C4962C69C360E3EB18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/305BC56743F4DB7CEB7D4BA9721C226F18DB182E877CBA82AA16A5B6A6DC63F6.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 448--1
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
 [28
 
-]) (./_minted-newTemplate/5CB4CE854E7FF21DFEDC39064B9E468718DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [29]
+]
+Chapter 7.
+LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/b/n' will be
+(Font)              scaled to size 11.10004pt on input line 447.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifCN(0)/b/n' will be
+(Font)              scaled to size 9.60004pt on input line 447.
+(./_minted-newTemplate/8DD448CF16547DE0C4962C69C360E3EB18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/305BC56743F4DB7CEB7D4BA9721C226F18DB182E877CBA82AA16A5B6A6DC63F6.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 451--1
+
+ []
+
+[29
+
+]) (./_minted-newTemplate/5CB4CE854E7FF21DFEDC39064B9E468718DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [30]
 Chapter 8.
 Missing character: There is no ≈ ("2248) in font MinLibReg-ot1!
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--469
+Underfull \hbox (badness 10000) in paragraph at lines 468--472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--477
+Underfull \hbox (badness 10000) in paragraph at lines 473--480
 
  []
 
@@ -1901,35 +1901,35 @@ Missing character: There is no … ("2026) in font MinLibReg-ot1!
 Missing character: There is no … ("2026) in font MinLibReg-ot1!
 Missing character: There is no − ("2212) in font MinLibReg-ot1!
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--504
+Underfull \hbox (badness 10000) in paragraph at lines 502--507
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--507
+Underfull \hbox (badness 10000) in paragraph at lines 508--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--509
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
  []
 
-[30
+[31
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
+Underfull \hbox (badness 10000) in paragraph at lines 513--514
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
+Underfull \hbox (badness 10000) in paragraph at lines 515--516
 
  []
 
-(./_minted-newTemplate/13A75DC504F335C38BDAD8FF7ACCFD2C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/4DF97C4EFDEC93B92591A62CDE1AF8B618DB182E877CBA82AA16A5B6A6DC63F6.pygtex [31] [32]) (./_minted-newTemplate/246892F0AC6DA339D340941E6F438BC518DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [33]
+(./_minted-newTemplate/13A75DC504F335C38BDAD8FF7ACCFD2C18DB182E877CBA82AA16A5B6A6DC63F6.pygtex) (./_minted-newTemplate/4DF97C4EFDEC93B92591A62CDE1AF8B618DB182E877CBA82AA16A5B6A6DC63F6.pygtex [32] [33]) (./_minted-newTemplate/246892F0AC6DA339D340941E6F438BC518DB182E877CBA82AA16A5B6A6DC63F6.pygtex) [34]
 Chapter 9.
-(./_minted-newTemplate/1879CE99FA6A39D798BE485CF55D188918DB182E877CBA82AA16A5B6A6DC63F6.pygtex [34
+(./_minted-newTemplate/1879CE99FA6A39D798BE485CF55D188918DB182E877CBA82AA16A5B6A6DC63F6.pygtex [35
 
 ])
 \openout3 = `newTemplate.pyg'.
@@ -1961,34 +1961,34 @@ Chapter 9.
  (./_minted-newTemplate/F38C96A6212DD9C736846AEE8F1BC65B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
 \openout3 = `newTemplate.pyg'.
 
- (./_minted-newTemplate/A957C9495B7AAECF23EE2C5BB280524B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex) [35]
+ (./_minted-newTemplate/A957C9495B7AAECF23EE2C5BB280524B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex) [36]
 \openout3 = `newTemplate.pyg'.
 
  (./_minted-newTemplate/546B5D15823E9D18D5DF2B1C09E0149572EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex)
 \openout3 = `newTemplate.pyg'.
 
- (./_minted-newTemplate/3021297BC913F2B2D7F2D859E3137F4472EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex) [36]
+ (./_minted-newTemplate/3021297BC913F2B2D7F2D859E3137F4472EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex) [37]
 Chapter 10.
-(./_minted-newTemplate/8F86A63790E2F5CA0527DDDFBA686C9D18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [37
+(./_minted-newTemplate/8F86A63790E2F5CA0527DDDFBA686C9D18DB182E877CBA82AA16A5B6A6DC63F6.pygtex [38
 
 ])
 \openout3 = `newTemplate.pyg'.
 
- (./_minted-newTemplate/96E2E0CDB6839B696B7FABAD4E92654B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [38]) (./_minted-newTemplate/ECD7CCF80155324D0AF68C9F14F9103718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [39] [40] [41] [42] [43] [44])
-Underfull \hbox (badness 10000) in paragraph at lines 674--678
+ (./_minted-newTemplate/96E2E0CDB6839B696B7FABAD4E92654B72EBEDDCC8FD56D8FC21C1DB5DF2A7DA.pygtex [39]) (./_minted-newTemplate/ECD7CCF80155324D0AF68C9F14F9103718DB182E877CBA82AA16A5B6A6DC63F6.pygtex [40] [41] [42] [43] [44] [45])
+Underfull \hbox (badness 10000) in paragraph at lines 677--681
 
  []
 
-[45]
+[46]
 Chapter 11.
-(./_minted-newTemplate/EC7EC49DCE0EFE4BEEAD82478FB624E318DB182E877CBA82AA16A5B6A6DC63F6.pygtex [46
+(./_minted-newTemplate/EC7EC49DCE0EFE4BEEAD82478FB624E318DB182E877CBA82AA16A5B6A6DC63F6.pygtex [47
 
-] [47])
+] [48])
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
-(Font)              scaled to size 6.75252pt on input line 695.
+(Font)              scaled to size 6.75252pt on input line 698.
 LaTeX Font Info:    Font shape `TU/LinuxLibertineO(0)/m/n' will be
-(Font)              scaled to size 5.08751pt on input line 695.
- [48] [49] (./newTemplate.aux)
+(Font)              scaled to size 5.08751pt on input line 698.
+ [49] [50] (./newTemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1998,17 +1998,17 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `newTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 3C12D6E32BEC771B7541853CCEC569A8;4600.
+(rerunfilecheck)             Checksum: 96252AF987013098EC6ECBEBD26CC5F5;4703.
 runsystem(del newTemplate.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 33942 strings out of 474773
- 665188 string characters out of 5761289
+ 33949 strings out of 474773
+ 665819 string characters out of 5761289
  2020842 words of memory out of 5000000
- 55445 multiletter control sequences out of 15000+600000
+ 55449 multiletter control sequences out of 15000+600000
  603409 words of font info for 163 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,11n,108p,721b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,108p,721b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on newTemplate.pdf (50 pages).
+Output written on newTemplate.pdf (51 pages).
